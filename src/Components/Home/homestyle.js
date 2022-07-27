@@ -22,7 +22,6 @@ export const useStyles = makeStyles((theme) => ({
     width: "100%",
   },
   wholepage: {
-
     background: "#403B4A" /* fallback for old browsers */,
     background:
       "-webkit-linear-gradient(to bottom, #403b4a, #e7e9bb); " /* Chrome 10-25, Safari 5.1-6 */,
@@ -31,5 +30,21 @@ export const useStyles = makeStyles((theme) => ({
   },
   footer: {
     textAlign: "center",
+  },
+  ArrowTop: {
+    // position: "fixed",
+    // bottom: "20px",
+    animation: "fadeIn 0.3s",
+    opacity: "0.8",
+    margin: "0",
+    top: "auto",
+    right: "auto",
+    bottom: 20,
+    left: "0",
+    position: "fixed",
+    "&:hover": {
+      opacity: "1",
+      backgroundColor: "grey",
+    },
   },
 }));
