@@ -130,6 +130,8 @@ export const useStyles = makeStyles((theme) => ({
     top: "50%",
     left: "50%",
     transform: "translate(-50%, -50%)",
+    overflowY: "scroll",
+    maxHeight:"100vh",
     // backgroundColor: "#f3e5f5",
     // border: "2px solid #000",
     // boxShadow: 24,
@@ -140,7 +142,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   modalcv: {
     width: "auto",
-    height: "95vh",
+    height: "100vh",
     "@media(max-width:780px)": {
       width: "auto",
       height: "75vh",
@@ -150,6 +152,6 @@ export const useStyles = makeStyles((theme) => ({
     width: "80%",
     margin: "auto",
     textAlign: "center",
-    paddingBottom:"1%"
+    paddingBottom: "1%",
   },
 }));

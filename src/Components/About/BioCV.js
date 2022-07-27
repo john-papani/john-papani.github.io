@@ -26,7 +26,6 @@ const BioCV = () => {
     <div>
       <Typography
         variant="h5"
-        className={classes.cvtitle}
         sx={{ width: "80%", margin: "auto" }}
       >
         CV
