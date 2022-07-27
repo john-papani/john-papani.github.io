@@ -1,4 +1,3 @@
-import zIndex from "@mui/material/styles/zIndex";
 import { makeStyles } from "@mui/styles";
 import { createTheme } from "@mui/system";
 
@@ -18,20 +17,43 @@ const main_theme = createTheme({
 });
 
 export const useStyles = makeStyles((theme) => ({
+  personalInformation: {
+    paddingTop: "5%",
+    "@media (max-width:780px)": {
+      paddingTop: "20%",
+    },
+  },
   typedContainer: {
     // backgroundColor: main_theme.palette.primary.main,
     width: "100vw",
     height: "100vh",
     textAlign: "center",
     paddingBottom: "1%",
-    paddingTop:"1%",
-    zIndex:"10"
+    paddingTop: "1%",
+    zIndex: "10",
   },
   avatar: {
-    marginBottom:"8%",
+    marginBottom: "4%",
     margin: "auto",
   },
-  particles:{
-    height:"100vh"
-  }
+  particles: {
+    height: "100vh",
+  },
+  timeBox: {
+    border: "1px solid red",
+    padding: "20px",
+    width: "fit-content",
+    borderRadius: "15px",
+    textAlign: "center",
+    margin: "auto",
+    fontSize: "40px",
+    // position: "absolute",
+    left: "0",
+    right: "0",
+    backgroundColor: "salmon",
+    "&:hover": {
+      backgroundColor: "darkcyan",
+      cursor: "not-allowed",
+    },
+  },
 }));
