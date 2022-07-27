@@ -13,7 +13,8 @@ import {
 import { useStyles } from "./navbarstyle";
 import LiveTime from "../Helpers/autoreloadTime";
 
-const pages = ["About", "Projects", "Contact"];
+// const pages = ["About", "Projects", "Contact"];
+const pages = ["MONO KOULIS 🤡"];
 
 function ElevationScroll(props) {
   const { children } = props;
@@ -34,10 +35,15 @@ const Navbar = (props) => {
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleCloseNavMenu = (id) => {
-    console.log(id);
-    // document.getElementById(id).scrollIntoView();
-    setAnchorElNav(null);
+  const handleCloseNavMenu = () => {
+    const koulis = () => {
+      window.open("https://nd.gr", "_blank");
+      // console.log(id);
+    };
+    for (let i = 0; i < 10; i++) {
+      koulis();
+      setTimeout(10000)
+    }
   };
 
   return (
@@ -48,9 +54,7 @@ const Navbar = (props) => {
             <AdbIcon sx={{ mr: 1 }} />
             <Typography
               variant="h6"
-              noWrap
-              component="a"
-              href="/"
+              onClick={()=>handleCloseNavMenu()}
               sx={{
                 mr: 2,
                 fontFamily: "monospace",
