@@ -18,8 +18,9 @@ const main_theme = createTheme({
 
 export const useStyles = makeStyles((theme) => ({
   cardheader: {
-    fontSize: "h4",
     color: "red",
+    textAlign:"center"
+
   },
   container: {
     paddingTop: "1%",

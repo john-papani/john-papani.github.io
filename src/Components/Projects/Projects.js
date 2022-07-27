@@ -9,7 +9,10 @@ import {
 } from "@mui/material";
 import { useStyles } from "./projectstyle";
 import React from "react";
-
+import covidimg from "../../img/covid_project.jpg"
+import gradebookimg from "../../img/gradebook_project.png"
+import recipeimg from "../../img/recipe_project.png"
+import softengimg from "../../img/softeng_project.jpg"
 const Projects = () => {
   const classes = useStyles();
   return (
@@ -22,7 +25,7 @@ const Projects = () => {
           <Card className={classes.card}>
             <CardMedia
               component="img"
-              image="https://raw.githubusercontent.com/john-papani/Softeng-diodia-Ntua/master/frontend/public/img/aboutlogo.jpg"
+              image={softengimg}
               alt="softeng logo"
             />
             <CardContent>
@@ -59,7 +62,7 @@ const Projects = () => {
           <Card className={classes.card}>
             <CardMedia
               component="img"
-              image="https://raw.githubusercontent.com/john-papani/Gradebook/master/frontend/src/img/home_page.png"
+              image={gradebookimg}
               alt="gradebook logo"
             />
             <CardContent>
@@ -83,7 +86,7 @@ const Projects = () => {
           <Card className={classes.card}>
             <CardMedia
               component="img"
-              image="https://raw.githubusercontent.com/john-papani/covid19-tracker/master/covid19-tracker-react/src/images/homescreen.jpg"
+              image={covidimg}
               alt="covid19 logo"
             />
             <CardContent>
@@ -108,7 +111,7 @@ const Projects = () => {
           <Card className={classes.card}>
             <CardMedia
               component="img"
-              image="https://raw.githubusercontent.com/john-papani/Recipe-Treasure/master/frontend/src/img/homepage.png"
+              image={recipeimg}
               alt="recipe-treasure logo "
             />
             <CardContent>
