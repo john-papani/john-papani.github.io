@@ -1,76 +1,93 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
-import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
+import React, { useState } from "react";
+import AdbIcon from "@mui/icons-material/Adb";
 import {
-  List,
-  ListItem,
-  Divider,
-  ListItemText,
-  SwipeableDrawer,
-  Box,
+  Typography,
+  Button,
   Toolbar,
+  Box,
+  AppBar,
+  Container,
+  Chip,
+  useScrollTrigger,
 } from "@mui/material";
+import { useStyles } from "./navbarstyle";
+import LiveTime from "../Helpers/autoreloadTime";
 
-function Navbar() {
-  let navigate = useNavigate();
-  const [navbarOpen, setNavbarOpen] = React.useState(false);
-  const listItems = () => (
-    <Box
-      sx={{ width: "200px" }}
-      onClick={toggleDrawer(false)}
-      onKeyDown={toggleDrawer(false)}
-    >
-      <List aria-label="portofolio folders">
-        <ListItem button onClick={() => navigate("/home")}>
-          <ListItemText primary="Home" />
-        </ListItem>
-        <Divider />
-        <ListItem button divider onClick={() => navigate("/resume")}>
-          <ListItemText primary="Resume" />
-        </ListItem>
-        <ListItem button onClick={() => navigate("#")}>
-          <ListItemText primary="Portofolio" />
-        </ListItem>
-        <Divider light />
-        <ListItem button onClick={() => navigate("/home")}>
-          <ListItemText primary="Contact" />
-        </ListItem>
-      </List>
-    </Box>
-  );
-  const toggleDrawer = (open) => (event) => {
-    if (
-      event &&
-      event.type === "keydown" &&
-      (event.key === "Tab" || event.key === "Shift")
-    ) {
-      return;
-    }
-    setNavbarOpen(open);
-  };
-  return (
-    <div>
-      <React.Fragment>
-        {/* <Button onClick={toggleDrawer(true)} >
-          <h1>Navbar</h1>
-        </Button> */}
-        <Toolbar >
-          <FormatListBulletedIcon
-            fontSize="large"
-            onClick={toggleDrawer(true)}
-          />
-          <SwipeableDrawer
-            anchor={"right"}
-            open={navbarOpen}
-            onClose={toggleDrawer(false)}
-            onOpen={toggleDrawer(true)}
-          >
-            {listItems()}
-          </SwipeableDrawer>
-        </Toolbar>
-      </React.Fragment>
-    </div>
-  );
+const pages = ["About", "Projects", "Contact"];
+
+function ElevationScroll(props) {
+  const { children } = props;
+  const trigger = useScrollTrigger({
+    disableHysteresis: true,
+    threshold: 0,
+  });
+
+  return React.cloneElement(children, {
+    elevation: trigger ? 15 : 0,
+    color: trigger ? "inherit" : "transparent",
+  });
 }
+
+const Navbar = (props) => {
+  const classes = useStyles();
+  const [anchorElNav, setAnchorElNav] = useState(null);
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget);
+  };
+  const handleCloseNavMenu = (id) => {
+    console.log(id);
+    // document.getElementById(id).scrollIntoView();
+    setAnchorElNav(null);
+  };
+
+  return (
+    <ElevationScroll {...props}>
+      <AppBar className={classes.appbar}>
+        <Container maxWidth="xl">
+          <Toolbar disableGutters>
+            <AdbIcon sx={{ mr: 1 }} />
+            <Typography
+              variant="h6"
+              noWrap
+              component="a"
+              href="/"
+              sx={{
+                mr: 2,
+                fontFamily: "monospace",
+                fontWeight: 700,
+                letterSpacing: ".3rem",
+                color: "inherit",
+                textDecoration: "none",
+              }}
+            >
+              Ioannis Papanikolaou
+            </Typography>
+            <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+              {pages.map((page) => (
+                <Button
+                  key={page}
+                  onClick={() => handleCloseNavMenu({ page })}
+                  sx={{ my: 2, color: "black", display: "block" }}
+                >
+                  {page}
+                </Button>
+              ))}
+              <Chip
+                label={<LiveTime />}
+                sx={{
+                  my: 2,
+                  color: "black",
+                  fontWeight: "bold",
+                  position: "absolute",
+                  right: "0",
+                }}
+              />
+            </Box>
+          </Toolbar>
+        </Container>
+      </AppBar>
+    </ElevationScroll>
+  );
+};
 
 export default Navbar;
