@@ -4,78 +4,76 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography, Button } from "@mui/material";
 
 const Contact = () => {
   const classes = useStyles();
   return (
     <>
-      <Grid
-        container
-        spacing={1}
-        direction="column"
-        className={classes.container}
-      >
+      <Grid container direction="row" spacing={2} className={classes.container}>
         <Grid item xs={12}>
-          <Typography variant="h5">Contact with me! </Typography>
+          <Typography variant="h6s">Where I live ?</Typography>
         </Grid>
-        <Grid item>
-          <Grid container spacing={2}>
-            <Grid item>
-              <GitHubIcon
-                fontSize="large"
-                className={classes.icon}
-                onClick={() => window.open("http://www.google.com", "_blank")}
-                baseClassName="john-papani"
-              />
-            </Grid>
-            <Grid item>
-              <Typography className={classes.iconlabel}>john-papani</Typography>
-            </Grid>
-          </Grid>
-        </Grid>
-        <Grid item>
-          <Grid container spacing={2}>
-            <Grid item>
-              <AlternateEmailIcon fontSize="large" />
-            </Grid>
-            <Grid item>
-              <Typography className={classes.iconlabel}>
-                johnpapani1@gmail.com
-              </Typography>
-            </Grid>
-          </Grid>
-        </Grid>
-        <Grid item>
-          <Grid container spacing={2}>
-            <Grid item>
-              <FacebookIcon
-                fontSize="large"
-                className={classes.icon}
-                onClick={() => window.open("http://www.google.com", "_blank")}
-              />
-            </Grid>
-            <Grid item>
-              <Typography className={classes.iconlabel}>
-                Γιάννης Παπανικολάου
-              </Typography>
-            </Grid>
-          </Grid>
+        <Grid item xs={6}>
+          <iframe
+            title="google_maps_location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d21016.861970776692!2d23.741884623953265!3d37.934769342812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a196255e3858ed%3A0x400bd2ce2b97980!2sIlioupoli%20Municipality%2C%20Greece!5e0!3m2!1sen!2sus!4v1658954375330!5m2!1sen!2sus"
+            width="500"
+            height="350"
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
         </Grid>
 
-        <Grid item>
-          <Grid container spacing={2}>
-            <Grid item>
-              <InstagramIcon
-                fontSize="large"
-                className={classes.icon}
-                onClick={() => window.open("http://www.google.com", "_blank")}
-              />
+        <Grid item xs={6}>
+          <Grid container direction="column" spacing={3}>
+            <Grid item xs={12}>
+              <Typography variant="h5">Contact with me! </Typography>
             </Grid>
             <Grid item>
-              <Typography className={classes.iconlabel}>
-               john.papp
-              </Typography>
+              <Button
+                variant="contained"
+                color="primary"
+                size="large"
+                startIcon={<GitHubIcon />}
+                onClick={() => window.open("https://www.github.com/john-papani", "_blank")}
+              >
+                john-papani
+              </Button>
+            </Grid>
+            <Grid item>
+              <Button
+                variant="contained"
+                color="primary"
+                size="large"
+                startIcon={<AlternateEmailIcon />}
+                onClick={() => window.open("mailto:johnpapani1@gmail.com","_blank")}
+              >
+                johnpapani1@gmail.com
+              </Button>
+            </Grid>
+            <Grid item>
+              <Button
+                variant="contained"
+                color="info"
+                size="large"
+                startIcon={<FacebookIcon />}
+                onClick={() => window.open("http://www.facebook.com/john.papp.4", "_blank")}
+              >
+                Γιαννης Παπανικολαου
+              </Button>
+            </Grid>
+            <Grid item>
+              <Button
+                color="info"
+                variant="contained"
+                size="large"
+                startIcon={<InstagramIcon />}
+                onClick={() => window.open("http://www.instagram.com/john.papp", "_blank")}
+              >
+                john.papp
+              </Button>
             </Grid>
           </Grid>
         </Grid>

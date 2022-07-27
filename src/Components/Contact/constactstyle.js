@@ -22,6 +22,11 @@ export const useStyles = makeStyles((theme) => ({
     paddingLeft: "10%",
     paddingRight: "10%",
     paddingTop: "2%",
+    paddingBottom:"2%",
+    flexDirection:'row',
+    flexWrap:"wrap",
+    alignContent:"space-around",
+    justifyContent:"space-evenly",
   },
   iconlabel: {
     paddingTop: "4%",
