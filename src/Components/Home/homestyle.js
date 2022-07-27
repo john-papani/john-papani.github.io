@@ -30,18 +30,20 @@ export const useStyles = makeStyles((theme) => ({
   },
   footer: {
     textAlign: "center",
+    padding:"1%",
+    "@media(max-width:780px)":{
+      padding:"3%",
+    }
   },
   ArrowTop: {
-    // position: "fixed",
-    // bottom: "20px",
+     position: "fixed !important",
+    bottom: "20px",
     animation: "fadeIn 0.3s",
     opacity: "0.8",
     margin: "0",
     top: "auto",
-    right: "auto",
-    bottom: 20,
-    left: "0",
-    position: "fixed",
+    right: "0",
+    marginRight:"10px !important",
     "&:hover": {
       opacity: "1",
       backgroundColor: "grey",

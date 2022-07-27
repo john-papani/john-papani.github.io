@@ -36,22 +36,23 @@ const Home = () => {
         <Divider />
         <Contact />
         <Divider />
-        <Typography variant="h5" className={classes.footer}>
-          Made with ❤️ by Ioannis Papanikolaou
-        </Typography>
 
         <Fab
           size="small"
           className={classes.ArrowTop}
           onClick={scrollTop}
           // aria-label="add"
-          style={{ display: showScroll ? "fixed" : "none" }}
+          // style={{ display: showScroll ? "fixed !important" : "none" }}
         >
           <KeyboardArrowUpIcon />
         </Fab>
 
-        <Divider />
         <About />
+        <Divider/>
+        <Typography variant="h5" className={classes.footer}>
+          Made with ❤️ by Ioannis Papanikolaou
+        </Typography>
+
       </div>
     </div>
   );
