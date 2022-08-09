@@ -18,7 +18,7 @@ const About = () => {
       <BioCV />
       <Divider />
       <Box>
-        <Timeline position="rigth">
+        <Timeline position="right">
           <TimelineItem>
             <TimelineOppositeContent color="text.secondary">
               <Typography variant="h5">2018 - now</Typography>
@@ -48,8 +48,6 @@ const About = () => {
             </TimelineContent>
           </TimelineItem>
         </Timeline>
-        <Divider />
-        <LanguageTools />
       </Box>
     </>
   );

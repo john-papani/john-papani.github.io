@@ -22,11 +22,11 @@ export const useStyles = makeStyles((theme) => ({
     paddingLeft: "10%",
     paddingRight: "10%",
     paddingTop: "2%",
-    paddingBottom:"2%",
-    flexDirection:'row',
-    flexWrap:"wrap",
-    alignContent:"space-around",
-    justifyContent:"space-evenly",
+    paddingBottom: "2%",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    alignContent: "space-around",
+    justifyContent: "space-evenly",
   },
   iconlabel: {
     paddingTop: "4%",
@@ -34,6 +34,12 @@ export const useStyles = makeStyles((theme) => ({
   icon: {
     "&:hover": {
       color: "darkgrey",
+    },
+  },
+  googleMapIframe: {
+    "@media (min-width:780px)": {
+      width: "500px",
+      height: "350px",
     },
   },
 }));

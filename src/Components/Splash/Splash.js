@@ -19,7 +19,7 @@ const Splash = (props) => {
     sessionStorage.setItem("visited", true);
     setTimeout(() => {
       props.update();
-    }, 2500);
+    }, 1500);
   };
   return (
     <>
