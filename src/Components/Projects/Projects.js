@@ -13,6 +13,7 @@ import covidimg from "../../img/covid_project.jpg"
 import gradebookimg from "../../img/gradebook_project.png"
 import recipeimg from "../../img/recipe_project.png"
 import softengimg from "../../img/softeng_project.jpg"
+import energyliveimg from "../../img/energylive22.png"
 const Projects = () => {
   const classes = useStyles();
   return (
@@ -25,9 +26,42 @@ const Projects = () => {
           <Card className={classes.card}>
             <CardMedia
               component="img"
-              image={softengimg}
+              image={energyliveimg}
               alt="softeng logo"
             />
+            <CardContent>
+              <Typography className={classes.cardheader}>
+                EnergyLive2022 2021-2022
+              </Typography>
+              <Typography className={classes.cardtext}>
+                'EnergyLive2022' is a Software as a Service application, where
+                the user can see various charts related to Energy consumption
+                and generation in European countries.
+                <br />
+                This project was conducted for the course of Software as a
+                Service at the 2021-2022 Spring semester of the Electrical and
+                Computer Engineering School at the National Technical University
+                of Athens.
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <Button
+                size="small"
+                onClick={() =>
+                  window.open(
+                    "https://github.com/john-papani/Softeng-diodia-Ntua",
+                    "_blank"
+                  )
+                }
+              >
+                Learn More
+              </Button>
+            </CardActions>
+          </Card>
+        </Grid>
+        <Grid item md={6} xs={12}>
+          <Card className={classes.card}>
+            <CardMedia component="img" image={softengimg} alt="softeng logo" />
             <CardContent>
               <Typography className={classes.cardheader}>
                 Software Engineering ECE NTUA 2021-2022
@@ -75,7 +109,12 @@ const Projects = () => {
             <CardActions>
               <Button
                 size="small"
-                onClick={() => window.open("https://github.com/john-papani/Gradebook", "_blank")}
+                onClick={() =>
+                  window.open(
+                    "https://github.com/john-papani/Gradebook",
+                    "_blank"
+                  )
+                }
               >
                 Learn More
               </Button>
@@ -84,11 +123,7 @@ const Projects = () => {
         </Grid>
         <Grid item md={6} xs={12}>
           <Card className={classes.card}>
-            <CardMedia
-              component="img"
-              image={covidimg}
-              alt="covid19 logo"
-            />
+            <CardMedia component="img" image={covidimg} alt="covid19 logo" />
             <CardContent>
               <Typography className={classes.cardheader}>
                 Covid-19 Tracker
@@ -100,7 +135,12 @@ const Projects = () => {
             <CardActions>
               <Button
                 size="small"
-                onClick={() => window.open("https://github.com/john-papani/covid19-tracker", "_blank")}
+                onClick={() =>
+                  window.open(
+                    "https://github.com/john-papani/covid19-tracker",
+                    "_blank"
+                  )
+                }
               >
                 Learn More
               </Button>
@@ -115,7 +155,9 @@ const Projects = () => {
               alt="recipe-treasure logo "
             />
             <CardContent>
-              <Typography className={classes.cardheader}>Recipe Treasure </Typography>
+              <Typography className={classes.cardheader}>
+                Recipe Treasure{" "}
+              </Typography>
               <Typography className={classes.cardtext}>
                 A simple web app where you can find some delicious recipes from
                 all over the world
@@ -124,7 +166,12 @@ const Projects = () => {
             <CardActions>
               <Button
                 size="small"
-                onClick={() => window.open("https://github.com/john-papani/Recipe-Treasure", "_blank")}
+                onClick={() =>
+                  window.open(
+                    "https://github.com/john-papani/Recipe-Treasure",
+                    "_blank"
+                  )
+                }
               >
                 Learn More
               </Button>
