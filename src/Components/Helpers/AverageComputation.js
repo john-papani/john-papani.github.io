@@ -8,6 +8,6 @@ const AverageComputation = ({ data }) => {
   ).length;
   
   const average = sum / count;
-  return average;
+  return Math.round(average * 100) / 100;
 };
 export default AverageComputation;

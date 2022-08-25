@@ -19,6 +19,7 @@ const Chart = (props) => {
       verticalAlign: "bottom",
     },
     legend: {
+      // labelFormat: "Grades",
       layout: "vertical",
       align: "left",
       verticalAlign: "top",
@@ -49,10 +50,12 @@ const Chart = (props) => {
     },
     series: [
       {
+        name: "Grades",
         data: data
           .filter((dataItem) => !isNaN(dataItem.Grade))
           .map((dataItem) => dataItem.Grade),
         step: "center",
+        color: "#808080",
       },
     ],
   };

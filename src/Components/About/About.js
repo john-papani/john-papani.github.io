@@ -16,7 +16,6 @@ const About = () => {
   return (
     <>
       <BioCV />
-      <Divider />
       <Box>
         <Timeline position="right">
           <TimelineItem>
