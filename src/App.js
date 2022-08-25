@@ -16,7 +16,7 @@ const App = () => {
     return (
       <>
        <CssBaseline />
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
          <Routes>
            <Route exact path="/" element={<Home />} />
            <Route exact path="/home" element={<Home />} />
