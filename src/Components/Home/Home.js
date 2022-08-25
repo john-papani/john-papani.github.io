@@ -1,4 +1,4 @@
-import { Box, Grid, Typography, Divider, Fab } from "@mui/material";
+import { Typography, Divider, Fab } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import Contact from "../Contact/Contact";
 import Navbar from "../Navbar/Navbar";
@@ -7,11 +7,15 @@ import Projects from "../Projects/Projects";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { useStyles } from "./homestyle";
 import About from "../About/About";
-import Terminal from "@nitric/react-animated-term";
-import "@nitric/react-animated-term/css/styles.css";
-
+import LanguageTools from "../About/LanguageTools";
+import Grades from "../Grades/Grades";
 const Home = () => {
   const [showScroll, setShowScroll] = useState(false);
+  // const [openAlert, setOpenAlert] = React.useState(false);
+  // const [messageAlert, setMessageAlert] = useState("");
+  // const [severityAlert, setSeverityAlert] = useState("");
+  const [businessProfile, setBusinessProfile] = useState(true);
+
   const checkScrollTop = () => {
     if (!showScroll && window.pageYOffset > 400) {
       setShowScroll(true);
@@ -24,17 +28,25 @@ const Home = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [businessProfile]);
   const classes = useStyles();
   return (
     <div className={classes.wholepage}>
       <div className="scroll-to-top">
-        <Navbar className={classes.navbar} />
+        <Navbar
+          className={classes.navbar}
+          // setOpenAlert={setOpenAlert}
+          // openAlert={openAlert}
+          // setMessageAlert={setMessageAlert}
+          // setSeverityAlert={setSeverityAlert}
+          setBusinessProfile={setBusinessProfile}
+        />
 
         <PersonalInformation />
         <Divider />
-        <Projects />
-        <Divider />
-        <Contact />
+        {businessProfile ? <Projects /> : ""}
         <Divider />
 
         <Fab
@@ -48,7 +60,13 @@ const Home = () => {
         </Fab>
 
         <About />
-        <Divider/>
+        <Divider />
+        {businessProfile ? <LanguageTools /> : ""}
+        <Divider />
+        <Grades />
+        <Divider />
+        <Contact />
+        <Divider />
         <Typography variant="h5" className={classes.footer}>
           Made with ❤️ by Ioannis Papanikolaou
         </Typography>

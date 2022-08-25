@@ -9,6 +9,9 @@ import {
   Container,
   Chip,
   useScrollTrigger,
+  FormControlLabel,
+  Switch,
+  Tooltip,
 } from "@mui/material";
 import { useStyles } from "./navbarstyle";
 import LiveTime from "../Helpers/autoreloadTime";
@@ -30,6 +33,13 @@ function ElevationScroll(props) {
 }
 
 const Navbar = (props) => {
+  const {
+    // openAlert,
+    // setOpenAlert,
+    // setMessageAlert,
+    // setSeverityAlert,
+    setBusinessProfile,
+  } = props;
   const classes = useStyles();
   const [anchorElNav, setAnchorElNav] = useState(null);
   const handleOpenNavMenu = (event) => {
@@ -38,12 +48,20 @@ const Navbar = (props) => {
   const handleCloseNavMenu = () => {
     const koulis = () => {
       window.open("https://nd.gr", "_blank");
-      // console.log(id);
     };
     for (let i = 0; i < 10; i++) {
       koulis();
-      setTimeout(10000)
     }
+  };
+  const handleBusinessSwitch = () => {
+    // setSeverityAlert(openAlert ? "success" : "error");
+    // setMessageAlert(
+    //   openAlert
+    //     ? "Show Projects and Business Components"
+    //     : "Hide Projects and Businnes Components"
+    // );
+    // setOpenAlert(true);
+    setBusinessProfile((profile) => !profile);
   };
 
   return (
@@ -54,7 +72,7 @@ const Navbar = (props) => {
             <AdbIcon sx={{ mr: 1 }} />
             <Typography
               variant="h6"
-              onClick={()=>handleCloseNavMenu()}
+              onClick={() => handleCloseNavMenu()}
               sx={{
                 mr: 2,
                 fontFamily: "monospace",
@@ -66,15 +84,27 @@ const Navbar = (props) => {
             >
               Ioannis Papanikolaou
             </Typography>
+            <FormControlLabel
+              control={
+                <Switch
+                  color="warning"
+                  defaultChecked
+                  onChange={() => handleBusinessSwitch()}
+                />
+              }
+              label="Bussiness"
+            />
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               {pages.map((page) => (
-                <Button
-                  key={page}
-                  onClick={() => handleCloseNavMenu({ page })}
-                  sx={{ my: 2, color: "black", display: "block" }}
-                >
-                  {page}
-                </Button>
+                <Tooltip title="DON'T PRESS !" arrow>
+                  <Button
+                    key={page}
+                    onClick={() => handleCloseNavMenu({ page })}
+                    sx={{ my: 2, color: "black", display: "block" }}
+                  >
+                    {page}
+                  </Button>
+                </Tooltip>
               ))}
               <Chip
                 label={<LiveTime />}

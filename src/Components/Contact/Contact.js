@@ -33,12 +33,13 @@ const Contact = () => {
             <Grid item>
               <Button
                 variant="contained"
-                color="primary"
+                color="error"
                 size="large"
                 startIcon={<GitHubIcon />}
                 onClick={() =>
                   window.open("https://www.github.com/john-papani", "_blank")
                 }
+                style={{textTransform: "none"}}
               >
                 john-papani
               </Button>
@@ -46,12 +47,13 @@ const Contact = () => {
             <Grid item>
               <Button
                 variant="contained"
-                color="primary"
+                color="warning"
                 size="large"
                 startIcon={<AlternateEmailIcon />}
                 onClick={() =>
                   window.open("mailto:johnpapani1@gmail.com", "_blank")
                 }
+                style={{textTransform: "none"}}
               >
                 johnpapani1@gmail.com
               </Button>
@@ -65,19 +67,21 @@ const Contact = () => {
                 onClick={() =>
                   window.open("http://www.facebook.com/john.papp.4", "_blank")
                 }
+                style={{textTransform: "none"}}
               >
-                Γιαννης Παπανικολαου
+                Γιάννης Παπανικολάου
               </Button>
             </Grid>
             <Grid item>
               <Button
-                color="info"
+                color="inherit"
                 variant="contained"
                 size="large"
                 startIcon={<InstagramIcon />}
                 onClick={() =>
                   window.open("http://www.instagram.com/john.papp", "_blank")
                 }
+                style={{textTransform: "none"}}
               >
                 john.papp
               </Button>

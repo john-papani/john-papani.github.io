@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import { useStyles } from "./aboutStyle";
 import { Box, Button, Modal, Grid, Typography } from "@mui/material";
-
 import cvimg from "./cv.jpg";
 
 const BioCV = () => {
-  const [numPages, setNumPages] = useState(null);
-
   const [openmodal, setOpenmodal] = useState(false);
   const handleOpenModal = () => setOpenmodal(true);
   const handleCloseModal = () => setOpenmodal(false);
@@ -18,16 +15,10 @@ const BioCV = () => {
     console.log(link);
     link.dispatchEvent(new MouseEvent("click"));
   };
-  function onDocumentLoadSuccess({ numPages }) {
-    setNumPages(numPages);
-  }
   const classes = useStyles();
   return (
     <div>
-      <Typography
-        variant="h5"
-        sx={{ width: "80%", margin: "auto" }}
-      >
+      <Typography variant="h5" sx={{ width: "80%", margin: "auto", paddingTop:"1%" }}>
         CV
       </Typography>
       <Grid container spacing={2} className={classes.biocv}>
