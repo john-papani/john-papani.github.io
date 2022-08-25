@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/myPortfolio/static/css/main.abd64e84.css",
+    "main.js": "/myPortfolio/static/js/main.0dae7dbd.js",
+    "static/js/937.8fd9669c.chunk.js": "/myPortfolio/static/js/937.8fd9669c.chunk.js",
+    "static/media/energylive22.png": "/myPortfolio/static/media/energylive22.eefdd587c38ed21e9c45.png",
+    "static/media/recipe_project.png": "/myPortfolio/static/media/recipe_project.3479d12b0b6c8708e66c.png",
+    "static/media/cv.jpg": "/myPortfolio/static/media/cv.488a5b62396d42e36b2d.jpg",
+    "static/media/softeng_project.jpg": "/myPortfolio/static/media/softeng_project.053bc8c5a6716251c03f.jpg",
+    "static/media/covid_project.jpg": "/myPortfolio/static/media/covid_project.8991bbbd31baba52aa71.jpg",
+    "static/media/giannis.jpg": "/myPortfolio/static/media/giannis.fb80102930adc1358462.jpg",
+    "static/media/gradebook_project.png": "/myPortfolio/static/media/gradebook_project.58df998a74f73758e552.png",
+    "index.html": "/myPortfolio/index.html",
+    "main.abd64e84.css.map": "/myPortfolio/static/css/main.abd64e84.css.map",
+    "main.0dae7dbd.js.map": "/myPortfolio/static/js/main.0dae7dbd.js.map",
+    "937.8fd9669c.chunk.js.map": "/myPortfolio/static/js/937.8fd9669c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.abd64e84.css",
+    "static/js/main.0dae7dbd.js"
+  ]
+}
