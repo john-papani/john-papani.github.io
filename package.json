@@ -1,7 +1,7 @@
 {
   "name": "myportfolio",
   "version": "0.1.0",
-  "homepage": "https://john-papani.github.io/myPortfolio",
+  "homepage": "http://john-papani.github.io",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.9.0",
