@@ -4,6 +4,8 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
+import PaidIcon from "@mui/icons-material/Paid";
+import PaymentIcon from "@mui/icons-material/Payment";
 import { Box, Grid, Typography, Button } from "@mui/material";
 
 const Contact = () => {
@@ -12,7 +14,7 @@ const Contact = () => {
     <>
       <Grid container direction="row" spacing={2} className={classes.container}>
         <Grid item xs={12}>
-          <Typography variant="h6">Where I live ?</Typography>
+          <Typography variant="h5">Where I live ?</Typography>
         </Grid>
         <Grid item xs={12} md={6}>
           <iframe
@@ -25,7 +27,7 @@ const Contact = () => {
           ></iframe>
         </Grid>
 
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={3}>
           <Grid container direction="column" spacing={3}>
             <Grid item xs={12}>
               <Typography variant="h5">Contact with me! </Typography>
@@ -39,7 +41,7 @@ const Contact = () => {
                 onClick={() =>
                   window.open("https://www.github.com/john-papani", "_blank")
                 }
-                style={{textTransform: "none"}}
+                style={{ textTransform: "none" }}
               >
                 john-papani
               </Button>
@@ -53,7 +55,7 @@ const Contact = () => {
                 onClick={() =>
                   window.open("mailto:johnpapani1@gmail.com", "_blank")
                 }
-                style={{textTransform: "none"}}
+                style={{ textTransform: "none" }}
               >
                 johnpapani1@gmail.com
               </Button>
@@ -67,7 +69,7 @@ const Contact = () => {
                 onClick={() =>
                   window.open("http://www.facebook.com/john.papp.4", "_blank")
                 }
-                style={{textTransform: "none"}}
+                style={{ textTransform: "none" }}
               >
                 Γιάννης Παπανικολάου
               </Button>
@@ -81,9 +83,47 @@ const Contact = () => {
                 onClick={() =>
                   window.open("http://www.instagram.com/john.papp", "_blank")
                 }
-                style={{textTransform: "none"}}
+                style={{ textTransform: "none" }}
               >
                 john.papp
+              </Button>
+            </Grid>
+          </Grid>
+        </Grid>
+
+        <Grid item xs={12} md={3}>
+          <Grid container direction="column" spacing={3}>
+            <Grid item xs={12}>
+              <Typography variant="h5">Donate me! 😁</Typography>
+            </Grid>
+
+            <Grid item>
+              <Button
+                color="inherit"
+                variant="contained"
+                size="large"
+                startIcon={<PaidIcon />}
+                onClick={() =>
+                  window.open("https://www.paypal.me/ioannispapani", "_blank")
+                }
+                style={{ textTransform: "none" }}
+              >
+                Paypal.me/ioannispapani
+              </Button>
+            </Grid>
+
+            <Grid item>
+              <Button
+                color="inherit"
+                variant="contained"
+                size="large"
+                startIcon={<PaymentIcon />}
+                onClick={() =>
+                  window.open("https://www.revolut.me/ioanni4t68", "_blank")
+                }
+                style={{ textTransform: "none" }}
+              >
+                Revolut.me/ioanni4t68
               </Button>
             </Grid>
           </Grid>

@@ -9,6 +9,8 @@ import { useStyles } from "./homestyle";
 import About from "../About/About";
 import LanguageTools from "../About/LanguageTools";
 import Grades from "../Grades/Grades";
+import ShortBio from "../ShortBio/ShortBio";
+
 const Home = () => {
   const [showScroll, setShowScroll] = useState(false);
   // const [openAlert, setOpenAlert] = React.useState(false);
@@ -45,6 +47,8 @@ const Home = () => {
         />
 
         <PersonalInformation />
+        <Divider />
+        <ShortBio/>
         <Divider />
         {businessProfile ? <Projects /> : ""}
         <Divider />
