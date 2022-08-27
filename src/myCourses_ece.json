@@ -1,0 +1,252 @@
+[
+  {
+    "ID": 1,
+    "COURSE": "Linear Algebra",
+    "CORE/FLOW": "Core"
+  },
+  {
+    "ID": 2,
+    "COURSE": "Logic Design of Digital Systems",
+    "CORE/FLOW": "Core"
+  },
+  {
+    "ID": 3,
+    "COURSE": "Mathematical Analysis I (Functions of one variable)",
+    "CORE/FLOW": "Core"
+  },
+  {
+    "ID": 4,
+    "COURSE": "Computer Programming",
+    "CORE/FLOW": "Core"
+  },
+  {
+    "ID": 5,
+    "COURSE": "Physics I (Mechanics)",
+    "CORE/FLOW": "Core"
+  },
+  {
+    "ID": 6,
+    "COURSE": "Philosophy",
+    "CORE/FLOW": "Core"
+  },
+  {
+    "ID": 7,
+    "COURSE": "Linear Circuits Analysis",
+    "CORE/FLOW": "Core"
+  },
+  {
+    "ID": 8,
+    "COURSE": "Differential Equations",
+    "CORE/FLOW": "Core"
+  },
+  {
+    "ID": 9,
+    "COURSE": "Structure and Electrical Properties of Materials",
+    "CORE/FLOW": "Core"
+  },
+  {
+    "ID": 10,
+    "COURSE": "Mathematical Analysis II (Functions of several variables and Vector analysis)",
+    "CORE/FLOW": "Core"
+  },
+  {
+    "ID": 11,
+    "COURSE": "Programming Techniques",
+    "CORE/FLOW": "Core"
+  },
+  {
+    "ID": 12,
+    "COURSE": "Engineering Mechanics",
+    "CORE/FLOW": "Core"
+  },
+  {
+    "ID": 13,
+    "COURSE": "Introductory Lab of Electronics and Telecommunications",
+    "CORE/FLOW": "Core"
+  },
+  {
+    "ID": 14,
+    "COURSE": "Electric Measurements",
+    "CORE/FLOW": "Core"
+  },
+  {
+    "ID": 15,
+    "COURSE": "Foundations of Computer Science",
+    "CORE/FLOW": "Core"
+  },
+  {
+    "ID": 16,
+    "COURSE": "Probability Theory and Statistics",
+    "CORE/FLOW": "Core"
+  },
+  {
+    "ID": 17,
+    "COURSE": "Signals and Systems",
+    "CORE/FLOW": "Core"
+  },
+  {
+    "ID": 18,
+    "COURSE": "Organization and Management",
+    "CORE/FLOW": "Core"
+  },
+  {
+    "ID": 19,
+    "COURSE": "English language",
+    "CORE/FLOW": "Core"
+  },
+  {
+    "ID": 20,
+    "COURSE": "Communication Networks",
+    "CORE/FLOW": "Core"
+  },
+  {
+    "ID": 21,
+    "COURSE": "Electromagnetic Fields I",
+    "CORE/FLOW": "Core"
+  },
+  {
+    "ID": 22,
+    "COURSE": "Electronics I",
+    "CORE/FLOW": "Core"
+  },
+  {
+    "ID": 23,
+    "COURSE": "Physics III (Wave and Quantum Physics)",
+    "CORE/FLOW": "Core"
+  },
+  {
+    "ID": 24,
+    "COURSE": "Stochastic Systems and Communications",
+    "CORE/FLOW": "Core"
+  },
+  {
+    "ID": 25,
+    "COURSE": "Discrete Mathematics",
+    "CORE/FLOW": "Core"
+  },
+  {
+    "ID": 26,
+    "COURSE": "Computer Architecture",
+    "CORE/FLOW": "Core"
+  },
+  {
+    "ID": 27,
+    "COURSE": "Introduction to Electric Energy Systems",
+    "CORE/FLOW": "Core"
+  },
+  {
+    "ID": 28,
+    "COURSE": "Industrial Electronics",
+    "CORE/FLOW": "Core"
+  },
+  {
+    "ID": 29,
+    "COURSE": "Introduction to Telecommunications",
+    "CORE/FLOW": "Core"
+  },
+  {
+    "ID": 30,
+    "COURSE": "Introduction to Automatic Control",
+    "CORE/FLOW": "Core"
+  },
+  {
+    "ID": 31,
+    "COURSE": "Electromagnetic Fields II",
+    "CORE/FLOW": "Core"
+  },
+  {
+    "ID": 32,
+    "COURSE": "Network and Circuit Theory",
+    "CORE/FLOW": "Core"
+  },
+  {
+    "ID": 33,
+    "COURSE": "Electrical Design",
+    "CORE/FLOW": "Core"
+  },
+  {
+    "ID": 34,
+    "COURSE": "Operating Systems",
+    "CORE/FLOW": "Flow Y"
+  },
+  {
+    "ID": 35,
+    "COURSE": "Microprocessor Systems",
+    "CORE/FLOW": "Flow Y"
+  },
+  {
+    "ID": 36,
+    "COURSE": "Human­Computer Interaction",
+    "CORE/FLOW": "Flow Y"
+  },
+  {
+    "ID": 37,
+    "COURSE": "Advanced Topics in Computer Architecture",
+    "CORE/FLOW": "Flow Y"
+  },
+  {
+    "ID": 38,
+    "COURSE": "Databases",
+    "CORE/FLOW": "Flow L"
+  },
+  {
+    "ID": 39,
+    "COURSE": "Programming Languages I",
+    "CORE/FLOW": "Flow L"
+  },
+  {
+    "ID": 40,
+    "COURSE": "Algorithms and Complexity",
+    "CORE/FLOW": "Flow L"
+  },
+  {
+    "ID": 41,
+    "COURSE": "Software Engineering",
+    "CORE/FLOW": "Flow L"
+  },
+  {
+    "ID": 42,
+    "COURSE": "Queuing Systems",
+    "CORE/FLOW": "Flow D"
+  },
+  {
+    "ID": 43,
+    "COURSE": "Computer Networks",
+    "CORE/FLOW": "Flow D"
+  },
+  {
+    "ID": 44,
+    "COURSE": "Internet Applications",
+    "CORE/FLOW": "Flow D"
+  },
+  {
+    "ID": 45,
+    "COURSE": "Computer Network Security",
+    "CORE/FLOW": "Flow D"
+  },
+  {
+    "ID": 46,
+    "COURSE": "Business Microeconomics",
+    "CORE/FLOW": "Flow O"
+  },
+  {
+    "ID": 47,
+    "COURSE": "Management and Management Information Systems",
+    "CORE/FLOW": "Flow O"
+  },
+  {
+    "ID": 48,
+    "COURSE": "Decision Support Systems",
+    "CORE/FLOW": "Flow O"
+  },
+  {
+    "ID": 49,
+    "COURSE": "Management of the Digital Enterprise",
+    "CORE/FLOW": "Flow O"
+  },
+  {
+    "ID": 50,
+    "COURSE": "Biomedical Signal Analysis and Processing",
+    "CORE/FLOW": "Flow I"
+  }
+]

@@ -4,13 +4,13 @@ import {Typography, Grid} from "@mui/material"
 function LanguageTools() {
   return (
     <>
-      <Typography variant="h5" sx={{ width: "80%", margin: "auto" }}>
+      <Typography variant="h5" sx={{ width: "80%", margin: "auto", paddingTop:"1%", paddingBottom:"1%"}}>
         Languages and Tools:
       </Typography>
       <Grid
         container
         spacing={1}
-        sx={{ width: "80%", margin: "auto", paddingBottom: "1%" }}
+        sx={{ width: "80%", margin: "auto", paddingBottom: "2%" }}
       >
         <Grid item xs={3} md={1}>
           <a href="https://getbootstrap.com" target="_blank" rel="noreferrer">

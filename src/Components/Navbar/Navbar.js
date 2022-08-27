@@ -17,6 +17,8 @@ import { useStyles } from "./navbarstyle";
 import LiveTime from "../Helpers/autoreloadTime";
 
 // const pages = ["About", "Projects", "Contact"];
+// const pages = ["Projects","CV and Information",  "Contact"];
+//  const pages = ["Short Bio","CV and Information",  "Contact"];
 const pages = ["MONO KOULIS 🤡"];
 
 function ElevationScroll(props) {
@@ -46,12 +48,13 @@ const Navbar = (props) => {
     setAnchorElNav(event.currentTarget);
   };
   const handleCloseNavMenu = () => {
-    const koulis = () => {
-      window.open("https://nd.gr", "_blank");
-    };
-    for (let i = 0; i < 10; i++) {
-      koulis();
-    }
+    // const koulis = () => {
+    //   window.open("https://nd.gr", "_blank");
+    // };
+    // for (let i = 0; i < 10; i++) {
+    //   koulis();
+    // }
+    // document.getElementById("about").scrollIntoView({behavior: "smooth",  block: "center", inline: "start"});
   };
   const handleBusinessSwitch = () => {
     // setSeverityAlert(openAlert ? "success" : "error");

@@ -20,7 +20,7 @@ const Projects = () => {
     <>
       <Grid container spacing={3} className={classes.container}>
         <Grid item xs={12}>
-          <Typography variant="h4">Projects</Typography>
+          <Typography variant="h5">Projects</Typography>
         </Grid>
         <Grid item md={6} xs={12}>
           <Card className={classes.card}>
