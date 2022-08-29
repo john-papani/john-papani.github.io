@@ -16,7 +16,7 @@ const Home = () => {
   // const [openAlert, setOpenAlert] = React.useState(false);
   // const [messageAlert, setMessageAlert] = useState("");
   // const [severityAlert, setSeverityAlert] = useState("");
-  const [businessProfile, setBusinessProfile] = useState(true);
+  const [businessProfile, setBusinessProfile] = useState(false);
 
   const checkScrollTop = () => {
     if (!showScroll && window.pageYOffset > 400) {

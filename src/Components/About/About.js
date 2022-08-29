@@ -16,7 +16,7 @@ const About = () => {
   return (
     <>
       <BioCV />
-      <Box>
+      <Box style={{ width: "80%" }}>
         <Timeline position="right">
           <TimelineItem>
             <TimelineOppositeContent color="text.secondary">

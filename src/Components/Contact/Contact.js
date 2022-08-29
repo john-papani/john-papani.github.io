@@ -31,6 +31,10 @@ const Contact = () => {
           <Grid container direction="column" spacing={3}>
             <Grid item xs={12}>
               <Typography variant="h5">Contact with me! </Typography>
+              <Typography width="75%" paddingLeft="5%">
+                If you require any further information, please feel free to
+                contact me.
+              </Typography>
             </Grid>
             <Grid item>
               <Button

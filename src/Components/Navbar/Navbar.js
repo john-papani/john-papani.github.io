@@ -91,7 +91,6 @@ const Navbar = (props) => {
               control={
                 <Switch
                   color="warning"
-                  defaultChecked
                   onChange={() => handleBusinessSwitch()}
                 />
               }
