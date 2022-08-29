@@ -22,28 +22,33 @@ export const useStyles = makeStyles((theme) => ({
     width: "100%",
   },
   wholepage: {
-    background: "#403B4A" /* fallback for old browsers */,
+    // background: "#403B4A" /* fallback for old browsers */,
+    // background:
+    //   "-webkit-linear-gradient(to bottom, #403b4a, #e7e9bb); " /* Chrome 10-25, Safari 5.1-6 */,
+    // background:
+    //   "linear-gradient(to bottom, #403b4a, #e7e9bb)" /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */,
+    background: "#bdc3c7",
     background:
-      "-webkit-linear-gradient(to bottom, #403b4a, #e7e9bb); " /* Chrome 10-25, Safari 5.1-6 */,
+      "-webkit-linear-gradient(to bottom, #2c3e50, #bdc3c7)" /* Chrome 10-25, Safari 5.1-6 */,
     background:
-      "linear-gradient(to bottom, #403b4a, #e7e9bb)" /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */,
+      "linear-gradient(to bottom, #2c3e50, #bdc3c7)" /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */,
   },
   footer: {
     textAlign: "center",
-    padding:"1%",
-    "@media(max-width:780px)":{
-      padding:"3%",
-    }
+    padding: "1%",
+    "@media(max-width:780px)": {
+      padding: "3%",
+    },
   },
   ArrowTop: {
-     position: "fixed !important",
+    position: "fixed !important",
     bottom: "20px",
     animation: "fadeIn 0.3s",
     opacity: "0.8",
     margin: "0",
     top: "auto",
     right: "0",
-    marginRight:"10px !important",
+    marginRight: "10px !important",
     "&:hover": {
       opacity: "1",
       backgroundColor: "grey",
