@@ -17,7 +17,7 @@ const ShortBio = () => {
           padding="1%"
           textAlign="justify"
         >
-          <Grid item xs={12}>
+          <Grid item xs={12} sx={{ backgroundColor: "#EEEDE7",borderRadius:'12%' }}>
             <Card>
               <CardContent>
                 My name is Ioannis Papanikolaou and I am 22 years old.

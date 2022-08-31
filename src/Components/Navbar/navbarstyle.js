@@ -18,7 +18,8 @@ const main_theme = createTheme({
 
 export const useStyles = makeStyles((theme) => ({
   appbar: {
-    position:"sticky"
+    position:"sticky",
+    borderBottom:"1px solid white"
   },
   toolbar: {
     backgroundColor: main_theme.palette.primary.main,

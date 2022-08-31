@@ -19,7 +19,8 @@ import LiveTime from "../Helpers/autoreloadTime";
 // const pages = ["About", "Projects", "Contact"];
 // const pages = ["Projects","CV and Information",  "Contact"];
 //  const pages = ["Short Bio","CV and Information",  "Contact"];
-const pages = ["MONO KOULIS 🤡"];
+// const pages = ["MONO KOULIS 🤡"];
+const pages = [""];
 
 function ElevationScroll(props) {
   const { children } = props;
@@ -70,7 +71,7 @@ const Navbar = (props) => {
   return (
     <ElevationScroll {...props}>
       <AppBar className={classes.appbar}>
-        <Container maxWidth="xl">
+        <Container maxWidth="xl" sx={{ alignItems: "center" }}>
           <Toolbar disableGutters>
             <AdbIcon sx={{ mr: 1 }} />
             <Typography
@@ -111,7 +112,6 @@ const Navbar = (props) => {
               <Chip
                 label={<LiveTime />}
                 sx={{
-                  my: 2,
                   color: "black",
                   fontWeight: "bold",
                   position: "absolute",
