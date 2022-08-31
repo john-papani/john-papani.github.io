@@ -20,6 +20,14 @@ const Home = () => {
   // const [severityAlert, setSeverityAlert] = useState("");
   const [businessProfile, setBusinessProfile] = useState(false);
 
+  useEffect(
+    () =>
+      fetch(
+        "https://api.countapi.xyz/hit/john-papani.github.io/bec3e21b-8894-4028-a57d-926fdb17d5d3"
+      ),
+    []
+  );
+
   const checkScrollTop = () => {
     if (!showScroll && window.pageYOffset > 400) {
       setShowScroll(true);

@@ -26,8 +26,7 @@ const ShortBio = () => {
                 studying at the National Technical University of Athens in the
                 Electrical and Computer Engineering department.
                 <br />I live in Ilioupoli, Athens and I plan to become a full
-                stack developer. I'm looking for a job that suitable with my
-                studied jobscope. I'm open to new ideas always by making them
+                stack developer. I'm open to new ideas always by making them
                 coming in real life with a good team.
               </CardContent>
             </Card>
