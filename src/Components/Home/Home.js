@@ -10,6 +10,8 @@ import About from "../About/About";
 import LanguageTools from "../About/LanguageTools";
 import Grades from "../Grades/Grades";
 import ShortBio from "../ShortBio/ShortBio";
+import Footer from "../Footer/Footer";
+import Particle from "../Particle";
 
 const Home = () => {
   const [showScroll, setShowScroll] = useState(false);
@@ -45,10 +47,10 @@ const Home = () => {
           // setSeverityAlert={setSeverityAlert}
           setBusinessProfile={setBusinessProfile}
         />
-
+        <Particle />
         <PersonalInformation />
         <Divider />
-        <ShortBio/>
+        <ShortBio />
         <Divider />
         {businessProfile ? <Projects /> : ""}
         <Divider />
@@ -71,10 +73,7 @@ const Home = () => {
         <Divider />
         <Contact />
         <Divider />
-        <Typography variant="h5" className={classes.footer}>
-          Made with ❤️ by Ioannis Papanikolaou
-        </Typography>
-
+        <Footer />
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import PaidIcon from "@mui/icons-material/Paid";
 import PaymentIcon from "@mui/icons-material/Payment";
-import { Box, Grid, Typography, Button } from "@mui/material";
+import { Grid, Typography, Button } from "@mui/material";
 
 const Contact = () => {
   const classes = useStyles();

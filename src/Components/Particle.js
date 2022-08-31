@@ -23,12 +23,12 @@ function Particle() {
       init={particlesInit}
       loaded={particlesLoaded}
       options={{
-        background: {
-          color: {
-            value: "#000000",
-          },
-        },
-        fpsLimit: 120,
+        // background: {
+        //   color: {
+        //     value: "#000000",
+        //   },
+        // },
+        fpsLimit: 1200,
         interactivity: {
           events: {
             onClick: {
@@ -59,8 +59,8 @@ function Particle() {
             color: "#ffffff",
             distance: 250,
             enable: true,
-            opacity: 0.8,
-            width: 1,
+            opacity: 0.2,
+            width: 0.7,
           },
           collisions: {
             enable: true,
@@ -72,7 +72,7 @@ function Particle() {
               default: "bounce",
             },
             random: false,
-            speed: 6,
+            speed: 4,
             straight: false,
           },
           number: {
