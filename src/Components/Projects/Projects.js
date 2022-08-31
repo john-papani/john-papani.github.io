@@ -49,7 +49,7 @@ const Projects = () => {
                 size="small"
                 onClick={() =>
                   window.open(
-                    "https://github.com/john-papani/Softeng-diodia-Ntua",
+                    "https://github.com/john-papani/Saas-EnergyLive-Ntua",
                     "_blank"
                   )
                 }
