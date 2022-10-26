@@ -9,16 +9,23 @@ import {
 } from "@mui/material";
 import { useStyles } from "./projectstyle";
 import React from "react";
-import covidimg from "../../img/covid_project.jpg"
-import gradebookimg from "../../img/gradebook_project.png"
-import recipeimg from "../../img/recipe_project.png"
-import softengimg from "../../img/softeng_project.jpg"
-import energyliveimg from "../../img/energylive22.png"
+import covidimg from "../../img/covid_project.jpg";
+import gradebookimg from "../../img/gradebook_project.png";
+import recipeimg from "../../img/recipe_project.png";
+import softengimg from "../../img/softeng_project.jpg";
+import energyliveimg from "../../img/energylive22.png";
 const Projects = () => {
   const classes = useStyles();
   return (
     <>
-      <Grid container spacing={3} className={classes.container}>
+      <Grid
+        container
+        spacing={3}
+        className={classes.container}
+        direction="row"
+        justifyContent="center"
+        alignItems="flex-start"
+        >
         <Grid item xs={12}>
           <Typography variant="h5">Projects</Typography>
         </Grid>

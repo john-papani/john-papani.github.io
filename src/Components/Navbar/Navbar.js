@@ -89,6 +89,11 @@ const Navbar = (props) => {
               Ioannis Papanikolaou
             </Typography>
             <FormControlLabel
+              sx={{
+                background: "#d9d9d9",
+                borderRadius: "12px",
+                paddingRight: "5px",
+              }}
               control={
                 <Switch
                   color="warning"

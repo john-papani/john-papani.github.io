@@ -9,7 +9,7 @@ function LanguageTools() {
       </Typography>
       <Grid
         container
-        spacing={1}
+        spacing={2}
         sx={{ width: "80%", margin: "auto", paddingBottom: "2%" }}
       >
         <Grid item xs={3} md={1}>
