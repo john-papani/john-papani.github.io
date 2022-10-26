@@ -1,18 +1,12 @@
 import React from "react";
 import { useStyles } from "./personalInformationstyle";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import { green } from "@mui/material/colors";
-import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import { Box, Grid, Typography, Avatar, Chip } from "@mui/material";
 import photoprofilegiannis from "../../img/giannis.jpg";
-import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
 import { MovingComponent } from "react-moving-text";
-import LiveTime from "../Helpers/autoreloadTime";
-const PersonalInformation = () => {
+const PersonalInformation = (props) => {
   const classes = useStyles();
+  const { businessProfile } = props;
   return (
     <div className={classes.personalInformation}>
       <Box className={classes.typedContainer}>
@@ -29,7 +23,7 @@ const PersonalInformation = () => {
 
         <MovingComponent
           type="fadeInFromLeft"
-          duration="1500ms"
+          duration="300ms"
           delay="0s"
           direction="normal"
           timing="ease"

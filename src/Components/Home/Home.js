@@ -1,4 +1,4 @@
-import { Typography, Divider, Fab } from "@mui/material";
+import { Alert, Divider, Fab, Snackbar } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import Contact from "../Contact/Contact";
 import Navbar from "../Navbar/Navbar";
@@ -12,13 +12,15 @@ import Grades from "../Grades/Grades";
 import ShortBio from "../ShortBio/ShortBio";
 import Footer from "../Footer/Footer";
 import Particle from "../Particle";
+import CloseIcon from "@mui/icons-material/Close";
 
 const Home = () => {
   const [showScroll, setShowScroll] = useState(false);
-  // const [openAlert, setOpenAlert] = React.useState(false);
+  const [openAlert, setOpenAlert] = useState(true);
   // const [messageAlert, setMessageAlert] = useState("");
   // const [severityAlert, setSeverityAlert] = useState("");
   const [businessProfile, setBusinessProfile] = useState(false);
+  const classes = useStyles();
 
   useEffect(
     () =>
@@ -27,6 +29,13 @@ const Home = () => {
       ),
     []
   );
+
+  const handleCloseAlert = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setOpenAlert(false);
+  };
 
   const checkScrollTop = () => {
     if (!showScroll && window.pageYOffset > 400) {
@@ -43,7 +52,6 @@ const Home = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [businessProfile]);
-  const classes = useStyles();
   return (
     <div className={classes.wholepage}>
       <div className="scroll-to-top">
@@ -56,7 +64,7 @@ const Home = () => {
           setBusinessProfile={setBusinessProfile}
         />
         <Particle />
-        <PersonalInformation />
+        <PersonalInformation businessProfile={businessProfile} />
         <Divider />
         <ShortBio />
         <Divider />
@@ -79,9 +87,24 @@ const Home = () => {
         <Divider />
         <Grades />
         <Divider />
-        <Contact />
-        <Divider />
-        <Footer />
+        <Contact businessProfile={businessProfile} />
+        {businessProfile ? "" : <Divider />}
+        <Footer businessProfile={businessProfile} />
+        <Snackbar
+          anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
+          open={openAlert}
+          autoHideDuration={30000}
+          onClose={handleCloseAlert}
+        >
+          <Alert severity="warning" onClose={handleCloseAlert}>
+            Send me your feedback at{" "}
+            <u>
+              <i>
+                <b>johnpapan1@gmail.com</b>
+              </i>
+            </u>
+          </Alert>
+        </Snackbar>
       </div>
     </div>
   );
