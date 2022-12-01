@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.abd64e84.css",
-    "main.js": "/static/js/main.0e3cafb9.js",
+    "main.js": "/static/js/main.5ba468e8.js",
     "static/js/937.8fd9669c.chunk.js": "/static/js/937.8fd9669c.chunk.js",
     "static/media/energylive22.png": "/static/media/energylive22.eefdd587c38ed21e9c45.png",
     "static/media/recipe_project.png": "/static/media/recipe_project.3479d12b0b6c8708e66c.png",
@@ -12,11 +12,11 @@
     "static/media/gradebook_project.png": "/static/media/gradebook_project.58df998a74f73758e552.png",
     "index.html": "/index.html",
     "main.abd64e84.css.map": "/static/css/main.abd64e84.css.map",
-    "main.0e3cafb9.js.map": "/static/js/main.0e3cafb9.js.map",
+    "main.5ba468e8.js.map": "/static/js/main.5ba468e8.js.map",
     "937.8fd9669c.chunk.js.map": "/static/js/937.8fd9669c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.abd64e84.css",
-    "static/js/main.0e3cafb9.js"
+    "static/js/main.5ba468e8.js"
   ]
 }
