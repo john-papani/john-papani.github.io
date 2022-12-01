@@ -10,8 +10,9 @@ const BioCV = () => {
   const downloadCV = () => {
     console.log("as");
     var link = document.createElement("a");
-    link.href = "cv.jpg";
-    link.download = "cv.jpg";
+    link.href = "./Components/About/cv.pdf"
+    link.target="_blank"
+    link.download = "cv.pdf";
     console.log(link);
     link.dispatchEvent(new MouseEvent("click"));
   };
