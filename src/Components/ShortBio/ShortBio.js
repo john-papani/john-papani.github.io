@@ -17,17 +17,39 @@ const ShortBio = () => {
           padding="1%"
           textAlign="justify"
         >
-          <Grid item xs={12} sx={{ backgroundColor: "#EEEDE7",borderRadius:'12%' }}>
+          <Grid
+            item
+            xs={12}
+            sx={{ backgroundColor: "#EEEDE7", borderRadius: "12%" }}
+          >
             <Card>
               <CardContent>
-                My name is Ioannis Papanikolaou and I am 22 years old.
+                Hello there! Welcome to my personal portfolio website. My name
+                is
+                <b> Ioannis Papanikolaou</b>, and I'm thrilled to have you here.
+                At the age of 23, I'm concentrating on my studies at the
+                prestigious National Technical University of Athens, where I'm
+                pursuing a degree in<b> Electrical and Computer Engineering</b>.{" "}
                 <br />
-                In this period of time I am focusing on my studies, since I am
-                studying at the National Technical University of Athens in the
-                Electrical and Computer Engineering department.
-                <br />I live in Ilioupoli, Athens and I plan to become a full
-                stack developer. I'm open to new ideas always by making them
-                coming in real life with a good team.
+                <br />
+                My home is the vibrant city of Athens, specifically the charming
+                neighborhood of Ilioupoli. As I progress through my academic
+                career, my ultimate goal is to become a versatile and skilled
+                full stack developer (or not). I get a lot of satisfaction from
+                transforming abstract ideas into concrete solutions, and I'm
+                always up for exploring new ideas and pushing boundaries.
+                <br />
+                <br />
+                <b>Collaboration is key for me.</b> I believe that great ideas
+                come to life when passionate individuals work together in a
+                supportive team environment. So, if you have an exciting project
+                or an innovative idea that you'd like to bring to fruition, I'm
+                all ears. Let's connect and make it happen! <br />
+                <br />
+                Feel free to explore my portfolio and learn more about my
+                skills, experiences, and projects.
+                <br /> Thank you for visiting, and I look forward to connecting
+                with you soon.
               </CardContent>
             </Card>
           </Grid>
