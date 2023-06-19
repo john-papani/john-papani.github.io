@@ -12,14 +12,13 @@ import Grades from "../Grades/Grades";
 import ShortBio from "../ShortBio/ShortBio";
 import Footer from "../Footer/Footer";
 import Particle from "../Particle";
-import CloseIcon from "@mui/icons-material/Close";
 
 const Home = () => {
   const [showScroll, setShowScroll] = useState(false);
   const [openAlert, setOpenAlert] = useState(true);
   // const [messageAlert, setMessageAlert] = useState("");
   // const [severityAlert, setSeverityAlert] = useState("");
-  const [businessProfile, setBusinessProfile] = useState(false);
+  const [businessProfile, setBusinessProfile] = useState(true);
   const classes = useStyles();
 
   useEffect(
@@ -88,7 +87,8 @@ const Home = () => {
         <Grades />
         <Divider />
         <Contact businessProfile={businessProfile} />
-        {businessProfile ? "" : <Divider />}
+        {/* {businessProfile ? "" : <Divider />} */}
+        <Divider />
         <Footer businessProfile={businessProfile} />
         <Snackbar
           anchorOrigin={{ vertical: "bottom", horizontal: "left" }}

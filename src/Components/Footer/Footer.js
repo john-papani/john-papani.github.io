@@ -20,7 +20,7 @@ const Footer = (props) => {
           },
         }}
       >
-        <Grid item xs={12} sx={{ display: businessProfile ? "none" : "auto" }}>
+        <Grid item xs={12} sx={{ display: businessProfile ? "none" : "none" }}>
           <Grid
             container
             direction="row"
@@ -64,13 +64,13 @@ const Footer = (props) => {
           </Grid>
         </Grid>
         <Grid item xs={12}>
-          {businessProfile ? (
+          {/* {businessProfile ? (
             ""
           ) : (
             <Typography variant="h5" sx={{ fontWeight: "bold" }}>
               Made with ❤️ by
             </Typography>
-          )}
+          )} */}
           <Typography variant="h5" sx={{ fontWeight: "bold" }}>
             © Ioannis Papanikolaou
           </Typography>
