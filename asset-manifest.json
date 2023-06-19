@@ -1,22 +1,24 @@
 {
   "files": {
     "main.css": "/static/css/main.abd64e84.css",
-    "main.js": "/static/js/main.5ba468e8.js",
+    "main.js": "/static/js/main.0b94b8ee.js",
     "static/js/937.8fd9669c.chunk.js": "/static/js/937.8fd9669c.chunk.js",
     "static/media/energylive22.png": "/static/media/energylive22.eefdd587c38ed21e9c45.png",
     "static/media/recipe_project.png": "/static/media/recipe_project.3479d12b0b6c8708e66c.png",
     "static/media/cv.jpg": "/static/media/cv.488a5b62396d42e36b2d.jpg",
     "static/media/softeng_project.jpg": "/static/media/softeng_project.053bc8c5a6716251c03f.jpg",
     "static/media/covid_project.jpg": "/static/media/covid_project.8991bbbd31baba52aa71.jpg",
-    "static/media/giannis.jpg": "/static/media/giannis.fb80102930adc1358462.jpg",
+    "static/media/iot-live-streaming.jpg": "/static/media/iot-live-streaming.43bf7688d454baee383a.jpg",
+    "static/media/taxi_advdb.jpg": "/static/media/taxi_advdb.42bf308e3f2dc1f1dcaf.jpg",
     "static/media/gradebook_project.png": "/static/media/gradebook_project.58df998a74f73758e552.png",
+    "static/media/giannis_1.jpg": "/static/media/giannis_1.758699043add43aefcca.jpg",
     "index.html": "/index.html",
     "main.abd64e84.css.map": "/static/css/main.abd64e84.css.map",
-    "main.5ba468e8.js.map": "/static/js/main.5ba468e8.js.map",
+    "main.0b94b8ee.js.map": "/static/js/main.0b94b8ee.js.map",
     "937.8fd9669c.chunk.js.map": "/static/js/937.8fd9669c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.abd64e84.css",
-    "static/js/main.5ba468e8.js"
+    "static/js/main.0b94b8ee.js"
   ]
 }
