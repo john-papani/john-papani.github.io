@@ -14,6 +14,9 @@ import gradebookimg from "../../img/gradebook_project.png";
 import recipeimg from "../../img/recipe_project.png";
 import softengimg from "../../img/softeng_project.jpg";
 import energyliveimg from "../../img/energylive22.png";
+import iotlivestreamingimg from "../../img/iot-live-streaming.jpg";
+import minesweeper from "../../img/minesweeper.png";
+import taxi_adv_db from "../../img/taxi_advdb.jpg"
 const Projects = () => {
   const classes = useStyles();
   return (
@@ -25,9 +28,103 @@ const Projects = () => {
         direction="row"
         justifyContent="center"
         alignItems="flex-start"
-        >
+      >
         <Grid item xs={12}>
           <Typography variant="h5">Projects</Typography>
+        </Grid>
+        <Grid item md={6} xs={12}>
+          <Card className={classes.card}>
+            <CardMedia
+              component="img"
+              image={iotlivestreamingimg}
+              alt="softeng logo"
+            />
+            <CardContent>
+              <Typography className={classes.cardheader}>
+                IoT-Live-streaming
+              </Typography>
+              <Typography className={classes.cardtext}>
+                This project was part of the Analysis and Design of Information
+                Systems course at NTUA. (2022-23, Fall Semester).
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <Button
+                size="small"
+                onClick={() =>
+                  window.open(
+                    "https://github.com/john-papani/IoT-Live-streaming",
+                    "_blank"
+                  )
+                }
+              >
+                Learn More
+              </Button>
+            </CardActions>
+          </Card>
+        </Grid>
+        <Grid item md={6} xs={12}>
+          <Card className={classes.card}>
+            <CardMedia component="img" image={minesweeper} alt="softeng logo" />
+            <CardContent>
+              <Typography className={classes.cardheader}>
+                Minesweeper Game with Super Mine
+              </Typography>
+              <Typography className={classes.cardtext}>
+                This project is a Java implementation of the classic Minesweeper
+                game, with the added feature of a "super mine".
+                <br />
+                This project was conducted for the course of Multimedia
+                Technology at the 2022-23 Fall semester of the Electrical and
+                Computer Engineering School at the National Technical University
+                of Athens.
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <Button
+                size="small"
+                onClick={() =>
+                  window.open(
+                    "https://github.com/john-papani/minesweeper_multimedia_ntua_22",
+                    "_blank"
+                  )
+                }
+              >
+                Learn More
+              </Button>
+            </CardActions>
+          </Card>
+        </Grid>
+        <Grid item md={6} xs={12}>
+          <Card className={classes.card}>
+            <CardMedia
+              component="img"
+              image={taxi_adv_db}
+              alt="taxi_adv_db logo"
+            />
+            <CardContent>
+              <Typography className={classes.cardheader}>
+                Advanced Topics in Database Systems 2022-2023
+              </Typography>
+              <Typography className={classes.cardtext}>
+                TLC-NYC-Big-Data-Analytics <br /> Semester project for the
+                Advanced Database Systems Course @ NTUA ECE 2022-2023
+              </Typography>
+            </CardContent>
+            <CardActions>
+              <Button
+                size="small"
+                onClick={() =>
+                  window.open(
+                    "https://github.com/john-papani/Saas-EnergyLive-Ntua",
+                    "_blank"
+                  )
+                }
+              >
+                Learn More
+              </Button>
+            </CardActions>
+          </Card>
         </Grid>
         <Grid item md={6} xs={12}>
           <Card className={classes.card}>
