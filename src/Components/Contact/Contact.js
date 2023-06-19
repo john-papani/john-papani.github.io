@@ -1,11 +1,10 @@
 import React from "react";
 import { useStyles } from "./constactstyle";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
-import PaidIcon from "@mui/icons-material/Paid";
-import PaymentIcon from "@mui/icons-material/Payment";
 import { Grid, Typography, Button } from "@mui/material";
 
 const Contact = (props) => {
@@ -28,14 +27,31 @@ const Contact = (props) => {
           ></iframe>
         </Grid>
 
-        <Grid item md={12} lg={3}>
+        <Grid item md={12} lg={6}>
           <Grid container direction="column" spacing={3}>
             <Grid item xs={12}>
               <Typography variant="h5">Contact with me! </Typography>
-              <Typography width="75%" paddingLeft="5%">
-                If you require any further information, please feel free to
-                contact me.
+              <Typography width="75%" paddingLeft="2%">
+                (If you require any further information, please feel free to
+                contact me.)
               </Typography>
+            </Grid>
+            <Grid item>
+              <Button
+                variant="contained"
+                color="primary"
+                size="large"
+                startIcon={<LinkedInIcon />}
+                onClick={() =>
+                  window.open(
+                    "https://www.linkedin.com/in/ioannis-papanikolaou-1b205a259",
+                    "_blank"
+                  )
+                }
+                style={{ textTransform: "none" }}
+              >
+                Ioannis Papanikolaou
+              </Button>
             </Grid>
             <Grid item>
               <Button
@@ -80,18 +96,22 @@ const Contact = (props) => {
               </Button>
             </Grid>
             <Grid item>
-              <Button
-                color="inherit"
-                variant="contained"
-                size="large"
-                startIcon={<InstagramIcon />}
-                onClick={() =>
-                  window.open("http://www.instagram.com/john.papp", "_blank")
-                }
-                style={{ textTransform: "none" }}
-              >
-                john.papp
-              </Button>
+              {businessProfile ? (
+                ""
+              ) : (
+                <Button
+                  color="inherit"
+                  variant="contained"
+                  size="large"
+                  startIcon={<InstagramIcon />}
+                  onClick={() =>
+                    window.open("http://www.instagram.com/john.papp", "_blank")
+                  }
+                  style={{ textTransform: "none" }}
+                >
+                  john.papp
+                </Button>
+              )}
             </Grid>
           </Grid>
         </Grid>
@@ -104,7 +124,7 @@ const Contact = (props) => {
             justifyContent="space-around"
             alignItems="flex-end"
           >
-            <Grid item xs={12}>
+            {/* <Grid item xs={12}>
               {businessProfile ? (
                 <Typography variant="h5">Donate me! </Typography>
               ) : (
@@ -140,7 +160,7 @@ const Contact = (props) => {
               >
                 Revolut.me/ioanni4t68
               </Button>
-            </Grid>
+            </Grid> */}
           </Grid>
         </Grid>
       </Grid>
