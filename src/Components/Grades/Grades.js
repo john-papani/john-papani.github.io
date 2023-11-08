@@ -34,8 +34,11 @@ const Grades = () => {
                 <Grid item xs={12} marginBottom="4%">
                   <Card className={classes.card}>
                     <CardContent>
-                      <Typography variant="h5" className={classes.cardTitle}>Average </Typography>
-                      <AverageComputation data={data} />
+                      <Typography variant="h5" className={classes.cardTitle}>
+                        Average{" "}
+                      </Typography>
+                      {/* <AverageComputation data={data} /> */}
+                      7+
                     </CardContent>
                   </Card>
                 </Grid>
@@ -46,7 +49,8 @@ const Grades = () => {
                       <Typography variant="h5" className={classes.cardTitle}>
                         Succesfully passed courses
                       </Typography>
-                      {passedCourses}
+                      {/* {passedCourses} */}
+                      All minus two.
                     </CardContent>
                   </Card>
                 </Grid>

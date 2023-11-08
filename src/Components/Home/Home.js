@@ -12,6 +12,7 @@ import Grades from "../Grades/Grades";
 import ShortBio from "../ShortBio/ShortBio";
 import Footer from "../Footer/Footer";
 import Particle from "../Particle";
+import Modal from "../Modal/Modal";
 
 const Home = () => {
   const [showScroll, setShowScroll] = useState(false);
@@ -53,6 +54,7 @@ const Home = () => {
   }, [businessProfile]);
   return (
     <div className={classes.wholepage}>
+      <Modal/>
       <div className="scroll-to-top">
         <Navbar
           className={classes.navbar}
