@@ -7,8 +7,9 @@ import {
   Button,
   CardMedia,
 } from "@mui/material";
+import { ImageList, ImageListItem } from "@mui/material";
 import { useStyles } from "./projectstyle";
-import React from "react";
+import React, { useState } from "react";
 import covidimg from "../../img/covid_project.jpg";
 import gradebookimg from "../../img/gradebook_project.png";
 import recipeimg from "../../img/recipe_project.png";
@@ -16,274 +17,94 @@ import softengimg from "../../img/softeng_project.jpg";
 import energyliveimg from "../../img/energylive22.png";
 import iotlivestreamingimg from "../../img/iot-live-streaming.jpg";
 import minesweeper from "../../img/minesweeper.png";
-import taxi_adv_db from "../../img/taxi_advdb.jpg"
+import taxi_adv_db from "../../img/taxi_advdb.jpg";
+
 const Projects = () => {
   const classes = useStyles();
+  const size_md = 3;
+  const size_xs = 6;
+  const [hoveredCard, setHoveredCard] = useState(null);
+
+  const itemData = [
+    {
+      img: "https://images.unsplash.com/photo-1551963831-b3b1ca40c98e",
+      title: "Breakfast",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1551782450-a2132b4ba21d",
+      title: "Burger",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1682685797661-9e0c87f59c60",
+      title: "Sky",
+    },
+    {
+      img: "https://images.unsplash.com/photo-1543858710-af0479276bed",
+      title: "XMas",
+    },
+  ];
+
   return (
-    <>
+    <div id="projects">
       <Grid
         container
         spacing={3}
         className={classes.container}
         direction="row"
         justifyContent="center"
-        alignItems="flex-start"
+        // alignItems="flex-start"
+        alignItems="stretch"
       >
         <Grid item xs={12}>
           <Typography variant="h5">Projects</Typography>
         </Grid>
-        <Grid item md={6} xs={12}>
-          <Card className={classes.card}>
-            <CardMedia
-              component="img"
-              image={iotlivestreamingimg}
-              alt="softeng logo"
-            />
-            <CardContent>
-              <Typography className={classes.cardheader}>
-                IoT-Live-streaming
-              </Typography>
-              <Typography className={classes.cardtext}>
-                This project was part of the Analysis and Design of Information
-                Systems course at NTUA. (2022-23, Fall Semester).
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button
-                size="small"
-                onClick={() =>
-                  window.open(
-                    "https://github.com/john-papani/IoT-Live-streaming",
-                    "_blank"
-                  )
-                }
-              >
-                Learn More
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
-        <Grid item md={6} xs={12}>
-          <Card className={classes.card}>
-            <CardMedia component="img" image={minesweeper} alt="softeng logo" />
-            <CardContent>
-              <Typography className={classes.cardheader}>
-                Minesweeper Game with Super Mine
-              </Typography>
-              <Typography className={classes.cardtext}>
-                This project is a Java implementation of the classic Minesweeper
-                game, with the added feature of a "super mine".
-                <br />
-                This project was conducted for the course of Multimedia
-                Technology at the 2022-23 Fall semester of the Electrical and
-                Computer Engineering School at the National Technical University
-                of Athens.
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button
-                size="small"
-                onClick={() =>
-                  window.open(
-                    "https://github.com/john-papani/minesweeper_multimedia_ntua_22",
-                    "_blank"
-                  )
-                }
-              >
-                Learn More
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
-        <Grid item md={6} xs={12}>
-          <Card className={classes.card}>
-            <CardMedia
-              component="img"
-              image={taxi_adv_db}
-              alt="taxi_adv_db logo"
-            />
-            <CardContent>
-              <Typography className={classes.cardheader}>
-                Advanced Topics in Database Systems 2022-2023
-              </Typography>
-              <Typography className={classes.cardtext}>
-                TLC-NYC-Big-Data-Analytics <br /> Semester project for the
-                Advanced Database Systems Course @ NTUA ECE 2022-2023
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button
-                size="small"
-                onClick={() =>
-                  window.open(
-                    "https://github.com/john-papani/Saas-EnergyLive-Ntua",
-                    "_blank"
-                  )
-                }
-              >
-                Learn More
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
-        <Grid item md={6} xs={12}>
-          <Card className={classes.card}>
-            <CardMedia
-              component="img"
-              image={energyliveimg}
-              alt="softeng logo"
-            />
-            <CardContent>
-              <Typography className={classes.cardheader}>
-                EnergyLive2022 2021-2022
-              </Typography>
-              <Typography className={classes.cardtext}>
-                'EnergyLive2022' is a Software as a Service application, where
-                the user can see various charts related to Energy consumption
-                and generation in European countries.
-                <br />
-                This project was conducted for the course of Software as a
-                Service at the 2021-2022 Spring semester of the Electrical and
-                Computer Engineering School at the National Technical University
-                of Athens.
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button
-                size="small"
-                onClick={() =>
-                  window.open(
-                    "https://github.com/john-papani/Saas-EnergyLive-Ntua",
-                    "_blank"
-                  )
-                }
-              >
-                Learn More
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
-        <Grid item md={6} xs={12}>
-          <Card className={classes.card}>
-            <CardMedia component="img" image={softengimg} alt="softeng logo" />
-            <CardContent>
-              <Typography className={classes.cardheader}>
-                Software Engineering ECE NTUA 2021-2022
-              </Typography>
 
-              <Typography className={classes.cardtext}>
-                A web app about interoperability in tolls highways with
-                different automatic crossing systems.
-                <br />
-                This project was conducted for the course of Software
-                Engineering at the 2021-2022 Winter semester of the Electrical
-                and Computer Engineering School at the National Technical
-                University of Athens.
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button
-                size="small"
-                onClick={() =>
-                  window.open(
-                    "https://github.com/john-papani/Softeng-diodia-Ntua",
-                    "_blank"
-                  )
-                }
-              >
-                Learn More
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
-        <Grid item md={6} xs={12}>
-          <Card className={classes.card}>
-            <CardMedia
-              component="img"
-              image={gradebookimg}
-              alt="gradebook logo"
-            />
-            <CardContent>
-              <Typography className={classes.cardheader}>GradeBook </Typography>
-              <Typography className={classes.cardtext}>
-                A simple web app where you can calculate the Αverage for your
-                university courses.
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button
-                size="small"
-                onClick={() =>
-                  window.open(
-                    "https://github.com/john-papani/Gradebook",
-                    "_blank"
-                  )
-                }
-              >
-                Learn More
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
-        <Grid item md={6} xs={12}>
-          <Card className={classes.card}>
-            <CardMedia component="img" image={covidimg} alt="covid19 logo" />
-            <CardContent>
-              <Typography className={classes.cardheader}>
-                Covid-19 Tracker
-              </Typography>
-              <Typography className={classes.cardtext}>
-                Chart with Cases and Deaths for Every Country.
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button
-                size="small"
-                onClick={() =>
-                  window.open(
-                    "https://github.com/john-papani/covid19-tracker",
-                    "_blank"
-                  )
-                }
-              >
-                Learn More
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
-        <Grid item md={6} xs={12}>
-          <Card className={classes.card}>
-            <CardMedia
-              component="img"
-              image={recipeimg}
-              alt="recipe-treasure logo "
-            />
-            <CardContent>
-              <Typography className={classes.cardheader}>
-                Recipe Treasure{" "}
-              </Typography>
-              <Typography className={classes.cardtext}>
-                A simple web app where you can find some delicious recipes from
-                all over the world
-              </Typography>
-            </CardContent>
-            <CardActions>
-              <Button
-                size="small"
-                onClick={() =>
-                  window.open(
-                    "https://github.com/john-papani/Recipe-Treasure",
-                    "_blank"
-                  )
-                }
-              >
-                Learn More
-              </Button>
-            </CardActions>
-          </Card>
-        </Grid>
+        {itemData.map((item) => (
+          <Grid item key={item.img} md={size_md} xs={size_xs}>
+            <div
+              onMouseEnter={() => setHoveredCard(item.img)}
+              onMouseLeave={() => setHoveredCard(null)}
+            >
+              <img
+                src={item.img}
+                alt="softeng logo"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  opacity: hoveredCard === item.img ? 0.3 : 1,
+                  transition: "0.5s ease",
+                  // backfaceVisibility: "hidden",
+                }}
+                onClick={() => {
+                  window.open("https://www.google.com");
+                }}
+              />
+              {hoveredCard === item.img && (
+                <div
+                  style={{
+                    transition: "0.5s ease",
+                    opacity: 1,
+                    position: "relative",
+                    // top: "50%",
+                    width: "70%",
+                    // right: "10%",
+                    transform: "translate(35%, -500%)",
+                    msTransform: "translate(-50%, -50%)",
+                    textAlign: "center",
+                    backgroundColor: "#04AA6D",
+                    color: "red",
+                    fontSize: "10px",
+                    padding: "0px 0px 0px 0px",
+                  }}
+                >
+                  {item.title}
+                </div>
+              )}
+            </div>
+          </Grid>
+        ))}
       </Grid>
-    </>
+    </div>
   );
 };
 

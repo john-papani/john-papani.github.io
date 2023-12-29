@@ -14,6 +14,7 @@ import Footer from "../Footer/Footer";
 import Particle from "../Particle";
 import Modal from "../Modal/Modal";
 
+import { useSmoothScroll } from "../../basic_hooks/useSmoothScroll";
 const Home = () => {
   const [showScroll, setShowScroll] = useState(false);
   const [openAlert, setOpenAlert] = useState(true);
@@ -22,13 +23,13 @@ const Home = () => {
   const [businessProfile, setBusinessProfile] = useState(true);
   const classes = useStyles();
 
-  useEffect(
-    () =>
-      fetch(
-        "https://api.countapi.xyz/hit/john-papani.github.io/bec3e21b-8894-4028-a57d-926fdb17d5d3"
-      ),
-    []
-  );
+  // useEffect(
+  //   () =>
+  //     fetch(
+  //       "https://api.countapi.xyz/hit/john-papani.github.io/bec3e21b-8894-4028-a57d-926fdb17d5d3"
+  //     ),
+  //   []
+  // );
 
   const handleCloseAlert = (event, reason) => {
     if (reason === "clickaway") {
@@ -52,9 +53,11 @@ const Home = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [businessProfile]);
+
+  useSmoothScroll();
   return (
     <div className={classes.wholepage}>
-      <Modal/>
+      <Modal />
       <div className="scroll-to-top">
         <Navbar
           className={classes.navbar}
@@ -64,13 +67,14 @@ const Home = () => {
           // setSeverityAlert={setSeverityAlert}
           setBusinessProfile={setBusinessProfile}
         />
+        <div className={classes.backgif}></div>
         <Particle />
         <PersonalInformation businessProfile={businessProfile} />
-        <Divider />
+        <Divider sx={{ bgcolor: "white" }} />
         <ShortBio />
-        <Divider />
-        {businessProfile ? <Projects /> : ""}
-        <Divider />
+        <Divider sx={{ bgcolor: "white" }} />
+        {/* {businessProfile ? <Projects /> : ""} */}
+        <Divider sx={{ bgcolor: "white" }} />
 
         <Fab
           size="small"
@@ -82,15 +86,16 @@ const Home = () => {
           <KeyboardArrowUpIcon />
         </Fab>
 
-        <About />
-        <Divider />
+        {/* <About /> */}
+        <Divider sx={{ bgcolor: "white" }} />
         {businessProfile ? <LanguageTools /> : ""}
-        <Divider />
-        <Grades />
-        <Divider />
+        <Divider sx={{ bgcolor: "white" }} />
+        <Divider sx={{ bgcolor: "white" }} />
+        {/* <Grades /> */}
+        {/* <Divider sx={{ bgcolor: "white" }} /> */}
         <Contact businessProfile={businessProfile} />
-        {/* {businessProfile ? "" : <Divider />} */}
-        <Divider />
+        {/* {businessProfile ? "" : <Divider sx={{ bgcolor: "white" }} />} */}
+        <Divider orientation="horizontal" />
         <Footer businessProfile={businessProfile} />
         <Snackbar
           anchorOrigin={{ vertical: "bottom", horizontal: "left" }}

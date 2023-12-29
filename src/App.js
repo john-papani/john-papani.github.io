@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import "./App.css";
 import About from "./Components/About/About";
 import Home from "./Components/Home/Home";
 import Admin from "./Components/Admin/Admin";
@@ -42,6 +41,7 @@ const App = () => {
             "textarea",
             "button",
             ".link",
+            "Button",
           ]}
         />
       </Router>

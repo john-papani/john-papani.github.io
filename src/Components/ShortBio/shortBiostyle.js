@@ -19,9 +19,13 @@ const main_theme = createTheme({
 export const useStyles = makeStyles((theme) => ({
   shortbiocontainer: {
     paddingTop: "2%",
-    width: "80%",
-    paddingRight: "10%",
-    paddingLeft: "10%",
-    paddingBottom: "2%",
+    // width: "80%",
+      paddingRight: "10%",
+      paddingLeft: "10%",
+      paddingBottom: "2%",
+    // width: "100vw",
+    // height: "95vh",
+    minHeight:"95vh"
+    
   },
 }));

@@ -17,6 +17,15 @@ const main_theme = createTheme({
 });
 
 export const useStyles = makeStyles((theme) => ({
+  contact:{
+    width: "100vw",
+    // height: "100vh",
+    // minHeight:"50vh",
+    // textAlign: "center",
+    // paddingBottom: "1%",
+    // paddingTop: "1%",
+  },
+  
   container: {
     width: "80%",
     paddingLeft: "10%",

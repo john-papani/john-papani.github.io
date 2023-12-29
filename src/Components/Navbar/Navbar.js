@@ -20,7 +20,8 @@ import LiveTime from "../Helpers/autoreloadTime";
 // const pages = ["Projects","CV and Information",  "Contact"];
 //  const pages = ["Short Bio","CV and Information",  "Contact"];
 // const pages = ["MONO KOULIS 🤡"];
-const pages = [""];
+const pages = ["about", "contact"];
+
 
 function ElevationScroll(props) {
   const { children } = props;
@@ -31,7 +32,13 @@ function ElevationScroll(props) {
 
   return React.cloneElement(children, {
     elevation: trigger ? 15 : 0,
-    color: trigger ? "inherit" : "transparent",
+    style: {
+      backgroundColor: trigger ? "transparent" : "transparent",
+      transition: "background-color 0.3s ease-out", // Add a transition for a smooth effect
+      backdropFilter: trigger ? "blur(250px)": "none",
+    },
+    // color: trigger ? "inherit" : "transparent",
+    position: trigger ? "fixed" : "absolute",
   });
 }
 
@@ -48,14 +55,16 @@ const Navbar = (props) => {
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleCloseNavMenu = () => {
+  const handleCloseNavMenu = (page) => {
     // const koulis = () => {
     //   window.open("https://nd.gr", "_blank");
     // };
     // for (let i = 0; i < 10; i++) {
     //   koulis();
     // }
-    // document.getElementById("about").scrollIntoView({behavior: "smooth",  block: "center", inline: "start"});
+    document
+      .getElementById(page.page)
+      .scrollIntoView({ behavior: "smooth", block: "center", inline: "start" });
   };
   const handleBusinessSwitch = () => {
     // setSeverityAlert(openAlert ? "success" : "error");
@@ -88,7 +97,7 @@ const Navbar = (props) => {
             >
               Ioannis Papanikolaou
             </Typography>
-            <FormControlLabel
+            {/* <FormControlLabel
               sx={{
                 background: "#d9d9d9",
                 borderRadius: "12px",
@@ -96,20 +105,20 @@ const Navbar = (props) => {
               }}
               control={
                 <Switch
-                  defaultChecked 
+                  defaultChecked
                   color="warning"
                   onChange={() => handleBusinessSwitch()}
                 />
               }
               label="Bussiness"
-            />
+            /> */}
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               {pages.map((page) => (
                 <Tooltip title="DON'T PRESS !" arrow>
                   <Button
                     key={page}
                     onClick={() => handleCloseNavMenu({ page })}
-                    sx={{ my: 2, color: "black", display: "block" }}
+                    sx={{ my: 2, color: "inherit", display: "block" }}
                   >
                     {page}
                   </Button>
@@ -118,10 +127,11 @@ const Navbar = (props) => {
               <Chip
                 label={<LiveTime />}
                 sx={{
-                  color: "black",
+                  color: "inherit",
                   fontWeight: "bold",
                   position: "absolute",
-                  right: "0",
+                  right: "0px",
+                  top: "30%",
                 }}
               />
             </Box>

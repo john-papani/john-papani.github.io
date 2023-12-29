@@ -26,7 +26,7 @@ export const useStyles = makeStyles((theme) => ({
   typedContainer: {
     // backgroundColor: main_theme.palette.primary.main,
     width: "100vw",
-    height: "100vh",
+    minHeight:"100vh",
     textAlign: "center",
     paddingBottom: "1%",
     paddingTop: "1%",

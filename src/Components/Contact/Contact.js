@@ -11,7 +11,7 @@ const Contact = (props) => {
   const classes = useStyles();
   const { businessProfile } = props;
   return (
-    <>
+    <div id="contact" className={classes.contact}>
       <Grid container direction="row" spacing={2} className={classes.container}>
         <Grid item xs={12}>
           <Typography variant="h5">Where I live ?</Typography>
@@ -164,7 +164,7 @@ const Contact = (props) => {
           </Grid>
         </Grid>
       </Grid>
-    </>
+    </div>
   );
 };
 export default Contact;
