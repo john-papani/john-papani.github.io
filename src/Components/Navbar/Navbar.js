@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import BackHandIcon from '@mui/icons-material/BackHand';
+import BackHandIcon from "@mui/icons-material/BackHand";
 import {
   Typography,
   Button,
@@ -9,7 +9,6 @@ import {
   Container,
   Chip,
   useScrollTrigger,
-  Tooltip,
 } from "@mui/material";
 import { useStyles } from "./navbarstyle";
 import LiveTime from "../Helpers/autoreloadTime";
@@ -18,8 +17,7 @@ import LiveTime from "../Helpers/autoreloadTime";
 // const pages = ["Projects","CV and Information",  "Contact"];
 //  const pages = ["Short Bio","CV and Information",  "Contact"];
 // const pages = ["MONO KOULIS 🤡"];
-const pages = ["about", "projects","contact"];
-
+const pages = ["about", "projects", "contact"];
 
 function ElevationScroll(props) {
   const { children } = props;
@@ -34,7 +32,7 @@ function ElevationScroll(props) {
       zIndex: trigger ? 30 : 0, // Adjust the value based on your needs
       backgroundColor: trigger ? "transparent" : "transparent",
       transition: "background-color 0.3s ease-out", // Add a transition for a smooth effect
-      backdropFilter: trigger ? "blur(250px)": "none",
+      backdropFilter: trigger ? "blur(250px)" : "none",
     },
     // color: trigger ? "inherit" : "transparent",
     position: trigger ? "fixed" : "absolute",
@@ -113,15 +111,13 @@ const Navbar = (props) => {
             /> */}
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               {pages.map((page) => (
-                <Tooltip title="DON'T PRESS !" arrow>
-                  <Button
-                    key={page}
-                    onClick={() => handleCloseNavMenu({ page })}
-                    sx={{ my: 2, color: "inherit", display: "block" }}
-                  >
-                    {page}
-                  </Button>
-                </Tooltip>
+                <Button
+                  key={page}
+                  onClick={() => handleCloseNavMenu({ page })}
+                  sx={{ my: 2, color: "inherit", display: "block" }}
+                >
+                  {page}
+                </Button>
               ))}
               <Chip
                 label={<LiveTime />}
