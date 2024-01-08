@@ -1,3 +1,4 @@
+import LinearProgress from "@mui/material/LinearProgress";
 import { Alert, Divider, Fab, Snackbar } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import Contact from "../Contact/Contact";
@@ -6,14 +7,12 @@ import PersonalInformation from "../PersonalInformation/PersonalInformation";
 import Projects from "../Projects/Projects";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { useStyles } from "./homestyle";
-import About from "../About/About";
 import LanguageTools from "../About/LanguageTools";
-import Grades from "../Grades/Grades";
 import ShortBio from "../ShortBio/ShortBio";
 import Footer from "../Footer/Footer";
 import Particle from "../Particle";
 import Modal from "../Modal/Modal";
-
+import ProgressIndicator from "../../basic_hooks/progressBar";
 import { useSmoothScroll } from "../../basic_hooks/useSmoothScroll";
 const Home = () => {
   const [showScroll, setShowScroll] = useState(false);
@@ -55,6 +54,55 @@ const Home = () => {
   }, [businessProfile]);
 
   useSmoothScroll();
+
+  const [loading, setLoading] = useState(true);
+  const [progressValue, setProgressValue] = useState(0);
+  useEffect(() => {
+    const duration = 1500; // Set the total loading time in milliseconds
+    const interval = 100; // Update interval for progress in milliseconds
+    const steps = duration / interval;
+
+    const updateProgress = (step) => {
+      const newProgress = (step / steps) * 100;
+      setProgressValue(newProgress);
+
+      if (step < steps) {
+        setTimeout(() => updateProgress(step + 1), interval);
+      } else {
+        setLoading(false);
+      }
+    };
+
+    // Start the loading simulation after a short delay
+    setTimeout(() => updateProgress(1), interval);
+  }, []);
+
+  if (loading) {
+    return (
+      <div
+        style={{
+          position: "absolute",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%,-50%)",
+          width: "30vw",
+        }}
+      >
+        <LinearProgress
+          sx={{
+            backgroundColor: "white",
+            "& .MuiLinearProgress-bar": {
+              backgroundColor: "red",
+            },
+          }}
+          fourColor
+          variant="determinate"
+          value={progressValue}
+        />
+      </div>
+    );
+  }
+
   return (
     <div className={classes.wholepage}>
       <Modal />
@@ -68,12 +116,14 @@ const Home = () => {
           setBusinessProfile={setBusinessProfile}
         />
         <div className={classes.backgif}></div>
+        <ProgressIndicator />
+
         <Particle />
         <PersonalInformation businessProfile={businessProfile} />
         <Divider sx={{ bgcolor: "white" }} />
         <ShortBio />
         <Divider sx={{ bgcolor: "white" }} />
-        {/* {businessProfile ? <Projects /> : ""} */}
+        {businessProfile ? <Projects /> : ""}
         <Divider sx={{ bgcolor: "white" }} />
 
         <Fab

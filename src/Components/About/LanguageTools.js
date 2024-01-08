@@ -1,20 +1,40 @@
-import React from "react";
-import {Typography, Grid} from "@mui/material"
+import React, { useRef } from "react";
+import { Typography, Grid } from "@mui/material";
 import { useStyles } from "./aboutStyle";
+import { fromto } from "../../basic_hooks/gsap";
 function LanguageTools() {
   const classes = useStyles();
-  const xs_size = 4
-  const md_size = 3
-  const width_height = 100
+  const xs_size = 4;
+  const md_size = 3;
+  const width_height = 100;
+
+  const languageToolsRef = useRef(null);
+  fromto(languageToolsRef);
   return (
     <div className={classes.languageTools}>
-      <Typography variant="h5" sx={{ width: "80%", margin: "auto", paddingTop:"1%", paddingBottom:"1%"}}>
+      <Typography
+        variant="h5"
+        sx={{
+          width: "80%",
+          margin: "auto",
+          paddingTop: "1%",
+          paddingBottom: "1%",
+        }}
+      >
         Languages and Tools:
       </Typography>
       <Grid
         container
         spacing={3}
-        sx={{ width: "80%", margin: "auto", paddingBottom: "2%" }}
+        sx={{
+          width: "80%",
+          margin: "auto",
+          paddingBottom: "2%",
+          "@media (max-width: 600px)": {
+            width: "95%",
+          },
+        }}
+        ref={languageToolsRef}
       >
         <Grid item xs={xs_size} md={md_size}>
           <a href="https://getbootstrap.com" target="_blank" rel="noreferrer">
@@ -89,6 +109,7 @@ function LanguageTools() {
               alt="dotnet"
               width={width_height}
               height={width_height}
+              style={{ backgroundColor: "white", borderRadius: "10%" }}
             />
           </a>
         </Grid>
@@ -99,6 +120,7 @@ function LanguageTools() {
               alt="express"
               width={width_height}
               height={width_height}
+              style={{ backgroundColor: "white", borderRadius: "10%" }}
             />
           </a>
         </Grid>

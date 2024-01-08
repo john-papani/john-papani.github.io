@@ -22,7 +22,7 @@ export const useStyles = makeStyles((theme) => ({
     textAlign: "center",
   },
   container: {
-    paddingTop: "1%",
+    paddingTop: "5%",
     // width: "80%",
     width: "100vw",
     // height: "100vh",

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import AdbIcon from "@mui/icons-material/Adb";
+import BackHandIcon from '@mui/icons-material/BackHand';
 import {
   Typography,
   Button,
@@ -9,8 +9,6 @@ import {
   Container,
   Chip,
   useScrollTrigger,
-  FormControlLabel,
-  Switch,
   Tooltip,
 } from "@mui/material";
 import { useStyles } from "./navbarstyle";
@@ -20,7 +18,7 @@ import LiveTime from "../Helpers/autoreloadTime";
 // const pages = ["Projects","CV and Information",  "Contact"];
 //  const pages = ["Short Bio","CV and Information",  "Contact"];
 // const pages = ["MONO KOULIS 🤡"];
-const pages = ["about", "contact"];
+const pages = ["about", "projects","contact"];
 
 
 function ElevationScroll(props) {
@@ -33,6 +31,7 @@ function ElevationScroll(props) {
   return React.cloneElement(children, {
     elevation: trigger ? 15 : 0,
     style: {
+      zIndex: trigger ? 30 : 0, // Adjust the value based on your needs
       backgroundColor: trigger ? "transparent" : "transparent",
       transition: "background-color 0.3s ease-out", // Add a transition for a smooth effect
       backdropFilter: trigger ? "blur(250px)": "none",
@@ -64,7 +63,7 @@ const Navbar = (props) => {
     // }
     document
       .getElementById(page.page)
-      .scrollIntoView({ behavior: "smooth", block: "center", inline: "start" });
+      .scrollIntoView({ behavior: "smooth", block: "start", inline: "start" });
   };
   const handleBusinessSwitch = () => {
     // setSeverityAlert(openAlert ? "success" : "error");
@@ -82,7 +81,7 @@ const Navbar = (props) => {
       <AppBar className={classes.appbar}>
         <Container maxWidth="xl" sx={{ alignItems: "center" }}>
           <Toolbar disableGutters>
-            <AdbIcon sx={{ mr: 1 }} />
+            <BackHandIcon sx={{ mr: 1 }} />
             <Typography
               variant="h6"
               onClick={() => handleCloseNavMenu()}

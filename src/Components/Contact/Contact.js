@@ -23,6 +23,7 @@ const Contact = (props) => {
             className={classes.googleMapIframe}
             allowFullScreen=""
             loading="lazy"
+            style={{filter: "invert(90%) grayscale(1)"}}
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </Grid>

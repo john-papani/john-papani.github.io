@@ -6,12 +6,19 @@ import Admin from "./Components/Admin/Admin";
 import CssBaseline from "@mui/material/CssBaseline";
 import AnimatedCursor from "react-animated-cursor";
 const App = () => {
-  // const [visited, setVisited] = useState(sessionStorage.getItem("visited"));
-  // const update = () => {
-  //   setVisited(sessionStorage.getItem("visited"));
-  // };
+  const [isPhone, setIsPhone] = useState(false);
 
-  // if (visited) {
+  useEffect(() => {
+    const handleResize = () => {
+      const screenWidth = window.innerWidth;
+      setIsPhone(screenWidth < 600);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   return (
     <>
       <CssBaseline />
@@ -22,28 +29,36 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/admin" element={<Admin />} />
         </Routes>
-        <AnimatedCursor
-          innerSize={8}
-          outerSize={8}
-          color="193, 11, 111"
-          outerAlpha={0.2}
-          innerScale={0.7}
-          outerScale={5}
-          clickables={[
-            "a",
-            'input[type="text"]',
-            'input[type="email"]',
-            'input[type="number"]',
-            'input[type="submit"]',
-            'input[type="image"]',
-            "label[for]",
-            "select",
-            "textarea",
-            "button",
-            ".link",
-            "Button",
-          ]}
-        />
+        {!isPhone && (
+          <AnimatedCursor
+            innerSize={8}
+            outerSize={35}
+            innerScale={0.5}
+            outerScale={0.5}
+            outerAlpha={0.2}
+            hasBlendMode={true}
+            innerStyle={{
+              backgroundColor: "red",
+            }}
+            outerStyle={{
+              border: "3px solid red",
+            }}
+            clickables={[
+              "a",
+              'input[type="text"]',
+              'input[type="email"]',
+              'input[type="number"]',
+              'input[type="submit"]',
+              'input[type="image"]',
+              "label[for]",
+              "select",
+              "textarea",
+              "button",
+              ".link",
+              "Button",
+            ]}
+          />
+        )}
       </Router>
     </>
   );

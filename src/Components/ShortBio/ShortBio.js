@@ -1,37 +1,12 @@
 import { Card, CardContent, Grid, Typography } from "@mui/material";
-import React, { useEffect, useRef } from "react";
+import React, {  useRef } from "react";
 import { useStyles } from "./shortBiostyle";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import BioCV from "../About/BioCV";
 
 const ShortBio = () => {
   const classes = useStyles();
-  const [lettersRef, setlettersRef] = useArrayRef();
-  const triggerRef = useRef(null);
-
-  function useArrayRef() {
-    const lettersRef = useRef([]);
-    lettersRef.current = [];
-    return [lettersRef, (ref) => ref && lettersRef.current.push(ref)];
-  }
-  gsap.registerPlugin(ScrollTrigger);
-  useEffect(() => {
-    const anim = gsap.to(lettersRef.current, {
-      scrollTrigger: {
-        trigger: triggerRef.current,
-        scrub: true,
-        start: "top center",
-        end: "bottom 85%",
-      },
-      color: "#2A2A2A",
-      duration: 5,
-      stagger: 1,
-    });
-    return () => {
-      anim.kill();
-    };
-  }, []);
+  const aboutRef = useRef(null);
+  const cvRef = useRef(null);
 
   const text = `Hello there! Welcome to my personal portfolio website. My name is
         <b> Ioannis Papanikolaou</b>, and I'm thrilled to have you here.
@@ -61,14 +36,19 @@ const ShortBio = () => {
 `;
   return (
     <div id="about">
-      <Grid container spacing={2} className={classes.shortbiocontainer}>
+      <Grid
+        container
+        spacing={2}
+        className={classes.shortbiocontainer}
+        ref={aboutRef}
+      >
         <Grid item xs={12}>
           <Typography variant="h5">About Me </Typography>
         </Grid>
         <Grid
           container
           width="85%"
-          alignItems="flex-start"
+          alignItems="center"
           margin="auto"
           marginTop="0"
           padding="1%"
@@ -77,16 +57,17 @@ const ShortBio = () => {
           <Grid
             item
             xs={12}
+            md={9}
             // sx={{ backgroundColor: "#EEEDE7", borderRadius: "12%" }}
           >
             <Card>
               <CardContent>
-                <div dangerouslySetInnerHTML={{ __html: text }} />
+                <div className={classes.maintext} dangerouslySetInnerHTML={{ __html: text }} />
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={12} ref={triggerRef}>
-          <BioCV/>
+          <Grid item xs={12} md={3} ref={cvRef}>
+            <BioCV />
           </Grid>
         </Grid>
       </Grid>

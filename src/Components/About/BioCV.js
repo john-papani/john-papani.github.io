@@ -28,11 +28,19 @@ const BioCV = () => {
         <Grid item xs={12} md={12}>
           <Button
             variant="contained"
-            color="secondary"
-            onClick={handleOpenModal}
+            // color='warning'
+            sx={{
+              backgroundColor: "saddlebrown",
+              "&:hover": {
+                backgroundColor: "yellow",
+                color:"red"
+              },
+            }}
+            // onClick={handleOpenModal}
+            onClick={() => window.open("https://drive.google.com/file/d/1-vhrJ6WVxxCxxzNeKxmEsrxt5rUpPs7T/view?usp=sharing", "_blank")}
             className={classes.modalbtn}
           >
-            <Typography variant="h6">Resume</Typography>
+            <Typography variant="h6">Check my CV</Typography>
           </Button>
           <Modal open={openmodal} onClose={handleCloseModal}>
             <Box className={classes.modal}>
