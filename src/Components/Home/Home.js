@@ -157,7 +157,7 @@ const Home = () => {
             Send me your feedback at{" "}
             <u>
               <i>
-                <b>johnpapan1@gmail.com</b>
+                <b>johnpapani1@gmail.com</b>
               </i>
             </u>
           </Alert>
