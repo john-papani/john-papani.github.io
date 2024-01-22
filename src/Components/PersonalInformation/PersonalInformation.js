@@ -8,7 +8,7 @@ import photoprofilegiannisnobg from "../../img/giannis_3_no_bg.png";
 import Typewriter from "typewriter-effect";
 import { MovingComponent } from "react-moving-text";
 import { Grid } from "@mui/material";
-const PersonalInformation = (props) => {
+const PersonalInformation = () => {
   const classes = useStyles();
   const [open, setOpen] = useState("");
 
@@ -21,16 +21,13 @@ const PersonalInformation = (props) => {
     <div className={classes.personalInformation}>
       <Grid container spacing={2} justifyContent="center" alignItems="center" className={classes.typedContainer}>
         <Grid item xs={xs_size} md={md_size}>
-          {/* <Box className={classes.typedContainer}> */}
           <Avatar
             onMouseOver={() => setOpen("main")}
             onMouseOut={unhover}
-            // variant={"rounded"}
             alt="profile Image"
             src={
               open === "main" ? photoprofilegiannisnobg : photoprofilegiannis
             }
-            // src={photoprofilegiannis}
             style={{
               width: 300,
               height: 300,
@@ -113,7 +110,6 @@ const PersonalInformation = (props) => {
               </Grid>
             </Grid>
           </MovingComponent>
-          {/* </Box> */}
         </Grid>
       </Grid>
     </div>

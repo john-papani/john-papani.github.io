@@ -42,7 +42,7 @@ const Admin = () => {
             <CardContent>
               <Typography variant="h5">Total Viewers</Typography>
               <Typography variant="h2">
-                <b>{viewers}</b>
+                {viewers && <b>{viewers}</b>}
               </Typography>
             </CardContent>
           </Card>

@@ -59,7 +59,6 @@ const Projects = () => {
                       width: "50%",
                       height: "auto",
                       transition: "0.5s ease",
-                      // backfaceVisibility: "hidden",
                     }}
                     onClick={() => {
                       window.open(item.githubLink, "_blank");
@@ -72,12 +71,9 @@ const Projects = () => {
                 md={size_md_item}
                 xs={size_xs_item}
                 textAlign={"center"}
-                // border={"1px solid blue"}
               >
                 <Typography variant="h6">{item.title}</Typography>
                 <Typography variant="body2">{item.description}</Typography>
-                {/* <Typography variant="body2">{item.te}</Typography> */}
-
                 <a
                   href={item.githubLink}
                   target="_blank"

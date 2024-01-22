@@ -24,8 +24,8 @@ const App = () => {
       <CssBaseline />
       <Router basename={process.env.PUBLIC_URL}>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home isPhone={isPhone}/>} />
+          <Route path="/home" element={<Home isPhone={isPhone}/>} />
           <Route path="/about" element={<About />} />
           <Route path="/admin" element={<Admin />} />
         </Routes>
@@ -62,14 +62,6 @@ const App = () => {
       </Router>
     </>
   );
-  // } else {
-  //   return (
-  //     <>
-  //       <CssBaseline />
-  //       <Splash update={update} />
-  //     </>
-  //   );
-  // }
 };
 
 export default App;

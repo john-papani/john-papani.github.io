@@ -1,9 +1,8 @@
-import { Card, CardContent, Grid, Typography } from "@mui/material";
-import React, {  useRef } from "react";
+import { Card, CardContent, Grid, Typography, Button } from "@mui/material";
+import React, { useRef } from "react";
 import { useStyles } from "./shortBiostyle";
-import BioCV from "../About/BioCV";
 
-const ShortBio = () => {
+const ShortBio = (isPhone) => {
   const classes = useStyles();
   const aboutRef = useRef(null);
   const cvRef = useRef(null);
@@ -62,12 +61,45 @@ const ShortBio = () => {
           >
             <Card>
               <CardContent>
-                <div className={classes.maintext} dangerouslySetInnerHTML={{ __html: text }} />
+                <div
+                  className={classes.maintext}
+                  dangerouslySetInnerHTML={{ __html: text }}
+                />
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={12} md={3} ref={cvRef}>
-            <BioCV />
+          <Grid
+            item
+            xs={12}
+            md={3}
+            ref={cvRef}
+            sx={{
+              paddingTop: isPhone.isPhone.isPhone ? "100px" : "0",
+              paddingLeft : isPhone.isPhone.isPhone ? "0" : "100px",
+            }}
+          >
+            {console.log(isPhone.isPhone.isPhone)}
+            <Button
+              variant="contained"
+              // color='warning'
+              sx={{
+                backgroundColor: "saddlebrown",
+                "&:hover": {
+                  backgroundColor: "yellow",
+                  color: "red",
+                },
+              }}
+              // onClick={handleOpenModal}
+              onClick={() =>
+                window.open(
+                  "https://drive.google.com/file/d/1-vhrJ6WVxxCxxzNeKxmEsrxt5rUpPs7T/view?usp=sharing",
+                  "_blank"
+                )
+              }
+              className={classes.modalbtn}
+            >
+              <Typography variant="h6">Check my CV</Typography>
+            </Button>
           </Grid>
         </Grid>
       </Grid>

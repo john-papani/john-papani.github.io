@@ -14,7 +14,7 @@ import Particle from "../Particle";
 import Modal from "../Modal/Modal";
 import ProgressIndicator from "../../basic_hooks/progressBar";
 import { useSmoothScroll } from "../../basic_hooks/useSmoothScroll";
-const Home = () => {
+const Home = (isPhone) => {
   const [showScroll, setShowScroll] = useState(false);
   const [openAlert, setOpenAlert] = useState(true);
   // const [messageAlert, setMessageAlert] = useState("");
@@ -109,10 +109,6 @@ const Home = () => {
       <div className="scroll-to-top">
         <Navbar
           className={classes.navbar}
-          // setOpenAlert={setOpenAlert}
-          // openAlert={openAlert}
-          // setMessageAlert={setMessageAlert}
-          // setSeverityAlert={setSeverityAlert}
           setBusinessProfile={setBusinessProfile}
         />
         <div className={classes.backgif}></div>
@@ -121,30 +117,20 @@ const Home = () => {
         <Particle />
         <PersonalInformation businessProfile={businessProfile} />
         <Divider sx={{ bgcolor: "white" }} />
-        <ShortBio />
+        <ShortBio isPhone={isPhone}/>
         <Divider sx={{ bgcolor: "white" }} />
         {businessProfile ? <Projects /> : ""}
         <Divider sx={{ bgcolor: "white" }} />
 
-        <Fab
-          size="small"
-          className={classes.ArrowTop}
-          onClick={scrollTop}
-          // aria-label="add"
-          // style={{ display: showScroll ? "fixed !important" : "none" }}
-        >
+        <Fab size="small" className={classes.ArrowTop} onClick={scrollTop}>
           <KeyboardArrowUpIcon />
         </Fab>
 
-        {/* <About /> */}
         <Divider sx={{ bgcolor: "white" }} />
         {businessProfile ? <LanguageTools /> : ""}
         <Divider sx={{ bgcolor: "white" }} />
         <Divider sx={{ bgcolor: "white" }} />
-        {/* <Grades /> */}
-        {/* <Divider sx={{ bgcolor: "white" }} /> */}
         <Contact businessProfile={businessProfile} />
-        {/* {businessProfile ? "" : <Divider sx={{ bgcolor: "white" }} />} */}
         <Divider orientation="horizontal" />
         <Footer businessProfile={businessProfile} />
         <Snackbar
