@@ -20,6 +20,16 @@ export const useStyles = makeStyles((theme) => ({
   mainContainer: {
     background: main_theme.palette.secondary.dark,
   },
+  aboutdiv: {
+    width: "100vw",
+    height: "100vh",
+    margin: "100px",
+  },
+  languageTools: {
+    width: "100vw",
+    minheight: "100vh",
+    // paddingtop: "5%",
+  },
   timeLine: {
     position: "relative",
     padding: "1rem",
@@ -131,7 +141,7 @@ export const useStyles = makeStyles((theme) => ({
     left: "50%",
     transform: "translate(-50%, -50%)",
     overflowY: "scroll",
-    maxHeight:"100vh",
+    maxHeight: "100vh",
     // backgroundColor: "#f3e5f5",
     // border: "2px solid #000",
     // boxShadow: 24,

@@ -11,12 +11,15 @@ import {
 } from "@mui/lab";
 import BioCV from "./BioCV";
 import LanguageTools from "./LanguageTools";
+import { useStyles } from "./aboutStyle";
 
 const About = () => {
+  const classes = useStyles();
+
   return (
-    <>
-      <BioCV />
-      <Box style={{ width: "80%" }}>
+    <div id="about" className={classes.aboutdiv}>
+      {/* <BioCV /> */}
+      {/* <Box style={{ width: "80%" }}>
         <Timeline position="right">
           <TimelineItem>
             <TimelineOppositeContent color="text.secondary">
@@ -47,8 +50,8 @@ const About = () => {
             </TimelineContent>
           </TimelineItem>
         </Timeline>
-      </Box>
-    </>
+      </Box> */}
+    </div>
   );
 };
 

@@ -1,0 +1,18 @@
+.progress {
+  height: 0.1875rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.progress-bar {
+  height: 0.2rem;
+  color: red;
+  transform-origin: left;
+  will-change: transform;
+  transform: scaleX(0);
+  width: 100%;
+  background-color: red
+}

@@ -10,25 +10,34 @@ const BioCV = () => {
   const downloadCV = () => {
     console.log("as");
     var link = document.createElement("a");
-    link.href = "./Components/About/cv.pdf"
-    link.target="_blank"
+    link.href = "./Components/About/cv.pdf";
+    link.target = "_blank";
     link.download = "cv.pdf";
     console.log(link);
     link.dispatchEvent(new MouseEvent("click"));
   };
   const classes = useStyles();
   return (
-    <div>
-      <Typography variant="h5" sx={{ width: "80%", margin: "auto", paddingTop:"1%" }}>
+    <div id="cv">
+      {/* <Typography variant="h5" sx={{ width: "80%", margin: "auto", paddingTop:"1%" }}>
         CV
-      </Typography>
+      </Typography> */}
+      <br />
+      <br />
       <Grid container spacing={2} className={classes.biocv}>
-        <Grid item xs={12}></Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={12}>
           <Button
             variant="contained"
-            color="secondary"
-            onClick={handleOpenModal}
+            // color='warning'
+            sx={{
+              backgroundColor: "saddlebrown",
+              "&:hover": {
+                backgroundColor: "yellow",
+                color:"red"
+              },
+            }}
+            // onClick={handleOpenModal}
+            onClick={() => window.open("https://drive.google.com/file/d/1-vhrJ6WVxxCxxzNeKxmEsrxt5rUpPs7T/view?usp=sharing", "_blank")}
             className={classes.modalbtn}
           >
             <Typography variant="h6">Check my CV</Typography>
@@ -39,7 +48,7 @@ const BioCV = () => {
             </Box>
           </Modal>
         </Grid>
-        <Grid item xs={12} md={6}>
+        {/* <Grid item xs={12} md={6}>
           <Button
             variant="contained"
             color="info"
@@ -50,7 +59,7 @@ const BioCV = () => {
           >
             <Typography variant="h6">Download my CV</Typography>
           </Button>
-        </Grid>
+        </Grid> */}
       </Grid>
     </div>
   );
