@@ -8,12 +8,12 @@ import Projects from "../Projects/Projects";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { useStyles } from "./homestyle";
 import LanguageTools from "../About/LanguageTools";
-import ShortBio from "../ShortBio/ShortBio";
 import Footer from "../Footer/Footer";
 import Particle from "../Particle";
 import Modal from "../Modal/Modal";
 import ProgressIndicator from "../../basic_hooks/progressBar";
 import { useSmoothScroll } from "../../basic_hooks/useSmoothScroll";
+import About from "../About/About";
 const Home = (isPhone) => {
   const [showScroll, setShowScroll] = useState(false);
   const [openAlert, setOpenAlert] = useState(true);
@@ -38,9 +38,9 @@ const Home = (isPhone) => {
   };
 
   const checkScrollTop = () => {
-    if (!showScroll && window.pageYOffset > 400) {
+    if (!showScroll && window.scrollY > 400) {
       setShowScroll(true);
-    } else if (showScroll && window.pageYOffset <= 400) {
+    } else if (showScroll && window.scrollY <= 400) {
       setShowScroll(false);
     }
   };
@@ -117,9 +117,10 @@ const Home = (isPhone) => {
         <Particle />
         <PersonalInformation businessProfile={businessProfile} />
         <Divider sx={{ bgcolor: "white" }} />
-        <ShortBio isPhone={isPhone}/>
+        <About isPhone={isPhone} />
         <Divider sx={{ bgcolor: "white" }} />
-        {businessProfile ? <Projects /> : ""}
+        {/* {businessProfile ? <Projects /> : ""} */}
+        <Projects />
         <Divider sx={{ bgcolor: "white" }} />
 
         <Fab size="small" className={classes.ArrowTop} onClick={scrollTop}>
