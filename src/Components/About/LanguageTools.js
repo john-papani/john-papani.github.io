@@ -2,11 +2,11 @@ import React, { useRef } from "react";
 import { Typography, Grid } from "@mui/material";
 import { useStyles } from "./aboutStyle";
 import { fromto } from "../../basic_hooks/gsap";
-function LanguageTools() {
+function LanguageTools({isPhone}) {
   const classes = useStyles();
-  const xs_size = 4;
-  const md_size = 3;
-  const width_height = 100;
+  const xs_size = 3;
+  const md_size = 2;
+  const width_height = isPhone.isPhone ? 50 : 80;
 
   const languageToolsRef = useRef(null);
   fromto(languageToolsRef);
@@ -43,6 +43,7 @@ function LanguageTools() {
               alt="bootstrap"
               width={width_height}
               height={width_height}
+              style={{ backgroundColor: "white", borderRadius: "10%" }}
             />
           </a>
         </Grid>
@@ -185,6 +186,7 @@ function LanguageTools() {
               alt="mongodb"
               width={width_height}
               height={width_height}
+              style={{ backgroundColor: "white", borderRadius: "10%" }}
             />
           </a>
         </Grid>
@@ -195,6 +197,7 @@ function LanguageTools() {
               alt="mysql"
               width={width_height}
               height={width_height}
+              style={{ backgroundColor: "white", borderRadius: "10%" }}
             />
           </a>
         </Grid>
@@ -205,6 +208,7 @@ function LanguageTools() {
               alt="nodejs"
               width={width_height}
               height={width_height}
+              style={{ backgroundColor: "white", borderRadius: "10%" }}
             />
           </a>
         </Grid>

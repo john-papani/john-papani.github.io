@@ -1,7 +1,7 @@
 import { makeStyles } from "@mui/styles";
 
 export const useStyles = makeStyles((theme) => ({
-  aboutcontainer: {
+  diplomacontainer: {
     paddingTop: "4%",
     paddingRight: "10%",
     paddingLeft: "10%",
@@ -17,12 +17,6 @@ export const useStyles = makeStyles((theme) => ({
     fontSize: "0.9vw",
     "@media (max-width:600px)": {
       fontSize: "3vw",
-    },
-  },
-  languageTools: {
-    "@media (max-width:600px)": {
-      paddingBottom: "10%",
-      paddingTop: "5%",
     },
   },
 }));

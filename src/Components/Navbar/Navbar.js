@@ -79,7 +79,10 @@ const Navbar = (props) => {
       <AppBar className={classes.appbar}>
         <Container maxWidth="xl" sx={{ alignItems: "center" }}>
           <Toolbar disableGutters>
-            <BackHandIcon sx={{ mr: 1 }} />
+            {/* <BackHandIcon sx={{ mr: 1 }} /> */}
+            <p className="text-2xl lg:mr-4 mr-6 px-[4px] py-[1px] text-orange-500  border  rounded-full bg-gray-800 font-black tracking-tighter">
+              IP
+            </p>
             <Typography
               variant="h6"
               onClick={() => handleCloseNavMenu()}

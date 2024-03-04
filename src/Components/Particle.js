@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 
@@ -23,11 +23,9 @@ function Particle() {
       init={particlesInit}
       loaded={particlesLoaded}
       options={{
-        // background: {
-        //   color: {
-        //     value: "#000000",
-        //   },
-        // },
+        background: {
+          zIndex: -10,
+        },
         fpsLimit: 1200,
         interactivity: {
           events: {
@@ -96,5 +94,5 @@ function Particle() {
       }}
     />
   );
-};
-export default Particle
+}
+export default Particle;

@@ -8,7 +8,7 @@ import photoprofilegiannisnobg from "../../img/giannis_3_no_bg.png";
 import Typewriter from "typewriter-effect";
 import { MovingComponent } from "react-moving-text";
 import { Grid } from "@mui/material";
-const PersonalInformation = () => {
+const PersonalInformation = ({ isPhone }) => {
   const classes = useStyles();
   const [open, setOpen] = useState("");
 
@@ -19,7 +19,13 @@ const PersonalInformation = () => {
   const md_size = 6;
   return (
     <div className={classes.personalInformation}>
-      <Grid container spacing={2} justifyContent="center" alignItems="center" className={classes.typedContainer}>
+      <Grid
+        container
+        spacing={2}
+        justifyContent="center"
+        alignItems="center"
+        className={classes.typedContainer}
+      >
         <Grid item xs={xs_size} md={md_size}>
           <Avatar
             onMouseOver={() => setOpen("main")}
@@ -29,8 +35,8 @@ const PersonalInformation = () => {
               open === "main" ? photoprofilegiannisnobg : photoprofilegiannis
             }
             style={{
-              width: 300,
-              height: 300,
+              width: isPhone.isPhone ? 250 : 400,
+              height: isPhone.isPhone ? 250 : 400,
             }}
             className={classes.avatar}
           />
@@ -45,7 +51,7 @@ const PersonalInformation = () => {
             iteration="1"
             fillMode="none"
           >
-            <Typography variant="h3" component="h2">
+            <Typography variant={isPhone.isPhone ? "h5" : "h3"}>
               Hi there👋, I'm Ioannis Papanikolaou 🧑🏻‍💻
             </Typography>
           </MovingComponent>

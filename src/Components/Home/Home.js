@@ -14,6 +14,7 @@ import Modal from "../Modal/Modal";
 import ProgressIndicator from "../../basic_hooks/progressBar";
 import { useSmoothScroll } from "../../basic_hooks/useSmoothScroll";
 import About from "../About/About";
+import Diploma from "../Diploma/Diploma";
 const Home = (isPhone) => {
   const [showScroll, setShowScroll] = useState(false);
   const [openAlert, setOpenAlert] = useState(true);
@@ -113,25 +114,24 @@ const Home = (isPhone) => {
         />
         <div className={classes.backgif}></div>
         <ProgressIndicator />
-
         <Particle />
-        <PersonalInformation businessProfile={businessProfile} />
+
+        <PersonalInformation isPhone={isPhone} />
         <Divider sx={{ bgcolor: "white" }} />
         <About isPhone={isPhone} />
         <Divider sx={{ bgcolor: "white" }} />
-        {/* {businessProfile ? <Projects /> : ""} */}
+        <Diploma isPhone={isPhone} />
+        <Divider sx={{ bgcolor: "white" }} />
         <Projects />
         <Divider sx={{ bgcolor: "white" }} />
-
         <Fab size="small" className={classes.ArrowTop} onClick={scrollTop}>
           <KeyboardArrowUpIcon />
         </Fab>
 
         <Divider sx={{ bgcolor: "white" }} />
-        {businessProfile ? <LanguageTools /> : ""}
+        <LanguageTools isPhone={isPhone} />
         <Divider sx={{ bgcolor: "white" }} />
-        <Divider sx={{ bgcolor: "white" }} />
-        <Contact businessProfile={businessProfile} />
+        <Contact isPhone={isPhone} />
         <Divider orientation="horizontal" />
         <Footer businessProfile={businessProfile} />
         <Snackbar

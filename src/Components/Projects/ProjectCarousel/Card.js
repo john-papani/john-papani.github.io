@@ -2,7 +2,7 @@ const Card = ({ card }) => {
   return (
     <div
       key={card.id}
-      className="relative h-[35vh] w-[80vw] lg:h-[350px] lg:w-[350px] overflow-hidden bg-neutral-200"
+      className="relative h-[35vh] w-[80vw] lg:h-[350px] ml-[10%] lg:ml-0 lg:w-[350px] overflow-hidden bg-neutral-200  hover:border-red-700 hover:border-4 cursor-pointer"
       onClick={() => window.open(card.githubLink, "_blank")}
     >
       <div
