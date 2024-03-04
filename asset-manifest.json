@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.347423fc.css",
-    "main.js": "/static/js/main.0dababde.js",
+    "main.css": "/static/css/main.bdf8cb01.css",
+    "main.js": "/static/js/main.f7e2e4e9.js",
     "static/media/giannis_2.png": "/static/media/giannis_2.76a469890b59fe1c2c88.png",
     "static/media/energylive22.png": "/static/media/energylive22.eefdd587c38ed21e9c45.png",
     "static/media/noise.gif": "/static/media/noise.2290dc385105e3fd9a35.gif",
@@ -13,11 +13,11 @@
     "static/media/taxi_advdb.jpg": "/static/media/taxi_advdb.42bf308e3f2dc1f1dcaf.jpg",
     "static/media/gradebook_project.png": "/static/media/gradebook_project.58df998a74f73758e552.png",
     "index.html": "/index.html",
-    "main.347423fc.css.map": "/static/css/main.347423fc.css.map",
-    "main.0dababde.js.map": "/static/js/main.0dababde.js.map"
+    "main.bdf8cb01.css.map": "/static/css/main.bdf8cb01.css.map",
+    "main.f7e2e4e9.js.map": "/static/js/main.f7e2e4e9.js.map"
   },
   "entrypoints": [
-    "static/css/main.347423fc.css",
-    "static/js/main.0dababde.js"
+    "static/css/main.bdf8cb01.css",
+    "static/js/main.f7e2e4e9.js"
   ]
 }
