@@ -2,7 +2,6 @@ import { Card, CardContent, Grid, Typography, Button } from "@mui/material";
 import React, { useRef } from "react";
 import { useStyles } from "./aboutStyle";
 
-
 const About = ({ isPhone }) => {
   const classes = useStyles();
   const aboutRef = useRef(null);
@@ -93,7 +92,7 @@ const About = ({ isPhone }) => {
               // onClick={handleOpenModal}
               onClick={() =>
                 window.open(
-                  "https://drive.google.com/file/d/1-vhrJ6WVxxCxxzNeKxmEsrxt5rUpPs7T/view?usp=sharing",
+                  "https://drive.google.com/file/d/1T8J9OJs3POiJ7G-gyazQqPUFUfDDqOfq/view?usp=sharing",
                   "_blank"
                 )
               }
