@@ -19,10 +19,4 @@ export const useStyles = makeStyles((theme) => ({
       fontSize: "3vw",
     },
   },
-  languageTools: {
-    "@media (max-width:600px)": {
-      paddingBottom: "10%",
-      paddingTop: "5%",
-    },
-  },
 }));

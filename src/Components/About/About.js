@@ -41,9 +41,9 @@ const About = ({ isPhone }) => {
         className={classes.aboutcontainer}
         ref={aboutRef}
       >
-        <Grid item xs={12}>
-          <Typography variant="h5">About Me </Typography>
-        </Grid>
+        <p className="text-xl lg:text-3xl text-center italic tracking-wider font-bold py-[1%] m-auto w-[80%]">
+          About Me
+        </p>
         <Grid
           container
           width="85%"
