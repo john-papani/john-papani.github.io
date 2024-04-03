@@ -1,6 +1,6 @@
 import React from "react";
 import { useStyles } from "./diplomaStyle";
-import { Grid, Typography, Card, CardContent } from "@mui/material";
+import { Grid, Card, CardContent } from "@mui/material";
 import DiplomaText from "./DiplomaText";
 
 const Diploma = ({ isPhone }) => {
@@ -9,9 +9,9 @@ const Diploma = ({ isPhone }) => {
   return (
     <div id="diploma">
       <Grid container spacing={2} className={classes.diplomacontainer}>
-        <Grid item xs={12}>
-          <Typography variant="h5">Diploma Thesis</Typography>
-        </Grid>
+        <p className="text-xl lg:text-3xl text-center italic tracking-wider font-bold py-[1%] m-auto w-[80%]">
+          Diploma Thesis
+        </p>
         <Grid
           container
           width={isPhone.isPhone ? "85%" : "100%"}

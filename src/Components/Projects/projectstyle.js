@@ -24,7 +24,8 @@ export const useStyles = makeStyles((theme) => ({
   container: {
     paddingTop: "5%",
     width: "100vw",
-    padding: "0 10% 2% 10%",
+    // padding: "0 10% 2% 10%",
+    // paddingLeft: "10%",
   },
 
   card: {

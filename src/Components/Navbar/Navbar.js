@@ -17,7 +17,7 @@ import LiveTime from "../Helpers/autoreloadTime";
 // const pages = ["Projects","CV and Information",  "Contact"];
 //  const pages = ["Short Bio","CV and Information",  "Contact"];
 // const pages = ["MONO KOULIS 🤡"];
-const pages = ["about", "projects", "contact"];
+const pages = ["about", "diploma", "projects"];
 
 function ElevationScroll(props) {
   const { children } = props;
@@ -32,7 +32,7 @@ function ElevationScroll(props) {
       zIndex: trigger ? 30 : 0, // Adjust the value based on your needs
       backgroundColor: trigger ? "transparent" : "transparent",
       transition: "background-color 0.3s ease-out", // Add a transition for a smooth effect
-      backdropFilter: trigger ? "blur(250px)" : "none",
+      backdropFilter: trigger ? "blur(500px)" : "none",
     },
     // color: trigger ? "inherit" : "transparent",
     position: trigger ? "fixed" : "absolute",
@@ -80,23 +80,17 @@ const Navbar = (props) => {
         <Container maxWidth="xl" sx={{ alignItems: "center" }}>
           <Toolbar disableGutters>
             {/* <BackHandIcon sx={{ mr: 1 }} /> */}
-            <p className="text-2xl lg:mr-4 mr-6 px-[4px] py-[1px] text-orange-500  border  rounded-full bg-gray-800 font-black tracking-tighter">
+            <p className="text-2xl lg:mr-4 mr-6 px-[4px] py-[1px] text-[#eb0028]  border  rounded-full bg-black font-black tracking-tighter">
               IP
             </p>
-            <Typography
-              variant="h6"
+
+            <p
+              className="mr-10 font-[agustina] font-bold tracking-wider cursor-pointer italic text-xl no-underline"
               onClick={() => handleCloseNavMenu()}
-              sx={{
-                mr: 2,
-                fontFamily: "monospace",
-                fontWeight: 700,
-                letterSpacing: ".3rem",
-                color: "inherit",
-                textDecoration: "none",
-              }}
             >
               Ioannis Papanikolaou
-            </Typography>
+            </p>
+
             {/* <FormControlLabel
               sx={{
                 background: "#d9d9d9",
@@ -117,7 +111,13 @@ const Navbar = (props) => {
                 <Button
                   key={page}
                   onClick={() => handleCloseNavMenu({ page })}
-                  sx={{ my: 2, color: "inherit", display: "block" }}
+                  sx={{
+                    my: 2,
+                    color: "white",
+                    display: "block",
+                    fontWeight: "bold",
+                  }}
+                  className="hover:text-[#eb0028] font-bold"
                 >
                   {page}
                 </Button>

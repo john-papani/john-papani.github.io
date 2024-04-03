@@ -1,6 +1,6 @@
-import { Typography, Grid } from "@mui/material";
+import {  Grid } from "@mui/material";
 import { useStyles } from "./projectstyle";
-import React, { useRef } from "react";
+import React from "react";
 import ProjectsCarousel from "./ProjectCarousel/ProjectsCarousel";
 
 const Projects = () => {
@@ -16,9 +16,9 @@ const Projects = () => {
         // alignItems="flex-start"
         alignItems="stretch"
       >
-        <Grid item xs={12} className="pb-[20px] lg:pb-0">
-          <Typography variant="h5">Projects</Typography>
-        </Grid>
+        <p className="text-xl lg:text-3xl text-center italic tracking-wider font-bold py-[5%] lg:py-[1%] m-auto w-[90%]">
+          Projects
+        </p>
         <ProjectsCarousel />
       </Grid>
     </div>
