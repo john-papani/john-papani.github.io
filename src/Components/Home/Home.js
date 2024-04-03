@@ -1,14 +1,13 @@
 import LinearProgress from "@mui/material/LinearProgress";
 import { Alert, Divider, Fab, Snackbar } from "@mui/material";
 import React, { useState, useEffect } from "react";
-import Contact from "../Contact/Contact";
+import ContactFooter from "../ContactFooter/ContactFooter";
 import Navbar from "../Navbar/Navbar";
 import PersonalInformation from "../PersonalInformation/PersonalInformation";
 import Projects from "../Projects/Projects";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { useStyles } from "./homestyle";
 import LanguageTools from "../About/LanguageTools";
-import Footer from "../Footer/Footer";
 import Particle from "../Particle";
 import Modal from "../Modal/Modal";
 import ProgressIndicator from "../../basic_hooks/progressBar";
@@ -130,10 +129,7 @@ const Home = (isPhone) => {
 
         <Divider sx={{ bgcolor: "white" }} />
         <LanguageTools isPhone={isPhone} />
-        <Divider sx={{ bgcolor: "white" }} />
-        <Contact isPhone={isPhone} />
-        <Divider orientation="horizontal" />
-        <Footer businessProfile={businessProfile} />
+        <ContactFooter />
         <Snackbar
           anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
           open={openAlert}
