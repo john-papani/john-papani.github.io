@@ -56,7 +56,7 @@ const About = ({ isPhone }) => {
           <Grid
             item
             xs={12}
-            md={9}
+            md={12}
             // sx={{ backgroundColor: "#EEEDE7", borderRadius: "12%" }}
           >
             <Card>
@@ -65,41 +65,33 @@ const About = ({ isPhone }) => {
                   className={classes.maintext}
                   dangerouslySetInnerHTML={{ __html: text }}
                 />
+
+                <div className="flex lg:justify-end justify-center ">
+                  <Button
+                    variant="contained"
+                    // color='warning'
+                    sx={{
+                      backgroundColor: "red",
+                      "&:hover": {
+                        backgroundColor: "black",
+                        color: "red",
+                      },
+                    }}
+                    // onClick={handleOpenModal}
+                    onClick={() =>
+                      window.open(
+                        "https://drive.google.com/file/d/1T8J9OJs3POiJ7G-gyazQqPUFUfDDqOfq/view?usp=sharing",
+                        "_blank"
+                      )
+                    }
+                    className={classes.modalbtn}
+                  >
+                    {" "}
+                    <p>Check my CV</p>
+                  </Button>
+                </div>
               </CardContent>
             </Card>
-          </Grid>
-          <Grid
-            item
-            xs={12}
-            md={3}
-            ref={cvRef}
-            sx={{
-              paddingTop: isPhone.isPhone ? "100px" : "0",
-              paddingBottom: isPhone.isPhone ? "100px" : "0",
-              paddingLeft: "100px",
-            }}
-          >
-            <Button
-              variant="contained"
-              // color='warning'
-              sx={{
-                backgroundColor: "saddlebrown",
-                "&:hover": {
-                  backgroundColor: "yellow",
-                  color: "red",
-                },
-              }}
-              // onClick={handleOpenModal}
-              onClick={() =>
-                window.open(
-                  "https://drive.google.com/file/d/1T8J9OJs3POiJ7G-gyazQqPUFUfDDqOfq/view?usp=sharing",
-                  "_blank"
-                )
-              }
-              className={classes.modalbtn}
-            >
-              <Typography variant="h6">Check my CV</Typography>
-            </Button>
           </Grid>
         </Grid>
       </Grid>
