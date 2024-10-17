@@ -14,6 +14,8 @@ import ProgressIndicator from "../../basic_hooks/progressBar";
 import { useSmoothScroll } from "../../basic_hooks/useSmoothScroll";
 import About from "../About/About";
 import Diploma from "../Diploma/Diploma";
+import WorkExperience from "../WorkExperience/WorkExperience";
+import Volunteering from "../Volunteering/Volunteering";
 const Home = (isPhone) => {
   const [showScroll, setShowScroll] = useState(false);
   const [openAlert, setOpenAlert] = useState(true);
@@ -120,6 +122,10 @@ const Home = (isPhone) => {
         <About isPhone={isPhone} />
         <Divider sx={{ bgcolor: "white" }} />
         <Diploma isPhone={isPhone} />
+        <Divider sx={{ bgcolor: "white" }} />
+        <WorkExperience isPhone={isPhone} />
+        <Divider sx={{ bgcolor: "white" }} />
+        <Volunteering  isPhone={isPhone} />
         <Divider sx={{ bgcolor: "white" }} />
         <Projects />
         <Divider sx={{ bgcolor: "white" }} />

@@ -17,7 +17,7 @@ import LiveTime from "../Helpers/autoreloadTime";
 // const pages = ["Projects","CV and Information",  "Contact"];
 //  const pages = ["Short Bio","CV and Information",  "Contact"];
 // const pages = ["MONO KOULIS 🤡"];
-const pages = ["about", "diploma", "projects"];
+const pages = ["about", "diploma","work experience", "volunteering","projects"];
 
 function ElevationScroll(props) {
   const { children } = props;
