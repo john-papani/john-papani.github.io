@@ -5,6 +5,8 @@ import DiplomaText from "./DiplomaText";
 
 const Diploma = ({ isPhone }) => {
   const classes = useStyles();
+  const diplomaUrl =
+    "http://artemis.cslab.ece.ntua.gr:8080/jspui/handle/123456789/19258"; // Your diploma URL
 
   return (
     <div id="diploma">
@@ -25,6 +27,19 @@ const Diploma = ({ isPhone }) => {
             <Card>
               <CardContent>
                 <DiplomaText className={classes.maintext} isPhone={isPhone} />
+                {/* Add text link here */}
+                <p className="text-center mt-4 text-xs lg:text-base text-red-600 italic">
+                  You can access the full diploma{" "}
+                  <a
+                    href={diplomaUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline decoration-red-600 font-bold"
+                  >
+                    here
+                  </a>
+                  .
+                </p>
               </CardContent>
             </Card>
           </Grid>
