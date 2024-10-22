@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import BackHandIcon from "@mui/icons-material/BackHand";
+import faviconfornav from "../../img/2.png";
 import {
   Typography,
   Button,
@@ -17,7 +17,13 @@ import LiveTime from "../Helpers/autoreloadTime";
 // const pages = ["Projects","CV and Information",  "Contact"];
 //  const pages = ["Short Bio","CV and Information",  "Contact"];
 // const pages = ["MONO KOULIS 🤡"];
-const pages = ["about", "diploma","work experience", "volunteering","projects"];
+const pages = [
+  "about",
+  "diploma",
+  "work experience",
+  "volunteering",
+  "projects",
+];
 
 function ElevationScroll(props) {
   const { children } = props;
@@ -79,10 +85,11 @@ const Navbar = (props) => {
       <AppBar className={classes.appbar}>
         <Container maxWidth="xl" sx={{ alignItems: "center" }}>
           <Toolbar disableGutters>
-            {/* <BackHandIcon sx={{ mr: 1 }} /> */}
-            <p className="text-2xl lg:mr-4 mr-6 px-[4px] py-[1px] text-[#eb0028]  border  rounded-full bg-black font-black tracking-tighter">
-              IP
-            </p>
+            <img
+              src={faviconfornav}
+              alt="ip"
+              className="w-8 h-8 mr-2 rounded-full"
+            />
 
             <p
               className="mr-10 font-[agustina] font-bold tracking-wider cursor-pointer italic text-xl no-underline"
