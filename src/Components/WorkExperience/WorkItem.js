@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 
-const WorkItem = ({ work,duration }) => {
+const WorkItem = ({ work, duration }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [needsExpansion, setNeedsExpansion] = useState(false);
   const contentRef = useRef(null);
@@ -25,20 +25,33 @@ const WorkItem = ({ work,duration }) => {
       <time className="mb-1 text-xs lg:text-sm font-normal leading-none text-red-500">
         {work.start_time} - {work.end_time} ({duration})
       </time>
-      <h3 className="text-base lg:text-lg font-semibold text-white">{work.title}</h3>
-      {work.location_url ? (
-        <a
-          href={work.location_url}
-          target="_blank"
-          rel="noreferrer"
-          className="italic underline decoration-red-600"
-        >
-          <h5 className="text-sm font-normal text-red-600">{work.location}</h5>
-        </a>
-      ) : (
-        <h5 className="text-sm font-normal text-red-600">{work.location}</h5>
-      )}
 
+      <h3 className="text-base lg:text-lg font-semibold text-white">
+        {work.title}
+      </h3>
+      <div className="flex items-center">
+        {work.logoimage && (
+          <img
+            src={work.logoimage}
+            alt={work.logoimage}
+            className="w-6 h-6 mr-1 rounded-full "
+          />
+        )}
+        {work.location_url ? (
+          <a
+            href={work.location_url}
+            target="_blank"
+            rel="noreferrer"
+            className="italic underline decoration-red-600"
+          >
+            <h5 className="text-sm font-normal text-red-600">
+              {work.location}
+            </h5>
+          </a>
+        ) : (
+          <h5 className="text-sm font-normal text-red-600">{work.location}</h5>
+        )}
+      </div>
       <ul
         ref={contentRef}
         className={`mb-2 text-xs lg:text-sm font-normal text-red-300 list-disc list-inside space-y-1 transition-all duration-300 ${
