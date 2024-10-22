@@ -25,22 +25,31 @@ const Volunteering = () => {
               <h5 className="text-lg lg:text-xl font-bold tracking-tight text-white">
                 {volunteering.title}
               </h5>
-              {volunteering.location_url ? (
-                <a
-                  href={volunteering.location_url}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="italic underline decoration-red-600"
-                >
+              <div className="flex items-center">
+                {volunteering.logoimage && (
+                  <img
+                    src={volunteering.logoimage}
+                    alt={volunteering.logoimage}
+                    className="w-6 h-6 mr-1 rounded-full "
+                  />
+                )}
+                {volunteering.location_url ? (
+                  <a
+                    href={volunteering.location_url}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="italic underline decoration-red-600"
+                  >
+                    <h5 className="text-sm lg:text-base font-normal text-red-600">
+                      {volunteering.location}
+                    </h5>
+                  </a>
+                ) : (
                   <h5 className="text-sm lg:text-base font-normal text-red-600">
                     {volunteering.location}
                   </h5>
-                </a>
-              ) : (
-                <h5 className="text-sm lg:text-base font-normal text-red-600">
-                  {volunteering.location}
-                </h5>
-              )}
+                )}
+              </div>
 
               {/* <ul className="mb-2 text-sm font-normal text-red-300 list-disc list-inside space-y-1"> */}
               {/* {volunteering.description.split("\n").map((bullet, index) => ( */}
