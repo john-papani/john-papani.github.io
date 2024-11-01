@@ -7,16 +7,16 @@ import blupry_logo from "../../img/work_exp/blupry_logo.jpg";
 export const work_experience_list = [
   {
     title: "Customer Service",
-    start_time: "Jun 2021",
-    end_time: "Sep 2021",
+    start_time: "June 2021",
+    end_time: "September 2021",
     location: "Restaurant in Ilioupoli, Athens",
     location_url: "",
     description: `Demonstrated adaptability and resilience by efficiently handling a significant increase in customer volume during peak hours.\nAssisted patrons with menu selections, providing detailed information about dishes, specials, and beverages.\nProcessed payments accurately and efficiently, handling cash and electronic transactions.\nMaintained cleanliness and organization in the dining area, adhering to hygiene and safety standards.`,
   },
   {
     title: "Full Stack Developer- Internship",
-    start_time: "Jun 2022",
-    end_time: "Jul 2022",
+    start_time: "June 2022",
+    end_time: "July 2022",
     location: "LIBRA AI Technologies",
     logoimage: libralogo,
     location_url: "https://www.libramli.ai/",
@@ -25,8 +25,8 @@ export const work_experience_list = [
 
   {
     title: "Supervisor - Secretary support",
-    start_time: "Oct 2019",
-    end_time: "Jun 2023",
+    start_time: "October 2019",
+    end_time: "June 2023",
     location: "Private Tutoring",
     location_url: "",
     description:
@@ -34,8 +34,8 @@ export const work_experience_list = [
   },
   {
     title: "E-Commerce Web Developer & Support Staff",
-    start_time: "Apr 2024",
-    end_time: "Oct 2024",
+    start_time: "Apri; 2024",
+    end_time: "October 2024",
     location: "PYROTECHNICA ENGINEERING HELLAS ΜΟΝ. ΙΚΕ",
     logoimage: pyrotechnica_logo,
     location_url: "https://pyrotechnica.gr/",
@@ -44,7 +44,7 @@ export const work_experience_list = [
 
   {
     title: "Organizer - IT TEAM",
-    start_time: "Nov 2023",
+    start_time: "November 2023",
     end_time: "Present",
     logoimage: tedxntua_logo,
     location: "TEDxNTUA",
@@ -54,7 +54,7 @@ export const work_experience_list = [
 
   {
     title: "Web Developer",
-    start_time: "Apr 2024",
+    start_time: "April 2024",
     end_time: "Present",
     logoimage: blupry_logo,
     location: "Blupry",
