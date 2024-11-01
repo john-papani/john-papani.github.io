@@ -80,7 +80,7 @@ const About = ({ isPhone }) => {
                     // onClick={handleOpenModal}
                     onClick={() =>
                       window.open(
-                        "https://drive.google.com/file/d/1T8J9OJs3POiJ7G-gyazQqPUFUfDDqOfq/view?usp=sharing",
+                        "https://www.canva.com/design/DAGVIrHLtPw/wrrM0r5TbdjdR36uOQIXKg/view?utm_content=DAGVIrHLtPw&utm_campaign=designshare&utm_medium=link&utm_source=editor",
                         "_blank"
                       )
                     }
