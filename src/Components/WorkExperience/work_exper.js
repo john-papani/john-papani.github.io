@@ -67,6 +67,6 @@ export const work_experience_list = [
     logoimage: haf_logo,
     location: "Hellenic Air Force (HAF)",
     location_url: "https://www.haf.gr/",
-    description: "",
+    description: "Delivered first-line helpdesk support by responding to incoming calls, accurately logging user issues, and performing thorough initial assessments to understand and prioritize technical problems.\nDiagnosed and resolved a wide range of hardware and software issues—both remotely and onsite—ensuring minimal disruption to end-user productivity.\nProvided hands-on technical support for desktops, laptops, printers, and network connectivity, maintaining smooth day-to-day operations across the organization.",
   },
 ];
