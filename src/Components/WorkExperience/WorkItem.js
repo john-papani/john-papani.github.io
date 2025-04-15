@@ -52,16 +52,20 @@ const WorkItem = ({ work, duration }) => {
           <h5 className="text-sm font-normal text-red-600">{work.location}</h5>
         )}
       </div>
-      <ul
-        ref={contentRef}
-        className={`mb-2 text-xs lg:text-sm font-normal text-red-300 list-disc list-inside space-y-1 transition-all duration-300 ${
-          isExpanded ? "max-h-full" : "max-h-[80px]"
-        } overflow-hidden`}
-      >
-        {work.description.split("\n").map((bullet, index) => (
-          <li key={index}>{bullet}</li>
-        ))}
-      </ul>
+      {/* {work.description ? ( */}
+        <ul
+          ref={contentRef}
+          className={`mb-2 text-xs lg:text-sm font-normal text-red-300 list-disc list-inside space-y-1 transition-all duration-300 ${
+            isExpanded ? "max-h-full" : "max-h-[80px]"
+          } overflow-hidden`}
+        >
+          {work.description.split("\n").map((bullet, index) => (
+            <li key={index}>{bullet}</li>
+          ))}
+        </ul>
+      {/* ) : (
+        ""
+      )} */}
 
       {/* Conditionally render the button if expansion is needed */}
       {needsExpansion && (

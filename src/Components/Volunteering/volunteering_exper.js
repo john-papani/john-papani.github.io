@@ -23,7 +23,7 @@ export const volunteering_exper_list = [
 
   {
     start_time:"April 2024",
-    end_time:"Present",
+    end_time:"Arpil 2025",
     title:"Volunteer",
     logoimage: snfcclogo,
     location:"Stavros Niarchos Foundation Cultural Center (SNFCC)",

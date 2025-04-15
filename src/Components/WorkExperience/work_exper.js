@@ -2,8 +2,7 @@ import libralogo from "../../img/work_exp/libra_logo.jpg";
 import pyrotechnica_logo from "../../img/work_exp/pyrotechnica_engineering_hellas___logo.jpg";
 import tedxntua_logo from "../../img/work_exp/tedxntua_logo.jpg";
 import blupry_logo from "../../img/work_exp/blupry_logo.jpg";
-
-
+import haf_logo from "../../img/work_exp/hellenic_airforce_logo.jpg";
 export const work_experience_list = [
   {
     title: "Customer Service",
@@ -45,7 +44,7 @@ export const work_experience_list = [
   {
     title: "Organizer - IT TEAM",
     start_time: "November 2023",
-    end_time: "Present",
+    end_time: "November 2024",
     logoimage: tedxntua_logo,
     location: "TEDxNTUA",
     location_url: "https://tedx-ntua.com/",
@@ -60,7 +59,14 @@ export const work_experience_list = [
     location: "Blupry",
     location_url: "https://blupry.io/",
     description: `Developed HTML Templates and React Components: Created dynamic, reusable HTML and React components for the Framer.com platform, ensuring they were adaptable for no-code usage. Leveraged responsive CSS to ensure cross-device compatibility, providing a seamless experience across mobile, tablet, and desktop devices. Enhanced interactivity through JavaScript to deliver an engaging and user-friendly interface.\nVersion Control with Git: Utilized Git to manage source code efficiently, enabling collaboration with other developers, tracking project changes, and facilitating smooth version control throughout the project lifecycle. Leveraged Git branches to work on new features and bug fixes while maintaining the integrity of the main codebase.\nTesting and Debugging: Carried out comprehensive testing and debugging processes to identify and fix issues early in development. Employed both manual and automated testing techniques to ensure that components met functional and performance requirements. Consistently improved code quality through iterative testing cycles, reducing potential issues in production.`,
-    
-  }
-  
+  },
+  {
+    title: "IT Support Specialist & Technical Support (Military Service)",
+    start_time: "November 2024",
+    end_time: "Present",
+    logoimage: haf_logo,
+    location: "Hellenic Air Force (HAF)",
+    location_url: "https://www.haf.gr/",
+    description: "",
+  },
 ];
