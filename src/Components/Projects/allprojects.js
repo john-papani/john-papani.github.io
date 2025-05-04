@@ -6,8 +6,24 @@ import energyliveimg from "../../img/energylive22.png";
 import iotlivestreamingimg from "../../img/iot-live-streaming.jpg";
 import minesweeper from "../../img/minesweeper.png";
 import taxi_adv_db from "../../img/taxi_advdb.jpg";
+import tedxntua2024 from "../../img/tedxntua2024.png";
+import tedxntua_archive from "../../img/tedxntua_archive.png";
+import shadows from "@mui/material/styles/shadows";
 
 export const all_projects_list = [
+  {
+    img: tedxntua2024,
+    title: "TEDxNTUA 2024*",
+    shortDescription: "A web app for the TEDxNTUA 2024 event.",
+    githubLink: "https://2024.tedxntua.com/",
+  },
+  {
+    img: tedxntua_archive,
+    title: "TEDxNTUA Archive*",
+    description:
+      "A web app that serves as an archive for all the TEDxNTUA events, showcasing the speakers and their talks.",
+    githubLink: "https://tedxntua.com/",
+  },
   {
     img: iotlivestreamingimg,
     title: "IoT-Live-streaming",
@@ -31,7 +47,7 @@ export const all_projects_list = [
   },
   {
     img: energyliveimg,
-    title: "EnergyLive2022 2021-2022",
+    title: "EnergyLive2022",
     description:
       "'EnergyLive2022' is a Software as a Service application, where the user can see various charts related to Energy consumption and generation in European countries. This project was conducted for the course of Software as a Service at the 2021-2022 Spring semester of the Electrical and Computer Engineering School at the National Technical University of Athens.",
     githubLink: "https://github.com/john-papani/Saas-EnergyLive-Ntua",
@@ -59,6 +75,7 @@ export const all_projects_list = [
   {
     img: recipeimg,
     title: "Recipe Treasure",
+  
     description:
       "A simple web app where you can find some delicious recipes from all over the world.",
     githubLink: "https://github.com/john-papani/Recipe-Treasure",
