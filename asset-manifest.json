@@ -1,10 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.efaac3c9.css",
-    "main.js": "/static/js/main.c977b2bb.js",
+    "main.css": "/static/css/main.72a84544.css",
+    "main.js": "/static/js/main.d5647e87.js",
     "static/media/energylive22.png": "/static/media/energylive22.eefdd587c38ed21e9c45.png",
     "static/media/2.png": "/static/media/2.adcd600f55bd7dfe5e9c.png",
     "static/media/4.png": "/static/media/4.ebea73097f243e523721.png",
+    "static/media/tedxntua2024.png": "/static/media/tedxntua2024.dd68b84611b0092685e0.png",
+    "static/media/tedxntua_archive.png": "/static/media/tedxntua_archive.9868af467403df5a2c2d.png",
     "static/media/noise.gif": "/static/media/noise.2290dc385105e3fd9a35.gif",
     "static/media/recipe_project.png": "/static/media/recipe_project.3479d12b0b6c8708e66c.png",
     "static/media/softeng_project.jpg": "/static/media/softeng_project.053bc8c5a6716251c03f.jpg",
@@ -13,11 +15,11 @@
     "static/media/taxi_advdb.jpg": "/static/media/taxi_advdb.42bf308e3f2dc1f1dcaf.jpg",
     "static/media/gradebook_project.png": "/static/media/gradebook_project.58df998a74f73758e552.png",
     "index.html": "/index.html",
-    "main.efaac3c9.css.map": "/static/css/main.efaac3c9.css.map",
-    "main.c977b2bb.js.map": "/static/js/main.c977b2bb.js.map"
+    "main.72a84544.css.map": "/static/css/main.72a84544.css.map",
+    "main.d5647e87.js.map": "/static/js/main.d5647e87.js.map"
   },
   "entrypoints": [
-    "static/css/main.efaac3c9.css",
-    "static/js/main.c977b2bb.js"
+    "static/css/main.72a84544.css",
+    "static/js/main.d5647e87.js"
   ]
 }
