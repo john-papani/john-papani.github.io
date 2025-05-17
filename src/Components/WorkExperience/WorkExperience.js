@@ -1,50 +1,72 @@
-import React, { useMemo } from "react";
+import React, { useEffect, useMemo, useRef } from "react";
 import { work_experience_list } from "./work_exper";
 import WorkItem from "./WorkItem";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// ✅ Parses "June 2022" into a real Date (cross-browser compatible)
+gsap.registerPlugin(ScrollTrigger);
+
 const parseMonthYear = (str) => {
   if (!str || str.includes("Present")) return new Date();
-
   const [monthStr, yearStr] = str.split(" ");
-  const monthIndex = new Date(Date.parse(monthStr + " 1")).getMonth(); // 'June' → 5
+  const monthIndex = new Date(Date.parse(monthStr + " 1")).getMonth();
   const year = parseInt(yearStr);
-
-  if (isNaN(monthIndex) || isNaN(year)) {
-    console.warn("Invalid date string:", str);
-    return new Date();
-  }
-
-  return new Date(year, monthIndex);
+  return isNaN(monthIndex) || isNaN(year) ? new Date() : new Date(year, monthIndex);
 };
 
 const WorkExperience = () => {
+  const containerRef = useRef(null);
+
   const sortedExperienceList = useMemo(() => {
     return [...work_experience_list].sort((a, b) => {
       const aIsPresent = a.end_time?.includes("Present");
       const bIsPresent = b.end_time?.includes("Present");
-
       if (aIsPresent && !bIsPresent) return -1;
       if (!aIsPresent && bIsPresent) return 1;
-
       const endDateA = parseMonthYear(a.end_time);
       const endDateB = parseMonthYear(b.end_time);
-
       if (endDateA.getTime() !== endDateB.getTime()) {
-        return endDateB - endDateA; // primary sort: by end date (desc)
+        return endDateB - endDateA;
       }
-
       const startDateA = parseMonthYear(a.start_time);
       const startDateB = parseMonthYear(b.start_time);
-
-      return startDateB - startDateA; // secondary sort: by start date (desc)
+      return startDateB - startDateA;
     });
+  }, []);
+
+  useEffect(() => {
+    const items = containerRef.current.querySelectorAll(".work-item");
+
+    items.forEach((item) => {
+      gsap.fromTo(
+        item,
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          ease: "power3.inOut",
+          scrollTrigger: {
+            trigger: item,
+            start: "top 100%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+    });
+
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
   }, []);
 
   return (
     <div id="work experience" className="pt-[2%] lg:w-3/4 w-3/4 mx-auto">
       <p className="text-2xl text-center font-bold m-10">Work Experience</p>
-      <ol className="relative border-s border-red-700 lg:w-3/4 mx-auto">
+      <ol
+        ref={containerRef}
+        className="relative border-s border-red-700 lg:w-3/4 mx-auto"
+      >
         {sortedExperienceList.map((work, index) => {
           const startDate = parseMonthYear(work.start_time);
           const endDate = work.end_time?.includes("Present")
@@ -65,7 +87,11 @@ const WorkExperience = () => {
             .filter(Boolean)
             .join(" ");
 
-          return <WorkItem key={index} work={work} duration={duration} />;
+          return (
+            <li key={index} className="work-item">
+              <WorkItem work={work} duration={duration} />
+            </li>
+          );
         })}
       </ol>
     </div>
