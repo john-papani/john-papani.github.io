@@ -45,7 +45,7 @@ const WorkExperience = () => {
           opacity: 1,
           y: 0,
           duration: 0.6,
-          ease: "power3.inOut",
+          ease: "power3.in",
           scrollTrigger: {
             trigger: item,
             start: "top 100%",
