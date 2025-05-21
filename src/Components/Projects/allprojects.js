@@ -8,9 +8,16 @@ import minesweeper from "../../img/minesweeper.png";
 import taxi_adv_db from "../../img/taxi_advdb.jpg";
 import tedxntua2024 from "../../img/tedxntua2024.png";
 import tedxntua_archive from "../../img/tedxntua_archive.png";
-import shadows from "@mui/material/styles/shadows";
+import e_syntagma_project from "../../img/e-syntagma_project.png";
 
 export const all_projects_list = [
+  {
+    img: e_syntagma_project,
+    title: "e-Syntagma",
+    shortDescription:
+      "e-Syntagma is a web application that provides information about the Greek Syntagma.",
+    githubLink: "https://e-syntagma.vercel.app/",
+  },
   {
     img: tedxntua2024,
     title: "TEDxNTUA 2024*",
@@ -43,7 +50,7 @@ export const all_projects_list = [
     title: "Advanced Topics in Database Systems 2022-2023",
     description:
       "TLC-NYC-Big-Data-Analytics. Semester project for the Advanced Database Systems Course @ NTUA ECE 2022-2023.",
-    githubLink: "https://github.com/john-papani/Saas-EnergyLive-Ntua",
+    githubLink: "https://github.com/john-papani/advanced_db",
   },
   {
     img: energyliveimg,
@@ -75,7 +82,7 @@ export const all_projects_list = [
   {
     img: recipeimg,
     title: "Recipe Treasure",
-  
+
     description:
       "A simple web app where you can find some delicious recipes from all over the world.",
     githubLink: "https://github.com/john-papani/Recipe-Treasure",
