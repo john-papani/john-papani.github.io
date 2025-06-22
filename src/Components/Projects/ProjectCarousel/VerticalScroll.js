@@ -4,7 +4,7 @@ import Card from "./Card";
 const VerticalScroll = () => {
   return (
     <>
-      <div className="flex flex-row flex-wrap gap-2 justify-center">
+      <div className="flex flex-wrap flex-row justify-center gap-2 mx-auto">
         {all_projects_list.map((card) => {
           return <Card card={card} key={card.id} />;
         })}

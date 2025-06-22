@@ -30,7 +30,6 @@ export const useStyles = makeStyles((theme) => ({
 
   card: {
     variant: "outlined",
-    elevation: "24",
 
     "&:hover": {
       border: "1px solid red",

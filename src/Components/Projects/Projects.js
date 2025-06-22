@@ -1,4 +1,4 @@
-import {  Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import { useStyles } from "./projectstyle";
 import React from "react";
 import ProjectsCarousel from "./ProjectCarousel/ProjectsCarousel";
@@ -16,10 +16,15 @@ const Projects = () => {
         // alignItems="flex-start"
         alignItems="stretch"
       >
-        <p className="text-xl lg:text-3xl text-center italic tracking-wider font-bold py-[5%] lg:py-[1%] m-auto w-[90%]">
-          Projects
-        </p>
-        <ProjectsCarousel />
+        <Grid item xs={12}>
+          <p className="text-xl lg:text-3xl text-center italic tracking-wider font-bold py-[5%] lg:py-[1%] m-auto w-[90%">
+            Projects
+          </p>
+        </Grid>
+        
+        <Grid item xs={12}>
+          <ProjectsCarousel />
+        </Grid>
       </Grid>
     </div>
   );
