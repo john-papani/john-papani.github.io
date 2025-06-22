@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef } from "react";
+import React, { useMemo, useRef } from "react";
 import { work_experience_list } from "./work_exper";
 import WorkItem from "./WorkItem";
 import gsap from "gsap";
@@ -11,7 +11,9 @@ const parseMonthYear = (str) => {
   const [monthStr, yearStr] = str.split(" ");
   const monthIndex = new Date(Date.parse(monthStr + " 1")).getMonth();
   const year = parseInt(yearStr);
-  return isNaN(monthIndex) || isNaN(year) ? new Date() : new Date(year, monthIndex);
+  return isNaN(monthIndex) || isNaN(year)
+    ? new Date()
+    : new Date(year, monthIndex);
 };
 
 const WorkExperience = () => {
@@ -34,31 +36,32 @@ const WorkExperience = () => {
     });
   }, []);
 
-  useEffect(() => {
-    const items = containerRef.current.querySelectorAll(".work-item");
+  // useEffect(() => {
+  //   const items = containerRef.current.querySelectorAll(".work-item");
+  //   items.forEach((item) => {
+  //     gsap.fromTo(
+  //       item,
+  //       { opacity: 0, y: 30 },
+  //       {
+  //         opacity: 1,
+  //         y: 0,
+  //         duration: 0.6,
+  //         ease: "power3.in",
+  //         scrollTrigger: {
+  //           trigger: item,
+  //           start: "top bottom",
+  //           toggleActions: "play none none none",
+  //           markers: true,
+  //         },
+  //       }
+  //     );
+  //   });
+  //   ScrollTrigger.refresh();
 
-    items.forEach((item) => {
-      gsap.fromTo(
-        item,
-        { opacity: 0, y: 30 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.6,
-          ease: "power3.in",
-          scrollTrigger: {
-            trigger: item,
-            start: "top 100%",
-            toggleActions: "play none none reverse",
-          },
-        }
-      );
-    });
-
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
-  }, []);
+  //   return () => {
+  //     ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+  //   };
+  // }, []);
 
   return (
     <div id="work experience" className="pt-[2%] lg:w-3/4 w-3/4 mx-auto">
