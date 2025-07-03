@@ -11,8 +11,16 @@ import tedxntua_archive from "../../img/tedxntua_archive.png";
 import e_syntagma_project from "../../img/e-syntagma_project.png";
 import github_explorer from "../../img/github_explorer.png";
 import data_growthfund from "../../img/data_growthfund.png";
-
+import minedu_schools_map from "../../img/minedu_schools_map.png";
 export const all_projects_list = [
+  {
+    img: minedu_schools_map,
+    title: "Minedu Schools Map",
+    description:
+      "A web application that visualizes the locations of schools in Greece, providing an interactive map experience for users to explore educational institutions.",
+    tags: ["React", "Next.js", "Tailwind CSS", "Leaflet"],
+    githubLink: "https://minedu-schools-map.vercel.app/",
+  },
   {
     img: github_explorer,
     title: "Github Explorer",
