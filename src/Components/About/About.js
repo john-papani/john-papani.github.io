@@ -8,31 +8,25 @@ const About = ({ isPhone }) => {
   const cvRef = useRef(null);
 
   const text = `Hello there! Welcome to my personal portfolio website. My name is
-        <b> Ioannis Papanikolaou</b>, and I'm thrilled to have you here.
-        At the age of 23, I'm concentrating on my studies at the
-        prestigious National Technical University of Athens, where I'm
-        pursuing a degree in<b> Electrical and Computer Engineering</b>.
-        <br />
-        <br />
-        My home is the vibrant city of Athens, specifically the charming
-        neighborhood of Ilioupoli. As I progress through my academic
-        career, my ultimate goal is to become a versatile and skilled
-        full stack developer (or not). I get a lot of satisfaction from
-        transforming abstract ideas into concrete solutions, and I'm
-        always up for exploring new ideas and pushing boundaries.
-        <br />
-        <br />
-        <b>Collaboration is key for me.</b> I believe that great ideas
-        come to life when passionate individuals work together in a
-        supportive team environment. So, if you have an exciting project
-        or an innovative idea that you'd like to bring to fruition, I'm
-        all ears. Let's connect and make it happen! <br />
-        <br />
-        Feel free to explore my portfolio and learn more about my
-        skills, experiences, and projects.
-        <br /> Thank you for visiting, and I look forward to connecting
-        with you soon.
-`;
+<b>Ioannis Papanikolaou</b>, and I’m glad to have you here.
+<br/>
+<br/>
+
+I’m 25 years old and a graduate of the <b>National Technical University of Athens</b>, where I earned my degree in <b>Electrical and Computer Engineering</b>. 
+I have also successfully fulfilled my military service, and I’m now fully focused on my professional career.
+<br/>
+<br/>
+Based in the vibrant city of Athens, in the neighborhood of Ilioupoli, my goal is to grow as a versatile and skilled full-stack developer. 
+I enjoy transforming abstract ideas into concrete solutions and constantly exploring new technologies to push boundaries and create meaningful results.
+
+<br/>
+<br/>
+<b>Collaboration is key to me.</b> I believe that great ideas come to life when passionate individuals work together in a supportive environment. 
+If you have an exciting project or an innovative idea you’d like to bring to fruition, I’d love to connect and make it happen!
+
+Feel free to explore my portfolio to learn more about my skills, experiences, and projects.
+<br/>
+s`;
   return (
     <div id="about">
       <Grid
