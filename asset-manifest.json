@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.72a84544.css",
-    "main.js": "/static/js/main.d5647e87.js",
+    "main.css": "/static/css/main.1d082df1.css",
+    "main.js": "/static/js/main.fd2be673.js",
+    "static/media/minedu_schools_map.png": "/static/media/minedu_schools_map.d0c1fc639d742d4b5ecd.png",
     "static/media/energylive22.png": "/static/media/energylive22.eefdd587c38ed21e9c45.png",
     "static/media/2.png": "/static/media/2.adcd600f55bd7dfe5e9c.png",
     "static/media/4.png": "/static/media/4.ebea73097f243e523721.png",
@@ -9,17 +10,20 @@
     "static/media/tedxntua_archive.png": "/static/media/tedxntua_archive.9868af467403df5a2c2d.png",
     "static/media/noise.gif": "/static/media/noise.2290dc385105e3fd9a35.gif",
     "static/media/recipe_project.png": "/static/media/recipe_project.3479d12b0b6c8708e66c.png",
+    "static/media/e-syntagma_project.png": "/static/media/e-syntagma_project.90dd406e459b31a1e2ae.png",
     "static/media/softeng_project.jpg": "/static/media/softeng_project.053bc8c5a6716251c03f.jpg",
     "static/media/covid_project.jpg": "/static/media/covid_project.8991bbbd31baba52aa71.jpg",
+    "static/media/github_explorer.png": "/static/media/github_explorer.b9141fadc7e53fe4e1fd.png",
     "static/media/iot-live-streaming.jpg": "/static/media/iot-live-streaming.43bf7688d454baee383a.jpg",
     "static/media/taxi_advdb.jpg": "/static/media/taxi_advdb.42bf308e3f2dc1f1dcaf.jpg",
     "static/media/gradebook_project.png": "/static/media/gradebook_project.58df998a74f73758e552.png",
+    "static/media/data_growthfund.png": "/static/media/data_growthfund.4fac56c3a37f5d4e853f.png",
     "index.html": "/index.html",
-    "main.72a84544.css.map": "/static/css/main.72a84544.css.map",
-    "main.d5647e87.js.map": "/static/js/main.d5647e87.js.map"
+    "main.1d082df1.css.map": "/static/css/main.1d082df1.css.map",
+    "main.fd2be673.js.map": "/static/js/main.fd2be673.js.map"
   },
   "entrypoints": [
-    "static/css/main.72a84544.css",
-    "static/js/main.d5647e87.js"
+    "static/css/main.1d082df1.css",
+    "static/js/main.fd2be673.js"
   ]
 }
