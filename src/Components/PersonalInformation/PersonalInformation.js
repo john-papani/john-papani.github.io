@@ -66,7 +66,7 @@ const PersonalInformation = ({ isPhone }) => {
             fillMode="none"
           >
             <Typography variant="h6">
-              Student of ECE NTUA <br />
+              MEng ECE @ NTUA <br />
             </Typography>
             <Typewriter
               options={{

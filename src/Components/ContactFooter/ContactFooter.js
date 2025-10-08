@@ -102,7 +102,7 @@ const ContactFooter = () => {
         <div>
           <p className="text-sm lg:text-base text-gray-200 text-center">
             <p>
-              © 2024 Ioannis Papanikolaou. <br />
+              © 2025 Ioannis Papanikolaou. <br />
               All rights reserved.
             </p>
           </p>

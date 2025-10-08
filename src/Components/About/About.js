@@ -25,8 +25,7 @@ I enjoy transforming abstract ideas into concrete solutions and constantly explo
 If you have an exciting project or an innovative idea you’d like to bring to fruition, I’d love to connect and make it happen!
 
 Feel free to explore my portfolio to learn more about my skills, experiences, and projects.
-<br/>
-s`;
+<br/>`;
   return (
     <div id="about">
       <Grid
