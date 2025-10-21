@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.a8864c4a.css",
-    "main.js": "/static/js/main.7d95f238.js",
+    "main.css": "/static/css/main.87a0a87f.css",
+    "main.js": "/static/js/main.e2b2c950.js",
     "static/media/minedu_schools_map.png": "/static/media/minedu_schools_map.d0c1fc639d742d4b5ecd.png",
     "static/media/energylive22.png": "/static/media/energylive22.eefdd587c38ed21e9c45.png",
     "static/media/2.png": "/static/media/2.adcd600f55bd7dfe5e9c.png",
@@ -19,11 +19,11 @@
     "static/media/gradebook_project.png": "/static/media/gradebook_project.58df998a74f73758e552.png",
     "static/media/data_growthfund.png": "/static/media/data_growthfund.4fac56c3a37f5d4e853f.png",
     "index.html": "/index.html",
-    "main.a8864c4a.css.map": "/static/css/main.a8864c4a.css.map",
-    "main.7d95f238.js.map": "/static/js/main.7d95f238.js.map"
+    "main.87a0a87f.css.map": "/static/css/main.87a0a87f.css.map",
+    "main.e2b2c950.js.map": "/static/js/main.e2b2c950.js.map"
   },
   "entrypoints": [
-    "static/css/main.a8864c4a.css",
-    "static/js/main.7d95f238.js"
+    "static/css/main.87a0a87f.css",
+    "static/js/main.e2b2c950.js"
   ]
 }
