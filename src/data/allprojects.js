@@ -1,17 +1,17 @@
-import covidimg from "../../img/covid_project.jpg";
-import gradebookimg from "../../img/gradebook_project.png";
-import recipeimg from "../../img/recipe_project.png";
-import softengimg from "../../img/softeng_project.jpg";
-import energyliveimg from "../../img/energylive22.png";
-import iotlivestreamingimg from "../../img/iot-live-streaming.jpg";
-import minesweeper from "../../img/minesweeper.png";
-import taxi_adv_db from "../../img/taxi_advdb.jpg";
-import tedxntua2024 from "../../img/tedxntua2024.png";
-import tedxntua_archive from "../../img/tedxntua_archive.png";
-import e_syntagma_project from "../../img/e-syntagma_project.png";
-import github_explorer from "../../img/github_explorer.png";
-import data_growthfund from "../../img/data_growthfund.png";
-import minedu_schools_map from "../../img/minedu_schools_map.png";
+import covidimg from "../img/covid_project.jpg";
+import gradebookimg from "../img/gradebook_project.png";
+import recipeimg from "../img/recipe_project.png";
+import softengimg from "../img/softeng_project.jpg";
+import energyliveimg from "../img/energylive22.png";
+import iotlivestreamingimg from "../img/iot-live-streaming.jpg";
+import minesweeper from "../img/minesweeper.png";
+import taxi_adv_db from "../img/taxi_advdb.jpg";
+import tedxntua2024 from "../img/tedxntua2024.png";
+import tedxntua_archive from "../img/tedxntua_archive.png";
+import e_syntagma_project from "../img/e-syntagma_project.png";
+import github_explorer from "../img/github_explorer.png";
+import data_growthfund from "../img/data_growthfund.png";
+import minedu_schools_map from "../img/minedu_schools_map.png";
 export const all_projects_list = [
   {
     img: minedu_schools_map,

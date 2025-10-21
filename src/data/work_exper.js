@@ -1,8 +1,8 @@
-import libralogo from "../../img/work_exp/libra_logo.jpg";
-import pyrotechnica_logo from "../../img/work_exp/pyrotechnica_engineering_hellas___logo.jpg";
-import tedxntua_logo from "../../img/work_exp/tedxntua_logo.jpg";
-import blupry_logo from "../../img/work_exp/blupry_logo.jpg";
-import haf_logo from "../../img/work_exp/hellenic_airforce_logo.jpg";
+import libralogo from "../img/work_exp/libra_logo.jpg";
+import pyrotechnica_logo from "../img/work_exp/pyrotechnica_engineering_hellas___logo.jpg";
+import tedxntua_logo from "../img/work_exp/tedxntua_logo.jpg";
+import blupry_logo from "../img/work_exp/blupry_logo.jpg";
+import haf_logo from "../img/work_exp/hellenic_airforce_logo.jpg";
 export const work_experience_list = [
   {
     title: "Customer Service",
@@ -33,7 +33,7 @@ export const work_experience_list = [
   },
   {
     title: "E-Commerce Web Developer & Support Staff",
-    start_time: "Apri; 2024",
+    start_time: "April 2024",
     end_time: "October 2024",
     location: "PYROTECHNICA ENGINEERING HELLAS ΜΟΝ. ΙΚΕ",
     logoimage: pyrotechnica_logo,

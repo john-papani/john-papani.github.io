@@ -1,5 +1,5 @@
 import React, { useMemo, useRef } from "react";
-import { work_experience_list } from "./work_exper";
+import { work_experience_list } from "../../data/work_exper";
 import WorkItem from "./WorkItem";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";

@@ -1,10 +1,10 @@
 import React from "react";
-import { volunteering_exper_list } from "./volunteering_exper";
+import { volunteering_exper_list } from "../../data/volunteering_exper";
 
 const Volunteering = () => {
   return (
-    <div id="volunteering" className="pt-[5%] pb-10">
-      <p className="text-2xl text-center font-bold m-6">Volunteering</p>
+    <div id="volunteering" className="py-[5%]">
+      <p className="text-2xl text-center font-bold pb-10">Volunteering</p>
       <div className="flex flex-wrap justify-center items-stretch gap-6 w-3/4 mx-auto mb-2">
         {volunteering_exper_list
           .sort((a, b) => {

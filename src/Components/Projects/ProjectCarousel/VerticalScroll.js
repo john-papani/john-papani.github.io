@@ -1,5 +1,5 @@
 import React from "react";
-import { all_projects_list } from "../allprojects";
+import { all_projects_list } from "../../../data/allprojects";
 import Card from "./Card";
 const VerticalScroll = () => {
   return (
