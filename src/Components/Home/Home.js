@@ -3,7 +3,7 @@ import { Alert, Divider, Fab, Snackbar } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import ContactFooter from "../ContactFooter/ContactFooter";
 import Navbar from "../Navbar/Navbar";
-import PersonalInformation from "../PersonalInformation/PersonalInformation";
+import Hero from "../Hero/Hero";
 import Projects from "../Projects/Projects";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { useStyles } from "./homestyle";
@@ -60,7 +60,7 @@ const Home = (isPhone) => {
   const [loading, setLoading] = useState(true);
   const [progressValue, setProgressValue] = useState(0);
   useEffect(() => {
-    const duration = 1500; // Set the total loading time in milliseconds
+    const duration = 600; // Set the total loading time in milliseconds
     const interval = 100; // Update interval for progress in milliseconds
     const steps = duration / interval;
 
@@ -117,7 +117,7 @@ const Home = (isPhone) => {
         <ProgressIndicator />
         <Particle />
 
-        <PersonalInformation isPhone={isPhone} />
+        <Hero isPhone={isPhone} />
         <Divider sx={{ bgcolor: "white" }} />
         <About isPhone={isPhone} />
         <Divider sx={{ bgcolor: "white" }} />
@@ -139,7 +139,7 @@ const Home = (isPhone) => {
         <Snackbar
           anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
           open={openAlert}
-          autoHideDuration={30000}
+          autoHideDuration={5000}
           onClose={handleCloseAlert}
         >
           <Alert severity="warning" onClose={handleCloseAlert}>
