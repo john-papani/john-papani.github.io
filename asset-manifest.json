@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.87a0a87f.css",
-    "main.js": "/static/js/main.e2b2c950.js",
+    "main.js": "/static/js/main.fdc1c839.js",
     "static/media/minedu_schools_map.png": "/static/media/minedu_schools_map.d0c1fc639d742d4b5ecd.png",
     "static/media/energylive22.png": "/static/media/energylive22.eefdd587c38ed21e9c45.png",
     "static/media/2.png": "/static/media/2.adcd600f55bd7dfe5e9c.png",
@@ -20,10 +20,10 @@
     "static/media/data_growthfund.png": "/static/media/data_growthfund.4fac56c3a37f5d4e853f.png",
     "index.html": "/index.html",
     "main.87a0a87f.css.map": "/static/css/main.87a0a87f.css.map",
-    "main.e2b2c950.js.map": "/static/js/main.e2b2c950.js.map"
+    "main.fdc1c839.js.map": "/static/js/main.fdc1c839.js.map"
   },
   "entrypoints": [
     "static/css/main.87a0a87f.css",
-    "static/js/main.e2b2c950.js"
+    "static/js/main.fdc1c839.js"
   ]
 }
