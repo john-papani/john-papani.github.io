@@ -5,7 +5,7 @@ const ContactFooter = () => {
       <div className="flex flex-col gap-4">
         <div className="flex flex-row flex-wrap gap-5 justify-center">
           <a
-            href="https://www.linkedin.com/in/ioannis-papanikolaou-1b205a259"
+            href="https://www.linkedin.com/in/ioannis-papanikolaou"
             target="_blank"
             rel="noreferrer"
             className="text-white hover:text-[#eb0028]"

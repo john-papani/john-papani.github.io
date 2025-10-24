@@ -88,7 +88,7 @@ Feel free to explore my portfolio to learn more about my <b>skills, experiences,
                     // onClick={handleOpenModal}
                     onClick={() =>
                       window.open(
-                        "https://www.canva.com/design/DAGVIrHLtPw/wrrM0r5TbdjdR36uOQIXKg/view?utm_content=DAGVIrHLtPw&utm_campaign=designshare&utm_medium=link&utm_source=editor",
+                        "./papanikolaou_ioannis_cv1.pdf",
                         "_blank"
                       )
                     }
