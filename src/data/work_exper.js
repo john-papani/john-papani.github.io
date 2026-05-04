@@ -54,7 +54,7 @@ export const work_experience_list = [
   {
     title: "Web Developer",
     start_time: "April 2024",
-    end_time: "Present",
+    end_time: "November 2025",
     logoimage: blupry_logo,
     location: "Blupry",
     location_url: "https://blupry.io/",
@@ -63,10 +63,20 @@ export const work_experience_list = [
   {
     title: "IT Support Specialist & Technical Support (Military Service)",
     start_time: "November 2024",
-    end_time: "Present",
+    end_time: "November 2025",
     logoimage: haf_logo,
     location: "Hellenic Air Force (HAF)",
     location_url: "https://www.haf.gr/",
     description: "Delivered first-line helpdesk support by responding to incoming calls, accurately logging user issues, and performing thorough initial assessments to understand and prioritize technical problems.\nDiagnosed and resolved a wide range of hardware and software issues—both remotely and onsite—ensuring minimal disruption to end-user productivity.\nProvided hands-on technical support for desktops, laptops, printers, and network connectivity, maintaining smooth day-to-day operations across the organization.",
   },
+  {
+    // Full stack developer Mitsis Group
+      title: "Full Stack Developer",
+      start_time: "November 2025",
+      end_time: "Present",
+      // logoimage: mitsis_logo,
+      location: "Mitsis Group",
+      location_url: "https://www.mitsisgroup.com/",
+      description: `Collaborate with cross-functional teams to design, develop, and maintain web applications that meet business requirements and enhance user experience.\nUtilize a variety of programming languages and frameworks to build scalable and efficient solutions, ensuring high performance and responsiveness.\nImplement best practices in coding, testing, and deployment to deliver robust applications while adhering to project timelines and quality standards.`,
+  }
 ];

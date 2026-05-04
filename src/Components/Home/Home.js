@@ -23,6 +23,7 @@ const Home = (isPhone) => {
   // const [severityAlert, setSeverityAlert] = useState("");
   const [businessProfile, setBusinessProfile] = useState(true);
   const classes = useStyles();
+  const dividerStyle = { bgcolor: "rgba(255, 255, 255, 0.12)" };
 
   // useEffect(
   //   () =>
@@ -94,7 +95,7 @@ const Home = (isPhone) => {
           sx={{
             backgroundColor: "white",
             "& .MuiLinearProgress-bar": {
-              backgroundColor: "red",
+              backgroundColor: "#ff3d55",
             },
           }}
           fourColor
@@ -118,22 +119,22 @@ const Home = (isPhone) => {
         <Particle />
 
         <Hero isPhone={isPhone} />
-        <Divider sx={{ bgcolor: "white" }} />
+        <Divider sx={dividerStyle} />
         <About isPhone={isPhone} />
-        <Divider sx={{ bgcolor: "white" }} />
+        <Divider sx={dividerStyle} />
         <Diploma isPhone={isPhone} />
-        <Divider sx={{ bgcolor: "white" }} />
+        <Divider sx={dividerStyle} />
         <WorkExperience isPhone={isPhone} />
-        <Divider sx={{ bgcolor: "white" }} />
+        <Divider sx={dividerStyle} />
         <Volunteering  isPhone={isPhone} />
-        <Divider sx={{ bgcolor: "white" }} />
+        <Divider sx={dividerStyle} />
         <Projects />
-        <Divider sx={{ bgcolor: "white" }} />
+        <Divider sx={dividerStyle} />
         <Fab size="small" className={classes.ArrowTop} onClick={scrollTop}>
           <KeyboardArrowUpIcon />
         </Fab>
 
-        <Divider sx={{ bgcolor: "white" }} />
+        <Divider sx={dividerStyle} />
         <LanguageTools isPhone={isPhone} />
         <ContactFooter />
         <Snackbar

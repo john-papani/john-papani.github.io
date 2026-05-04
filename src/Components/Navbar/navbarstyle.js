@@ -19,11 +19,15 @@ const main_theme = createTheme({
 export const useStyles = makeStyles((theme) => ({
   appbar: {
     position:"sticky",
-    borderBottom:"1px solid white",
+    borderBottom:"1px solid rgba(255, 255, 255, 0.12)",
     color: "white",
+    background:
+      "linear-gradient(90deg, rgba(6, 7, 11, 0.82), rgba(16, 19, 28, 0.72)) !important",
+    backdropFilter: "blur(18px)",
+    boxShadow: "0 18px 44px rgba(0, 0, 0, 0.24)",
   },
   toolbar: {
-    backgroundColor: main_theme.palette.primary.main,
+    backgroundColor: "transparent",
     position: "fixed",
   },
 }));

@@ -124,7 +124,7 @@ const Navbar = (props) => {
                     display: "block",
                     fontWeight: "bold",
                   }}
-                  className="hover:text-[#eb0028] font-bold"
+                  className="hover:text-[#ff6374] font-bold"
                 >
                   {page}
                 </Button>

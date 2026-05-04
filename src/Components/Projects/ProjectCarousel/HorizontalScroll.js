@@ -4,7 +4,7 @@ import Card from "./Card";
 const HorizontalScroll = () => {
   return (
     <>
-      <div className="flex flex-wrap justify-center gap-5 w-[100%] text-center">
+      <div className="flex flex-wrap justify-center gap-4 w-[96%] mx-auto text-center">
         {all_projects_list.map((card) => {
           return <Card card={card} key={card.id} />;
         })}

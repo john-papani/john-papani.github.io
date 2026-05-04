@@ -79,10 +79,11 @@ Feel free to explore my portfolio to learn more about my <b>skills, experiences,
                     variant="contained"
                     // color='warning'
                     sx={{
-                      backgroundColor: "red",
+                      backgroundColor: "#ff3d55",
+                      boxShadow: "0 14px 34px rgba(255, 61, 85, 0.22)",
                       "&:hover": {
-                        backgroundColor: "black",
-                        color: "red",
+                        backgroundColor: "#0c0f18",
+                        color: "#ff6374",
                       },
                     }}
                     // onClick={handleOpenModal}

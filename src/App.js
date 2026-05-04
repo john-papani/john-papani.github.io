@@ -38,10 +38,10 @@ const App = () => {
             outerAlpha={0.2}
             hasBlendMode={true}
             innerStyle={{
-              backgroundColor: "red",
+              backgroundColor: "#ff3d55",
             }}
             outerStyle={{
-              border: "3px solid red",
+              border: "3px solid #ff3d55",
             }}
             clickables={[
               "a",

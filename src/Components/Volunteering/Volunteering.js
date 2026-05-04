@@ -16,7 +16,7 @@ const Volunteering = () => {
           .map((volunteering, index) => (
             <div
               key={index}
-              className="flex flex-col w-full md:w-[300px] p-6 bg-black border border-red-700 rounded-lg shadow-lg"
+              className="flex flex-col w-full md:w-[300px] p-6 bg-[#0c0f18]/85 border border-white/10 rounded-lg shadow-2xl shadow-black/30 backdrop-blur-md transition-transform duration-300 hover:-translate-y-1 hover:border-red-400/60"
             >
               {/* <p>{index}</p> */}
               <time className="text-xs lg:text-sm text-red-500">

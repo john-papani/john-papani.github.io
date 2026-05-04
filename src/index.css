@@ -6,8 +6,14 @@
 
 
 :root {
-  --color-dark: #050505;
+  --color-dark: #06070b;
+  --color-dark-soft: #10131c;
   --color-light: #f7f7ff;
+  --color-muted: #b9c0d4;
+  --color-accent: #ff3d55;
+  --color-accent-soft: rgba(255, 61, 85, 0.16);
+  --surface-glass: rgba(12, 15, 24, 0.78);
+  --surface-border: rgba(255, 255, 255, 0.12);
 }
 ::-webkit-scrollbar {
   width: 10px;
@@ -15,11 +21,11 @@
 
 ::-webkit-scrollbar-thumb {
   height: 10%;
-  background-color: #909090;
+  background-color: rgba(255, 61, 85, 0.75);
   border-radius: 50px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #727272;
+  background-color: #ff6b7b;
 }
 
 ::-webkit-scrollbar-track {
@@ -27,7 +33,7 @@
 }
 
 ::selection {
-  background-color: #9a1b1b;
+  background-color: var(--color-accent);
   /* color: var(--color-dark); */
   color:rgb(255, 255, 255)
 }
@@ -39,7 +45,10 @@
 }
 
 body {
-  background-color: var(--color-dark)  !important;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(255, 61, 85, 0.18), transparent 28rem),
+    radial-gradient(circle at 85% 20%, rgba(75, 201, 240, 0.13), transparent 24rem),
+    linear-gradient(180deg, #06070b 0%, #090b12 42%, #050505 100%) !important;
   color: var(--color-light) !important;
   font-family: "Michroma", sans-serif;
   font-size: 1.5rem;
@@ -47,6 +56,52 @@ body {
   letter-spacing: 1.5px;
   word-spacing: 2.5px;
   overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -998;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 76px 76px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), transparent 70%);
+}
+
+a {
+  text-underline-offset: 4px;
+}
+
+.MuiCard-root {
+  color: var(--color-light) !important;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.025)),
+    var(--surface-glass) !important;
+  border: 1px solid var(--surface-border);
+  border-radius: 8px !important;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.34) !important;
+  backdrop-filter: blur(18px);
+}
+
+.MuiDivider-root {
+  max-width: min(88vw, 1180px);
+  margin: 0 auto !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+.MuiChip-root {
+  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.26);
+}
+
+.MuiFab-root {
+  color: var(--color-light) !important;
+  background: rgba(255, 61, 85, 0.86) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  backdrop-filter: blur(14px);
 }
 
 .inner-cursor {
@@ -95,7 +150,7 @@ input[type="submit"] {
 
 .link-item::after {
   content: "";
-  background-color: var(--color-light);
+  background-color: var(--color-accent);
   position: absolute;
   width: 0%;
   height: 1.5px;
@@ -142,8 +197,8 @@ input[type="submit"] {
 .circle-right {
   width: 700px;
   height: 700px;
-  border: 0.15rem dashed var(--color-light);
-  opacity: 0.3;
+  border: 0.15rem dashed rgba(255, 255, 255, 0.22);
+  opacity: 0.24;
   border-radius: 50%;
   position: fixed;
   z-index: -990;
@@ -198,7 +253,7 @@ input[type="submit"] {
 
 .skill-itme::after {
   width: 0;
-  background-color: #22d3ee;
+  background-color: var(--color-accent);
   transition: 0.5s;
 }
 

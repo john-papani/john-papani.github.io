@@ -32,8 +32,8 @@ export const useStyles = makeStyles((theme) => ({
     variant: "outlined",
 
     "&:hover": {
-      border: "1px solid red",
-      background: "#c7c7c7",
+      border: "1px solid #ff3d55",
+      background: "rgba(255, 255, 255, 0.08)",
     },
   },
   cardtext: {

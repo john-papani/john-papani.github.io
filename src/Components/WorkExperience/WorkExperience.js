@@ -64,11 +64,13 @@ const WorkExperience = () => {
   // }, []);
 
   return (
-    <div id="work experience" className="pt-[2%] lg:w-3/4 w-3/4 mx-auto">
-      <p className="text-2xl text-center font-bold m-10">Work Experience</p>
+    <div id="work experience" className="pt-[2%] w-[88%] lg:w-[72%] mx-auto">
+      <p className="text-xl lg:text-2xl text-center font-bold my-8">
+        Work Experience
+      </p>
       <ol
         ref={containerRef}
-        className="relative border-s border-red-700 lg:w-3/4 mx-auto"
+        className="relative border-s border-red-700/80 mx-auto"
       >
         {sortedExperienceList.map((work, index) => {
           const startDate = parseMonthYear(work.start_time);

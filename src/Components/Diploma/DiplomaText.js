@@ -50,7 +50,7 @@ const DiplomaText = ({isPhone}) => {
       <br />
       <p className="flex flex-col  items-center md:items-end">
         You can find more information about the project on my GitHub repository:
-        <p className="text-[#eb0028] italic bold font-bold hover:cursor-pointer underline underline-offset-2">
+        <p className="text-[#ff6374] italic bold font-bold hover:cursor-pointer underline underline-offset-2">
           <a
             href="https://github.com/john-papani/diploma"
             target="_blank"

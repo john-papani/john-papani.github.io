@@ -1,14 +1,14 @@
 import React from "react";
 const ContactFooter = () => {
   return (
-    <div className="bg-black z-[10] pt-10">
+    <div className="bg-[#06070b]/95 border-t border-white/10 z-[10] pt-10">
       <div className="flex flex-col gap-4">
         <div className="flex flex-row flex-wrap gap-5 justify-center">
           <a
             href="https://www.linkedin.com/in/ioannis-papanikolaou"
             target="_blank"
             rel="noreferrer"
-            className="text-white hover:text-[#eb0028]"
+            className="text-white hover:text-[#ff6374]"
           >
             {" "}
             <svg
@@ -29,7 +29,7 @@ const ContactFooter = () => {
             href="https://www.github.com/john-papani"
             target="_blank"
             rel="noreferrer"
-            className="text-white hover:text-[#eb0028]"
+            className="text-white hover:text-[#ff6374]"
           >
             <svg
               className="w-10 h-auto"
@@ -47,7 +47,7 @@ const ContactFooter = () => {
             href="https://www.facebook.com/john.papanikolaou.7"
             target="_blank"
             rel="noreferrer"
-            className="text-white hover:text-[#eb0028]"
+            className="text-white hover:text-[#ff6374]"
           >
             <svg
               className="w-10 h-auto"
@@ -65,7 +65,7 @@ const ContactFooter = () => {
             href="mailto:johnppani1@gmail.com"
             target="_blank"
             rel="noreferrer"
-            className="text-white hover:text-[#eb0028]"
+            className="text-white hover:text-[#ff6374]"
           >
             <svg
               className="w-10 h-auto"
