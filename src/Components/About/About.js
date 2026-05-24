@@ -27,19 +27,19 @@ const About = ({ isPhone }) => {
 // Feel free to explore my portfolio to learn more about my skills, experiences, and projects.
 
 const text = `
-Hello there! Welcome to my personal portfolio website — I’m Ioannis Papanikolaou, a motivated Electrical and Computer Engineering graduate from the National Technical University of Athens (NTUA).  
+Hi, I’m <b>Ioannis Papanikolaou</b>, a <b>Full Stack Developer</b> and Electrical and Computer Engineering graduate from the <b>National Technical University of Athens</b>.
 <br/><br/>
 
-I specialize in <b>React.js</b>, <b>JavaScript</b>, <b>Python</b>, and <b>C#</b>, with a strong passion for <b>full-stack development</b> and creating seamless, engaging digital experiences. What drives me most is turning innovative ideas into functional, user-focused applications that make a real impact.  
+I build modern, responsive, and business-oriented web applications, with experience across <b>React.js</b>, <b>Next.js</b>, <b>JavaScript</b>, <b>Python</b>, <b>Django REST Framework</b>, <b>Flask</b>, <b>Tailwind CSS</b>, <b>SQL</b>, and <b>Git</b>. My work focuses on creating practical digital solutions that are clean, scalable, user-friendly, and aligned with real operational needs.
 <br/><br/>
 
-Based in <b>Ilioupoli, Athens</b>, I’m constantly exploring new technologies and frameworks to expand my skill set and refine my approach to problem-solving. My goal is to grow as a <b>versatile and adaptive developer</b> capable of contributing to both front-end and back-end solutions with efficiency and creativity.  
+Currently, I develop and maintain <b>internal business applications</b>, <b>RESTful APIs</b>, and <b>reporting tools</b> that support hospitality operations, workflows, and management systems. I enjoy working across both front-end and back-end development, combining thoughtful interface design with reliable functionality and maintainable architecture.
 <br/><br/>
 
-I deeply value <b>collaboration</b> and believe that great results come from sharing knowledge and building upon each other’s strengths. If you have an exciting project, a creative concept, or an innovative idea you’d like to bring to life, I’d love to connect and make it happen.  
+My background also includes experience in <b>e-commerce development</b>, <b>WordPress/WooCommerce</b>, technical support, debugging, testing, and collaborative development through <b>GitHub</b>. These experiences have helped me build a practical, problem-solving mindset and a strong understanding of how software supports everyday business processes.
 <br/><br/>
 
-Feel free to explore my portfolio to learn more about my <b>skills, experiences, and projects</b> — and don’t hesitate to reach out for a potential collaboration!
+Through this portfolio, you can explore my <b>projects</b>, <b>skills</b>, and <b>professional experience</b>. I’m always interested in new challenges, meaningful collaborations, and opportunities to build software that makes a real impact.
 `;
   return (
     <div id="about">
