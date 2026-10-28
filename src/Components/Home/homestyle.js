@@ -4,6 +4,7 @@ import noise from "./noise.gif";
 export const useStyles = makeStyles(() => ({
   wholepage: {
     position: "relative",
+    isolation: "isolate",
   },
   backgif: {
     backgroundImage: `url(${noise})`,

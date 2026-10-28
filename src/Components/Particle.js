@@ -32,7 +32,7 @@ function Particle() {
       init={particlesInit}
       options={{
         background: {
-          zIndex: -10,
+          zIndex: -1,
         },
         fpsLimit: 1200,
         interactivity: {
@@ -65,7 +65,7 @@ function Particle() {
             color: particleColor,
             distance: 250,
             enable: true,
-            opacity: 0.2,
+            opacity: theme === "light" ? 0.35 : 0.2,
             width: 0.7,
           },
           collisions: {
@@ -89,7 +89,7 @@ function Particle() {
             value: 80,
           },
           opacity: {
-            value: 0.5,
+            value: theme === "light" ? 0.75 : 0.5,
           },
           shape: {
             type: "squere",
