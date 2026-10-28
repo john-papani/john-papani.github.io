@@ -3,63 +3,55 @@ import { volunteering_exper_list } from "../../data/volunteering_exper";
 
 const Volunteering = () => {
   return (
-    <div id="volunteering" className="py-[5%]">
-      <p className="text-2xl text-center font-bold pb-10">Volunteering</p>
-      <div className="flex flex-wrap justify-center items-stretch gap-6 w-3/4 mx-auto mb-2">
+    <section id="volunteering" className="py-11 px-4" aria-labelledby="volunteering-heading">
+      <h2 id="volunteering-heading" className="section-title">
+        Volunteering
+      </h2>
+      <div className="flex flex-wrap justify-center items-stretch gap-4 w-[88%] mx-auto">
         {volunteering_exper_list
           .sort((a, b) => {
-            // Check if either date has the word "Present"
-            if (a.end_time.includes("Present")) return -1; // "Present" goes to the top
+            if (a.end_time.includes("Present")) return -1;
             if (b.end_time.includes("Present")) return 1;
-            return new Date(b.end_time) - new Date(a.end_time); // Sort by date (descending)
+            return new Date(b.end_time) - new Date(a.end_time);
           })
           .map((volunteering, index) => (
-            <div
+            <article
               key={index}
-              className="flex flex-col w-full md:w-[300px] p-6 bg-[#0c0f18]/85 border border-white/10 rounded-lg shadow-2xl shadow-black/30 backdrop-blur-md transition-transform duration-300 hover:-translate-y-1 hover:border-red-400/60"
+              className="flex flex-col w-full sm:w-[calc(50%-0.5rem)] md:w-[280px] p-4 bg-[#0c0f18] border border-white/10 rounded-lg"
             >
-              {/* <p>{index}</p> */}
-              <time className="text-xs lg:text-sm text-red-500">
-                {volunteering.start_time} - {volunteering.end_time}
+              <time className="text-xs text-slate-400 mb-1">
+                {volunteering.start_time} – {volunteering.end_time}
               </time>
-              <h5 className="text-lg lg:text-xl font-bold tracking-tight text-white">
+              <h3 className="text-base font-semibold text-white mb-2">
                 {volunteering.title}
-              </h5>
-              <div className="flex items-center">
+              </h3>
+              <div className="flex items-center gap-2">
                 {volunteering.logoimage && (
                   <img
                     src={volunteering.logoimage}
-                    alt={volunteering.logoimage}
-                    className="w-6 h-6 mr-1 rounded-full "
+                    alt=""
+                    className="w-5 h-5 rounded-full"
                   />
                 )}
                 {volunteering.location_url ? (
                   <a
                     href={volunteering.location_url}
                     target="_blank"
-                    rel="noreferrer"
-                    className="italic underline decoration-red-600"
+                    rel="noopener noreferrer"
+                    className="text-sm text-[var(--color-muted)] hover:text-white"
                   >
-                    <h5 className="text-sm lg:text-base font-normal text-red-600">
-                      {volunteering.location}
-                    </h5>
+                    {volunteering.location}
                   </a>
                 ) : (
-                  <h5 className="text-sm lg:text-base font-normal text-red-600">
+                  <span className="text-sm text-[var(--color-muted)]">
                     {volunteering.location}
-                  </h5>
+                  </span>
                 )}
               </div>
-
-              {/* <ul className="mb-2 text-sm font-normal text-red-300 list-disc list-inside space-y-1"> */}
-              {/* {volunteering.description.split("\n").map((bullet, index) => ( */}
-              {/* <li key={index}>{bullet}</li> */}
-              {/* ))} */}
-              {/* </ul> */}
-            </div>
+            </article>
           ))}
       </div>
-    </div>
+    </section>
   );
 };
 

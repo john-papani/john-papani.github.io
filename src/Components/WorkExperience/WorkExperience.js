@@ -1,20 +1,7 @@
 import React, { useMemo, useRef } from "react";
 import { work_experience_list } from "../../data/work_exper";
 import WorkItem from "./WorkItem";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
-
-const parseMonthYear = (str) => {
-  if (!str || str.includes("Present")) return new Date();
-  const [monthStr, yearStr] = str.split(" ");
-  const monthIndex = new Date(Date.parse(monthStr + " 1")).getMonth();
-  const year = parseInt(yearStr);
-  return isNaN(monthIndex) || isNaN(year)
-    ? new Date()
-    : new Date(year, monthIndex);
-};
+import { parseMonthYear } from "../../utils/parseMonthYear";
 
 const WorkExperience = () => {
   const containerRef = useRef(null);
@@ -36,70 +23,24 @@ const WorkExperience = () => {
     });
   }, []);
 
-  // useEffect(() => {
-  //   const items = containerRef.current.querySelectorAll(".work-item");
-  //   items.forEach((item) => {
-  //     gsap.fromTo(
-  //       item,
-  //       { opacity: 0, y: 30 },
-  //       {
-  //         opacity: 1,
-  //         y: 0,
-  //         duration: 0.6,
-  //         ease: "power3.in",
-  //         scrollTrigger: {
-  //           trigger: item,
-  //           start: "top bottom",
-  //           toggleActions: "play none none none",
-  //           markers: true,
-  //         },
-  //       }
-  //     );
-  //   });
-  //   ScrollTrigger.refresh();
-
-  //   return () => {
-  //     ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-  //   };
-  // }, []);
-
   return (
-    <div id="work experience" className="pt-[2%] w-[88%] lg:w-[72%] mx-auto">
-      <p className="text-xl lg:text-2xl text-center font-bold my-8">
+    <section
+      id="work-experience"
+      aria-labelledby="experience-heading"
+      className="pt-11 pb-6 w-[min(92%,1100px)] mx-auto"
+    >
+      <h2 id="experience-heading" className="section-title">
         Work Experience
-      </p>
+      </h2>
       <ol
         ref={containerRef}
-        className="relative border-s border-red-700/80 mx-auto"
+        className="relative border-s border-white/15 mx-auto list-none pl-0"
       >
-        {sortedExperienceList.map((work, index) => {
-          const startDate = parseMonthYear(work.start_time);
-          const endDate = work.end_time?.includes("Present")
-            ? new Date()
-            : parseMonthYear(work.end_time);
-
-          const totalMonths =
-            (endDate.getFullYear() - startDate.getFullYear()) * 12 +
-            (endDate.getMonth() - startDate.getMonth());
-
-          const years = Math.floor(totalMonths / 12);
-          const months = totalMonths % 12;
-
-          const duration = [
-            years > 0 ? `${years} year${years > 1 ? "s" : ""}` : "",
-            months > 0 ? `${months} month${months > 1 ? "s" : ""}` : "",
-          ]
-            .filter(Boolean)
-            .join(" ");
-
-          return (
-            <li key={index} className="work-item">
-              <WorkItem work={work} duration={duration} />
-            </li>
-          );
-        })}
+        {sortedExperienceList.map((work) => (
+          <WorkItem key={`${work.title}-${work.start_time}`} work={work} />
+        ))}
       </ol>
-    </div>
+    </section>
   );
 };
 

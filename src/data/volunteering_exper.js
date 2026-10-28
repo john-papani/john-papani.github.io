@@ -6,7 +6,7 @@ import uniquemindslogo from "../img/volunteering_exp/unique_minds.jpg"
 export const volunteering_exper_list = [
   {
     start_time: "May 2022",
-    end_time: "April 2022",
+    end_time: "May 2022",
     title: "Volunteer Staff",
     logoimage: tedxntualogo,
     location:"TEDxNTUA",
@@ -18,12 +18,12 @@ export const volunteering_exper_list = [
     title:"Volunteer Staff",
     logoimage: iuflogo,
     location:"IUF Greece",
-    location_url: "https://www.iuf.wolrd/"
+    location_url: "https://www.iuf.world/"
   },
 
   {
     start_time:"April 2024",
-    end_time:"Arpil 2025",
+    end_time:"April 2025",
     title:"Volunteer",
     logoimage: snfcclogo,
     location:"Stavros Niarchos Foundation Cultural Center (SNFCC)",
