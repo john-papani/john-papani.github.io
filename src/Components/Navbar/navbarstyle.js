@@ -2,7 +2,7 @@ import { makeStyles } from "@mui/styles";
 
 export const useStyles = makeStyles(() => ({
   appbar: {
-    color: "white",
+    color: "var(--color-light)",
     boxShadow: "none",
   },
   brandButton: {

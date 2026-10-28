@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactFooter = () => {
   return (
-    <footer id="contact" className="border-t border-white/10 pt-9 pb-6 px-4">
+    <footer id="contact" data-reveal className="reveal border-t border-[var(--surface-border)] pt-9 pb-6 px-4">
       <div className="max-w-2xl mx-auto text-center">
         <h2 className="section-title mb-2">Contact</h2>
         <p className="section-subtitle mb-6">
@@ -32,7 +32,7 @@ const ContactFooter = () => {
             href="https://www.linkedin.com/in/ioannis-papanikolaou-1b205a259"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm text-[var(--color-muted)] hover:text-white no-underline"
+            className="text-sm text-[var(--color-muted)] hover:text-[var(--color-light)] no-underline"
           >
             LinkedIn
           </a>
@@ -40,13 +40,13 @@ const ContactFooter = () => {
             href="https://github.com/john-papani"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm text-[var(--color-muted)] hover:text-white no-underline"
+            className="text-sm text-[var(--color-muted)] hover:text-[var(--color-light)] no-underline"
           >
             GitHub
           </a>
         </div>
 
-        <p className="text-xs text-slate-500">
+        <p className="text-xs text-[var(--color-muted)] opacity-75">
           © {new Date().getFullYear()} Ioannis Papanikolaou. All rights reserved.
         </p>
       </div>

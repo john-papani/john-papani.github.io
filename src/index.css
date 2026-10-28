@@ -5,20 +5,44 @@
 @tailwind utilities;
 
 :root {
+  color-scheme: dark;
   --color-dark: #06070b;
   --color-dark-soft: #0c0f18;
   --color-light: #e8eaf0;
   --color-muted: #9aa3b8;
   --color-accent: #e63946;
   --color-accent-hover: #ff6374;
+  --color-on-accent: #ffffff;
   --surface-border: rgba(255, 255, 255, 0.1);
+  --surface-subtle: rgba(255, 255, 255, 0.05);
+  --surface-media: rgba(0, 0, 0, 0.2);
+  --divider-color: rgba(255, 255, 255, 0.08);
+  --grid-color: rgba(255, 255, 255, 0.035);
+  --nav-background: rgba(6, 7, 11, 0.92);
   --font-display: "Sora", sans-serif;
   --font-body: "IBM Plex Sans", sans-serif;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --color-dark: #f5f6f8;
+  --color-dark-soft: #ffffff;
+  --color-light: #171923;
+  --color-muted: #5f6675;
+  --color-accent: #c92f3c;
+  --color-accent-hover: #a92330;
+  --surface-border: rgba(23, 25, 35, 0.13);
+  --surface-subtle: rgba(23, 25, 35, 0.055);
+  --surface-media: #eef0f4;
+  --divider-color: rgba(23, 25, 35, 0.1);
+  --grid-color: rgba(23, 25, 35, 0.045);
+  --nav-background: rgba(245, 246, 248, 0.94);
 }
 
 html {
   background: var(--color-dark);
   overscroll-behavior-y: none;
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -57,6 +81,13 @@ body {
   min-height: 100vh;
 }
 
+:root[data-theme="light"] body {
+  background:
+    radial-gradient(circle at 15% 10%, rgba(201, 47, 60, 0.16), transparent 28rem),
+    radial-gradient(circle at 85% 20%, rgba(42, 145, 180, 0.13), transparent 24rem),
+    linear-gradient(180deg, #f5f6f8 0%, #eef1f5 55%, #f8f8fa 100%) !important;
+}
+
 body::before {
   content: "";
   position: fixed;
@@ -64,10 +95,18 @@ body::before {
   pointer-events: none;
   z-index: -1;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
   background-size: 76px 76px;
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), transparent 70%);
+}
+
+#tsparticles {
+  transition: opacity 250ms ease;
+}
+
+:root[data-theme="light"] #tsparticles {
+  opacity: 0.42;
 }
 
 a {
@@ -111,17 +150,17 @@ button:focus-visible {
 .MuiDivider-root {
   max-width: min(88vw, 1180px);
   margin: 0 auto !important;
-  border-color: rgba(255, 255, 255, 0.08) !important;
+  border-color: var(--divider-color) !important;
 }
 
 .MuiChip-root {
-  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border: 1px solid var(--surface-border) !important;
 }
 
 .MuiFab-root {
-  color: var(--color-light) !important;
+  color: var(--color-on-accent) !important;
   background: var(--color-accent) !important;
-  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border: 1px solid var(--surface-border) !important;
 }
 
 .btn-primary {
@@ -133,7 +172,7 @@ button:focus-visible {
   font-family: var(--font-body);
   font-size: 0.875rem;
   font-weight: 600;
-  color: #fff;
+  color: var(--color-on-accent);
   background: var(--color-accent);
   border: 1px solid transparent;
   border-radius: 8px;
@@ -163,8 +202,19 @@ button:focus-visible {
 }
 
 .btn-secondary:hover {
-  border-color: rgba(255, 255, 255, 0.28);
-  color: #fff;
+  border-color: var(--color-muted);
+  color: var(--color-light);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 450ms ease, transform 450ms ease, border-color 200ms ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -175,5 +225,10 @@ button:focus-visible {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
   }
 }

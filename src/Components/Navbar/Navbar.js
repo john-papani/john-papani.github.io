@@ -12,14 +12,16 @@ import {
   useScrollTrigger,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
+import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import { useStyles } from "./navbarstyle";
+import { useTheme } from "../../basic_hooks/useTheme";
 
 const pages = [
-  { label: "About", id: "about" },
-  { label: "Diploma", id: "diploma" },
   { label: "Experience", id: "work-experience" },
-  { label: "Volunteering", id: "volunteering" },
+  { label: "Research", id: "research" },
   { label: "Projects", id: "projects" },
+  { label: "Volunteering", id: "volunteering" },
   { label: "Contact", id: "contact" },
 ];
 
@@ -30,9 +32,9 @@ function ElevationScroll({ children }) {
     elevation: trigger ? 4 : 0,
     sx: {
       zIndex: trigger ? 30 : 10,
-      backgroundColor: trigger ? "rgba(6, 7, 11, 0.92)" : "transparent",
+      backgroundColor: trigger ? "var(--nav-background)" : "transparent",
       transition: "background-color 0.25s ease",
-      borderBottom: trigger ? "1px solid rgba(255,255,255,0.08)" : "none",
+      borderBottom: trigger ? "1px solid var(--divider-color)" : "none",
     },
     position: "fixed",
   });
@@ -41,6 +43,7 @@ function ElevationScroll({ children }) {
 const Navbar = () => {
   const classes = useStyles();
   const [anchorElNav, setAnchorElNav] = useState(null);
+  const { theme, toggleTheme } = useTheme();
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -96,6 +99,19 @@ const Navbar = () => {
                   {page.label}
                 </Button>
               ))}
+              
+            <IconButton
+              onClick={toggleTheme}
+              aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+              title={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+              sx={{ color: "var(--color-light)", mr: 0.5 }}
+            >
+              {theme === "dark" ? (
+                <LightModeOutlinedIcon fontSize="small" />
+              ) : (
+                <DarkModeOutlinedIcon fontSize="small" />
+              )}
+            </IconButton>
             </Box>
 
             <IconButton
@@ -118,8 +134,8 @@ const Navbar = () => {
               sx={{
                 display: { xs: "block", md: "none" },
                 "& .MuiPaper-root": {
-                  backgroundColor: "#0c0f18",
-                  border: "1px solid rgba(255,255,255,0.1)",
+                  backgroundColor: "var(--color-dark-soft)",
+                  border: "1px solid var(--surface-border)",
                 },
               }}
             >
