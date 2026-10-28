@@ -2,27 +2,24 @@
 
 Personal portfolio website for [john-papani.github.io](https://john-papani.github.io/).
 
-It presents my professional experience, selected projects, volunteering work,  
-technical skills, NTUA diploma thesis, and contact information.
+It presents my professional experience, selected software projects, technical
+skills, research and publication work, volunteering, and contact information.
 
-![Portfolio preview](https://file%2B.vscode-resource.vscode-cdn.net/c%3A/Users/yiannis.papanikolaou/OneDrive%20-%20Mitsis%20Group/Documents/0CODES_HERE/0mymycode/john-papani.github.io/src/site_image.png)
+## Highlights
 
-## Main sections
-
-- About and downloadable CV
-- Diploma thesis and publication links
-- Work experience and volunteering
-- Selected software projects
-- Languages, tools, and technologies
-- Contact and social links
+- Responsive professional overview with work experience, research, and skills
+- Featured project grid with expandable access to the full project list
+- Light and dark themes based on the system preference, with a saved manual toggle
+- Native smooth scrolling and accessible, reduced-motion-aware reveal effects
+- Responsive navigation, animated cursor, and theme-aware particle background
+- Downloadable CV and direct links to GitHub, LinkedIn, publications, and demos
 
 ## Tech stack
 
 - React 18 and React Router
-- Material UI
-- Tailwind CSS
-- GSAP and Framer Motion
-- tsParticles
+- Material UI and Tailwind CSS
+- tsParticles and React Animated Cursor
+- Native Intersection Observer for scroll reveals
 - Create React App
 - GitHub Actions and GitHub Pages
 
@@ -50,34 +47,30 @@ The development server runs at [http://localhost:3000](http://localhost:3000).
 | --- | --- |
 | `npm start` | Start the local development server |
 | `npm test` | Run the test suite in watch mode |
+| `npm test -- --watchAll=false --runInBand` | Run the test suite once |
 | `npm run build` | Create an optimized production build in `build/` |
-| `npm run deploy` | Manually deploy `build/` through the `gh-pages` package |
+| `npm run deploy` | Manually deploy `build/` through `gh-pages` |
 
-## Content updates
+## Updating portfolio content
 
-The main portfolio content is stored in these files:
+The main content is maintained in:
 
 - `src/data/allprojects.js` — project cards
 - `src/data/work_exper.js` — professional experience
 - `src/data/volunteering_exper.js` — volunteering experience
-- `src/Components/About/About.js` — profile summary
-- `src/Components/Diploma/` — diploma thesis content and links
+- `src/Components/Hero/Hero.js` — profile summary and primary links
+- `src/Components/Diploma/` — research, thesis, and publication content
+- `src/Components/About/LanguageTools.js` — skills and technologies
 - `src/Components/ContactFooter/ContactFooter.js` — contact details
 
 Images and other visual assets are stored under `src/img/` and `public/`.
 
 ## Production deployment
 
-Production deployment is automated with GitHub Actions. Every push to `master`  
-triggers the workflow in `.github/workflows/jekyll-gh-pages.yml`, which:
-
-1. Installs dependencies with `npm ci`.
-2. Creates the production build with `npm run build`.
-3. Uploads the `build/` directory to GitHub Pages.
-4. Deploys the new version to production.
+Every push to `master` triggers `.github/workflows/jekyll-gh-pages.yml`. The
+workflow installs dependencies with `npm ci`, creates the production build, and
+deploys the `build/` directory through GitHub Pages.
 
 ```bash
-git add .
-git commit -m "Update portfolio"
 git push origin master
 ```
