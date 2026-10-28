@@ -1,19 +1,19 @@
-const Card = ({ card }) => {
+const Card = ({ card, showOutcome = false }) => {
   const linkLabel = card.linkLabel || "View project";
 
   return (
-    <article className="w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.75rem)] min-h-[350px] p-4 bg-[#0c0f18] border border-white/10 rounded-lg flex flex-col text-left transition-colors duration-200 hover:border-white/20">
+    <article className="w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.75rem)] min-h-[310px] p-4 bg-[#0c0f18] border border-white/10 rounded-lg flex flex-col text-left transition-colors duration-200 hover:border-white/20">
       {card.img ? (
         <a href={card.githubLink} target="_blank" rel="noopener noreferrer">
           <img
-            className="rounded-md mb-3 h-32 w-full object-contain bg-black/20 p-2"
+            className="rounded-md mb-3 h-28 w-full object-contain bg-black/20 p-2"
             src={card.img}
             alt={`Screenshot of ${card.title}`}
           />
         </a>
       ) : (
         <div
-          className="rounded-md mb-3 h-32 w-full flex items-center justify-center bg-black/25 border border-white/5 text-sm text-slate-400"
+          className="rounded-md mb-3 h-28 w-full flex items-center justify-center bg-black/25 border border-white/5 text-sm text-slate-400"
           aria-hidden="true"
         >
           No preview
@@ -37,19 +37,19 @@ const Card = ({ card }) => {
         </p>
       )}
 
-      <p className="text-sm text-slate-300 leading-relaxed mb-2 flex-grow">
+      <p className="text-sm text-slate-300 leading-relaxed mb-2 flex-grow line-clamp-3">
         {card.description}
       </p>
 
-      {card.outcome && (
-        <p className="text-xs text-slate-400 leading-relaxed mb-3 border-l-2 border-white/10 pl-2">
+      {showOutcome && card.outcome && (
+        <p className="text-xs text-slate-400 leading-relaxed mb-3 border-l-2 border-white/10 pl-2 line-clamp-2">
           <span className="text-slate-500">Outcome: </span>
           {card.outcome}
         </p>
       )}
 
       <div className="flex flex-wrap gap-1.5 mb-3">
-        {card.tags?.map((tag) => (
+        {card.tags?.slice(0, 4).map((tag) => (
           <span
             key={tag}
             className="px-2 py-0.5 text-[0.6875rem] font-medium text-slate-300 bg-white/5 border border-white/8 rounded"
