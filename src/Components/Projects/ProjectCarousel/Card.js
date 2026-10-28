@@ -1,55 +1,76 @@
 const Card = ({ card }) => {
+  const linkLabel = card.linkLabel || "View project";
+
   return (
-    <div className="w-[82vw] md:w-[30vw] lg:w-[21vw] xl:w-[18vw] min-h-[360px] lg:min-h-[390px] pb-4 px-3 bg-[#0c0f18]/85 border border-white/10 rounded-lg shadow-2xl shadow-black/30 backdrop-blur-md flex flex-col justify-around text-center transition-transform duration-300 hover:-translate-y-1 hover:border-red-400/60">
-      <a href={card.githubLink} target="_blank" rel="noopener noreferrer">
-        <img
-          className="rounded-lg p-1 max-h-[15vh] w-3/4 mx-auto object-contain"
-          src={card.img}
-          alt=""
-        />
-      </a>
-      <a href={card.githubLink} target="_blank" rel="noopener noreferrer">
-        <h5 className="mb-2 text-lg xl:text-xl font-bold tracking-tight text-white leading-snug">
+    <article className="w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.75rem)] min-h-[350px] p-4 bg-[#0c0f18] border border-white/10 rounded-lg flex flex-col text-left transition-colors duration-200 hover:border-white/20">
+      {card.img ? (
+        <a href={card.githubLink} target="_blank" rel="noopener noreferrer">
+          <img
+            className="rounded-md mb-3 h-32 w-full object-contain bg-black/20 p-2"
+            src={card.img}
+            alt={`Screenshot of ${card.title}`}
+          />
+        </a>
+      ) : (
+        <div
+          className="rounded-md mb-3 h-32 w-full flex items-center justify-center bg-black/25 border border-white/5 text-sm text-slate-400"
+          aria-hidden="true"
+        >
+          No preview
+        </div>
+      )}
+
+      <h3 className="text-base font-semibold text-white leading-snug mb-1">
+        <a
+          href={card.githubLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-[var(--color-accent-hover)] no-underline text-inherit"
+        >
           {card.title}
-        </h5>
-      </a>
-      <p className="mb-2 text-xs xl:text-sm font-normal text-slate-300 leading-relaxed">
+        </a>
+      </h3>
+
+      {card.role && (
+        <p className="text-xs font-medium text-[var(--color-accent)] mb-2">
+          {card.role}
+        </p>
+      )}
+
+      <p className="text-sm text-slate-300 leading-relaxed mb-2 flex-grow">
         {card.description}
       </p>
-      <div className="flex justify-center items-center flex-wrap">
-        {card.tags?.map((tag, index) => (
+
+      {card.outcome && (
+        <p className="text-xs text-slate-400 leading-relaxed mb-3 border-l-2 border-white/10 pl-2">
+          <span className="text-slate-500">Outcome: </span>
+          {card.outcome}
+        </p>
+      )}
+
+      <div className="flex flex-wrap gap-1.5 mb-3">
+        {card.tags?.map((tag) => (
           <span
-            key={index}
-            className="inline-flex items-center px-2 py-1 text-[0.7rem] xl:text-xs font-medium text-slate-200 bg-white/10 border border-white/10 rounded-full m-1"
+            key={tag}
+            className="px-2 py-0.5 text-[0.6875rem] font-medium text-slate-300 bg-white/5 border border-white/8 rounded"
           >
             {tag}
           </span>
         ))}
       </div>
+
       <a
         href={card.githubLink}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center w-fit mx-auto px-3 py-2 mt-2 text-xs xl:text-sm font-medium text-center text-white rounded-lg focus:ring-4 focus:outline-none bg-[#ff3d55] hover:bg-[#ff6374] focus:ring-red-900/50"
+        className="inline-flex items-center w-fit text-sm font-medium text-[var(--color-accent)] hover:text-[var(--color-accent-hover)] no-underline mt-auto"
       >
-        Read more
-        <svg
-          className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 14 10"
-        >
-          <path
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M1 5h12m0 0L9 1m4 4L9 9"
-          />
-        </svg>
+        {linkLabel}
+        <span aria-hidden="true" className="ml-1">
+          →
+        </span>
       </a>
-    </div>
+    </article>
   );
 };
 

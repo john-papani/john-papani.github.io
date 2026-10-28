@@ -12,140 +12,185 @@ import e_syntagma_project from "../img/e-syntagma_project.png";
 import github_explorer from "../img/github_explorer.png";
 import data_growthfund from "../img/data_growthfund.png";
 import minedu_schools_map from "../img/minedu_schools_map.png";
+
 export const all_projects_list = [
-  {
-    img: minedu_schools_map,
-    title: "Minedu Schools Map",
-    description:
-      "A web application that visualizes the locations of schools in Greece, providing an interactive map experience for users to explore educational institutions.",
-    tags: ["React", "Next.js", "Tailwind CSS", "Leaflet"],
-    githubLink: "https://minedu-schools-map.vercel.app/",
-  },
-  {
-    img: github_explorer,
-    title: "Github Explorer",
-    description:
-      "A modern and responsive GitHub Dashboard/Explorer that allows you to search for any GitHub user and view their profile, repositories, and followers in a clean and interactive UI.",
-    tags: ["React", "Next.js", "Tailwind CSS", "axios"],
-    githubLink: "https://github-explorer-ivory-eta.vercel.app/",
-  },
   {
     img: data_growthfund,
     title: "Open Data Hub Charts",
-    tags: ["React", "Next.js", "Tailwind CSS", "axios", "Chart.js", "leaflet"],
+    role: "Full-stack developer",
     description:
-      "This project is a web application that provides interactive data visualizations based on the statistics from the official data.growthfund.gr platform. The goal is to offer users an engaging way to explore various datasets related to employment, investments, and performance.",
+      "Interactive dashboard for exploring public investment and employment datasets from data.growthfund.gr.",
+    outcome:
+      "Chart.js visualizations and map views that make large government datasets easier to filter and compare.",
+    tags: ["React", "Next.js", "Chart.js", "Leaflet", "REST API"],
     githubLink: "https://john-papani.github.io/data-growthfund-charts",
+    linkLabel: "Live demo",
   },
   {
-    img: e_syntagma_project,
-    title: "e-Syntagma",
+    img: minedu_schools_map,
+    title: "Minedu Schools Map",
+    role: "Front-end developer",
     description:
-      "e-Syntagma is a web application that provides information about the Greek Syntagma.",
-    githubLink: "https://e-syntagma.vercel.app/",
-    tags: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
+      "Map-based tool for browsing school locations across Greece with search and filtering.",
+    outcome:
+      "Leaflet map interface deployed on Vercel for quick geographic lookup of institutions.",
+    tags: ["React", "Next.js", "Tailwind CSS", "Leaflet"],
+    githubLink: "https://minedu-schools-map.vercel.app/",
+    linkLabel: "Live demo",
   },
-
   {
-    // img: e_syntagma_project,
-    title: "Web Scraper for Greek Constitution Articles",
+    img: github_explorer,
+    title: "GitHub Explorer",
+    role: "Front-end developer",
     description:
-      "This project is a web scraper that extracts articles from the Greek Constitution and stores them in a JSON file. It was created as part of the e-Syntagma project.",
-    githubLink: "https://github.com/john-papani/syntagma-web-scraping",
-    tags: ["Python", "BeautifulSoup", "JSON", "Web Scraping"],
-  },
-  {
-    img: tedxntua2024,
-    title: "TEDxNTUA 2024*",
-    description: "A web app for the TEDxNTUA 2024 event.",
-    githubLink: "https://2024.tedxntua.com/",
-    tags: ["React", "Next.js", "Tailwind CSS"],
-  },
-  {
-    img: tedxntua_archive,
-    title: "TEDxNTUA Archive*",
-    description:
-      "A web app that serves as an archive for all the TEDxNTUA events, showcasing the speakers and their talks.",
-    githubLink: "https://tedxntua.com/",
-    tags: ["React", "Next.js", "Tailwind CSS"],
-  },
-  {
-    img: iotlivestreamingimg,
-    title: "IoT-Live-streaming",
-    description:
-      "This project was part of the Analysis and Design of Information Systems course at NTUA. (2022-23, Fall Semester).",
-    githubLink: "https://github.com/john-papani/IoT-Live-streaming",
-    tags: [
-      "GrafanaDB",
-      "Apache Flink",
-      "OpenTSDB",
-      "RabbitMQ",
-      "Java",
-      "Python",
-    ],
-  },
-  {
-    img: minesweeper,
-    title: "Minesweeper Game with Super Mine",
-    description:
-      "This project is a Java implementation of the classic Minesweeper game, with the added feature of a 'super mine'. This project was conducted for the course of Multimedia Technology at the 2022-23 Fall semester of the Electrical and Computer Engineering School at the National Technical University of Athens.",
-    tags: ["Java", "JavaFX"],
-    githubLink: "https://github.com/john-papani/minesweeper_multimedia_ntua_22",
-  },
-  {
-    img: taxi_adv_db,
-    title: "Advanced Topics in Database Systems 2022-2023",
-    description:
-      "TLC-NYC-Big-Data-Analytics. Semester project for the Advanced Database Systems Course @ NTUA ECE 2022-2023.",
-    tags: ["Apache Spark", "Hadoop", "HDFS", "Python"],
-    githubLink: "https://github.com/john-papani/advanced_db",
+      "Dashboard to search GitHub users and inspect profiles, repositories, and followers.",
+    outcome:
+      "Responsive UI with paginated repo lists and clean profile summaries via the GitHub REST API.",
+    tags: ["React", "Next.js", "TypeScript", "REST API"],
+    githubLink: "https://github-explorer-ivory-eta.vercel.app/",
+    linkLabel: "Live demo",
   },
   {
     img: energyliveimg,
     title: "EnergyLive2022",
+    role: "Full-stack developer — university SaaS project",
     description:
-      "'EnergyLive2022' is a Software as a Service application, where the user can see various charts related to Energy consumption and generation in European countries.",
-    tags: [
-      "React",
-      "MicroServices",
-      "Chart.js",
-      "axios",
-      "Bootstrap",
-      "Express.js",
-      "MongoDB",
-    ],
+      "Multi-service app for visualizing energy consumption and generation across European countries.",
+    outcome:
+      "Microservice architecture with React charts, Express APIs, and MongoDB-backed data pipelines.",
+    tags: ["React", "Express.js", "Chart.js", "MongoDB", "Microservices"],
     githubLink: "https://github.com/john-papani/Saas-EnergyLive-Ntua",
+    linkLabel: "View code",
   },
   {
-    img: softengimg,
-    title: "Software Engineering ECE NTUA 2021-2022",
+    img: e_syntagma_project,
+    title: "e-Syntagma",
+    role: "Full-stack developer",
     description:
-      "A web app about interoperability in tolls highways with different automatic crossing systems.",
-    githubLink: "https://github.com/john-papani/Softeng-diodia-Ntua",
-    tags: ["EJS", "Node.js", "Express.js", "CSS", "Axios", "mySQL"],
+      "Web app for searching and reading articles of the Greek Constitution with a structured UI.",
+    outcome:
+      "Next.js front end backed by scraped JSON content and a Python data pipeline.",
+    tags: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+    githubLink: "https://e-syntagma.vercel.app/",
+    linkLabel: "Live demo",
+  },
+  {
+    title: "Greek Constitution Web Scraper",
+    role: "Back-end / automation",
+    description:
+      "Python scraper that extracts constitution articles and stores them as structured JSON for e-Syntagma.",
+    outcome:
+      "Automated content ingestion replacing manual copy — reusable for future content updates.",
+    tags: ["Python", "BeautifulSoup", "JSON", "Web Scraping"],
+    githubLink: "https://github.com/john-papani/syntagma-web-scraping",
+    linkLabel: "View code",
+  },
+  {
+    img: iotlivestreamingimg,
+    title: "IoT Live Streaming Pipeline",
+    role: "Back-end developer — course project",
+    description:
+      "Real-time sensor data pipeline with stream processing, message queues, and time-series storage.",
+    outcome:
+      "End-to-end ingestion from IoT devices through RabbitMQ and Flink into Grafana dashboards.",
+    tags: ["Apache Flink", "RabbitMQ", "OpenTSDB", "Grafana", "Java", "Python"],
+    githubLink: "https://github.com/john-papani/IoT-Live-streaming",
+    linkLabel: "View code",
   },
   {
     img: gradebookimg,
     title: "GradeBook",
+    role: "Full-stack developer",
     description:
-      "A simple web app where you can calculate the Average for your university courses.",
-    tags: ["React", "Node.js", "Express.js", "mySQL"],
+      "Web app for tracking university courses and calculating semester averages.",
+    outcome:
+      "React UI with Node/Express API and MySQL persistence for student grade management.",
+    tags: ["React", "Node.js", "Express.js", "MySQL"],
     githubLink: "https://github.com/john-papani/Gradebook",
+    linkLabel: "View code",
+  },
+  {
+    img: softengimg,
+    title: "Highway Toll Interoperability",
+    role: "Full-stack developer — NTUA software engineering",
+    description:
+      "Web platform modeling interoperability between Greek highway toll systems with different crossing technologies.",
+    outcome:
+      "Node/EJS application with MySQL data layer demonstrating cross-system toll routing logic.",
+    tags: ["Node.js", "Express.js", "EJS", "MySQL"],
+    githubLink: "https://github.com/john-papani/Softeng-diodia-Ntua",
+    linkLabel: "View code",
+  },
+  {
+    img: taxi_adv_db,
+    title: "NYC Taxi Big Data Analytics",
+    role: "Data engineer — advanced DB systems",
+    description:
+      "Large-scale analytics on NYC taxi trip datasets using distributed processing.",
+    outcome:
+      "Spark/Hadoop pipeline for querying and aggregating trip records stored on HDFS.",
+    tags: ["Apache Spark", "Hadoop", "HDFS", "Python"],
+    githubLink: "https://github.com/john-papani/advanced_db",
+    linkLabel: "View code",
+  },
+  {
+    img: tedxntua2024,
+    title: "TEDxNTUA 2024*",
+    role: "Contributor — IT team",
+    description:
+      "Event website for TEDxNTUA 2024 with speaker profiles, schedule, and registration flows.",
+    outcome:
+      "Production Next.js site deployed for the live event at tedxntua.com.",
+    tags: ["React", "Next.js", "Tailwind CSS"],
+    githubLink: "https://2024.tedxntua.com/",
+    linkLabel: "Live site",
+  },
+  {
+    img: tedxntua_archive,
+    title: "TEDxNTUA Archive*",
+    role: "Contributor — IT team",
+    description:
+      "Archive site cataloguing TEDxNTUA events, speakers, and talk metadata.",
+    outcome:
+      "Central hub linking historical events and maintaining brand consistency across years.",
+    tags: ["React", "Next.js", "Tailwind CSS"],
+    githubLink: "https://tedxntua.com/",
+    linkLabel: "Live site",
   },
   {
     img: covidimg,
-    title: "Covid-19 Tracker",
-    description: "Chart with Cases and Deaths for Every Country.",
-    tags: ["React", "Chart.js", "axios"],
+    title: "COVID-19 Tracker",
+    role: "Front-end developer",
+    description:
+      "Country-level dashboard for COVID-19 cases and deaths with time-series charts.",
+    outcome:
+      "React + Chart.js interface consuming public health API data.",
+    tags: ["React", "Chart.js", "REST API"],
     githubLink: "https://github.com/john-papani/covid19-tracker",
+    linkLabel: "View code",
   },
   {
     img: recipeimg,
     title: "Recipe Treasure",
-
+    role: "Full-stack developer",
     description:
-      "A simple web app where you can find some delicious recipes from all over the world.",
-    tags: ["React", "Node.js", "Express.js", "mySQL"],
+      "Recipe browser with search and category filtering backed by a REST API.",
+    outcome:
+      "Full-stack CRUD app with React front end and Node/MySQL backend.",
+    tags: ["React", "Node.js", "Express.js", "MySQL"],
     githubLink: "https://github.com/john-papani/Recipe-Treasure",
+    linkLabel: "View code",
+  },
+  {
+    img: minesweeper,
+    title: "Minesweeper with Super Mine",
+    role: "Developer — multimedia course",
+    description:
+      "Desktop Minesweeper implementation in Java with an extended super-mine mechanic.",
+    outcome:
+      "JavaFX game demonstrating OOP design, event handling, and custom UI components.",
+    tags: ["Java", "JavaFX"],
+    githubLink: "https://github.com/john-papani/minesweeper_multimedia_ntua_22",
+    linkLabel: "View code",
   },
 ];

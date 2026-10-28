@@ -1,16 +1,15 @@
 import React from "react";
 import { all_projects_list } from "../../../data/allprojects";
 import Card from "./Card";
-const HorizontalScroll = () => {
+
+const ProjectsGrid = () => {
   return (
-    <>
-      <div className="flex flex-wrap justify-center gap-4 w-[96%] mx-auto text-center">
-        {all_projects_list.map((card) => {
-          return <Card card={card} key={card.id} />;
-        })}
-      </div>
-    </>
+    <div className="flex flex-wrap justify-center gap-4 w-[min(96%,1180px)] mx-auto px-2">
+      {all_projects_list.slice(0, 10).map((card) => (
+        <Card card={card} key={card.title} />
+      ))}
+    </div>
   );
 };
 
-export default HorizontalScroll;
+export default ProjectsGrid;
