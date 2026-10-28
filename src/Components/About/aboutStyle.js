@@ -1,28 +1,23 @@
 import { makeStyles } from "@mui/styles";
 
-export const useStyles = makeStyles((theme) => ({
+export const useStyles = makeStyles(() => ({
   aboutcontainer: {
-    paddingTop: "4%",
-    paddingRight: "10%",
-    paddingLeft: "10%",
-    paddingBottom: "2%",
-    "@media (max-width:600px)": {
-      paddingRight: "0%",
-      paddingLeft: "3%",
+    padding: "2.75rem 0 2.25rem",
+    "@media (max-width: 768px)": {
+      padding: "2.25rem 0 1.75rem",
     },
-    minHeight: "95vh",
   },
-
   maintext: {
-    fontSize: "0.92vw",
-    lineHeight: 1.9,
-    color: "#dfe4f2",
-    "@media (max-width:600px)": {
-      fontSize: "3.25vw",
-    },
+    fontFamily: "var(--font-body)",
+    fontSize: "0.9375rem",
+    lineHeight: 1.75,
+    color: "#c5cad8",
     "& b": {
       color: "#ffffff",
-      textShadow: "0 0 18px rgba(255, 61, 85, 0.22)",
+      fontWeight: 600,
     },
+  },
+  languageTools: {
+    padding: "2.75rem 0 2rem",
   },
 }));

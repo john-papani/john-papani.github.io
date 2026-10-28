@@ -1,86 +1,100 @@
 import { makeStyles } from "@mui/styles";
-import { createTheme } from "@mui/system";
 
-const main_theme = createTheme({
-  palette: {
-    primary: {
-      light: "#5CDB95",
-      main: "#379683",
-      dark: "black",
-    },
-    secondary: {
-      light: "#fff",
-      main: "#EDF5E1",
-      dark: "#8EE4AF",
-    },
-  },
-});
-
-export const useStyles = makeStyles((theme) => ({
+export const useStyles = makeStyles(() => ({
   hero: {
-    paddingTop: "5%",
+    paddingTop: "5rem",
+    paddingBottom: "2rem",
     position: "relative",
-    overflow: "hidden",
-    "&:before": {
-      content: '""',
-      position: "absolute",
-      width: "min(36vw, 440px)",
-      height: "min(36vw, 440px)",
-      right: "8%",
-      top: "16%",
-      borderRadius: "50%",
-      background:
-        "radial-gradient(circle, rgba(255, 61, 85, 0.18), rgba(255, 61, 85, 0) 68%)",
-      filter: "blur(4px)",
-      zIndex: 0,
-    },
-    "@media (max-width:780px)": {
-      paddingTop: "20%",
+    "@media (max-width: 900px)": {
+      paddingTop: "4.5rem",
     },
   },
   typedContainer: {
-    // backgroundColor: main_theme.palette.primary.main,
-    width: "100vw",
-    minHeight:"97vh",
-    textAlign: "center",
-    paddingBottom: "1%",
-    paddingTop: "1%",
-    position: "relative",
-    zIndex: "10",
+    width: "min(92vw, 1100px)",
+    margin: "0 auto",
+    minHeight: "min(72vh, 600px)",
+    alignItems: "center",
   },
-  avatar: {
-    marginBottom: "4%",
-    margin: "auto",
-    border: "1px solid rgba(255, 255, 255, 0.22)",
-    boxShadow:
-      "0 0 0 12px rgba(255, 255, 255, 0.035), 0 32px 90px rgba(255, 61, 85, 0.2)",
-    background:
-      "linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02))",
-    transition: "transform 300ms ease, box-shadow 300ms ease",
-    "&:hover": {
-      transform: "translateY(-6px) scale(1.015)",
-      boxShadow:
-        "0 0 0 12px rgba(255, 61, 85, 0.07), 0 38px 110px rgba(255, 61, 85, 0.28)",
+  avatarCol: {
+    display: "flex",
+    justifyContent: "center",
+  },
+  textCol: {
+    textAlign: "left",
+    "@media (max-width: 900px)": {
+      textAlign: "center",
     },
   },
-  particles: {
-    height: "100vh",
+  avatar: {
+    margin: "0 auto",
+    border: "1px solid rgba(255, 255, 255, 0.14)",
+    boxShadow: "0 16px 48px rgba(0, 0, 0, 0.35)",
   },
-  timeBox: {
-    border: "1px solid #ff3d55",
-    padding: "20px",
-    width: "fit-content",
-    borderRadius: "15px",
-    textAlign: "center",
-    margin: "auto",
-    fontSize: "40px",
-    // position: "absolute",
-    left: "0",
-    right: "0",
-    backgroundColor: "#ff6374",
+  eyebrow: {
+    fontFamily: "var(--font-body)",
+    fontSize: "0.8125rem",
+    fontWeight: 600,
+    letterSpacing: "0.08em",
+    textTransform: "uppercase",
+    color: "var(--color-accent)",
+    marginBottom: "0.75rem",
+  },
+  heading: {
+    fontFamily: "var(--font-display)",
+    fontSize: "clamp(1.75rem, 4vw, 2.5rem)",
+    fontWeight: 700,
+    letterSpacing: "-0.03em",
+    lineHeight: 1.15,
+    color: "var(--color-light)",
+    margin: "0 0 0.5rem",
+  },
+  subheading: {
+    fontFamily: "var(--font-body)",
+    fontSize: "1rem",
+    fontWeight: 500,
+    color: "var(--color-muted)",
+    margin: "0 0 1.25rem",
+  },
+  summary: {
+    fontFamily: "var(--font-body)",
+    fontSize: "1rem",
+    lineHeight: 1.7,
+    color: "#c5cad8",
+    maxWidth: "36rem",
+    margin: "0 0 1.25rem",
+    "@media (max-width: 900px)": {
+      margin: "0 auto 1.25rem",
+    },
+  },
+  ctaRow: {
+    display: "flex",
+    flexWrap: "wrap",
+    gap: "0.75rem",
+    marginBottom: "1.1rem",
+    "@media (max-width: 900px)": {
+      justifyContent: "center",
+    },
+  },
+  socialRow: {
+    display: "flex",
+    flexWrap: "wrap",
+    gap: "1.25rem",
+    "@media (max-width: 900px)": {
+      justifyContent: "center",
+    },
+  },
+  socialLink: {
+    display: "inline-flex",
+    alignItems: "center",
+    gap: "0.4rem",
+    fontFamily: "var(--font-body)",
+    fontSize: "0.875rem",
+    fontWeight: 500,
+    color: "var(--color-muted)",
+    textDecoration: "none",
+    transition: "color 0.2s ease",
     "&:hover": {
-      backgroundColor: "darkcyan",
-      cursor: "not-allowed",
+      color: "var(--color-light)",
     },
   },
 }));

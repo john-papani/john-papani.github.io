@@ -1,5 +1,4 @@
-import LinearProgress from "@mui/material/LinearProgress";
-import { Alert, Divider, Fab, Snackbar } from "@mui/material";
+import { Divider, Fab } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import ContactFooter from "../ContactFooter/ContactFooter";
 import Navbar from "../Navbar/Navbar";
@@ -9,151 +8,66 @@ import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { useStyles } from "./homestyle";
 import LanguageTools from "../About/LanguageTools";
 import Particle from "../Particle";
-import Modal from "../Modal/Modal";
 import ProgressIndicator from "../../basic_hooks/progressBar";
-import { useSmoothScroll } from "../../basic_hooks/useSmoothScroll";
 import About from "../About/About";
 import Diploma from "../Diploma/Diploma";
 import WorkExperience from "../WorkExperience/WorkExperience";
 import Volunteering from "../Volunteering/Volunteering";
-const Home = (isPhone) => {
+
+const Home = ({ isPhone }) => {
   const [showScroll, setShowScroll] = useState(false);
-  const [openAlert, setOpenAlert] = useState(true);
-  // const [messageAlert, setMessageAlert] = useState("");
-  // const [severityAlert, setSeverityAlert] = useState("");
-  const [businessProfile, setBusinessProfile] = useState(true);
   const classes = useStyles();
-  const dividerStyle = { bgcolor: "rgba(255, 255, 255, 0.12)" };
+  const dividerStyle = { bgcolor: "rgba(255, 255, 255, 0.08)" };
 
-  // useEffect(
-  //   () =>
-  //     fetch(
-  //       "https://api.countapi.xyz/hit/john-papani.github.io/bec3e21b-8894-4028-a57d-926fdb17d5d3"
-  //     ),
-  //   []
-  // );
+  useEffect(() => {
+    const checkScrollTop = () => {
+      setShowScroll(window.scrollY > 400);
+    };
+    window.addEventListener("scroll", checkScrollTop, { passive: true });
+    return () => window.removeEventListener("scroll", checkScrollTop);
+  }, []);
 
-  const handleCloseAlert = (event, reason) => {
-    if (reason === "clickaway") {
-      return;
-    }
-    setOpenAlert(false);
-  };
-
-  const checkScrollTop = () => {
-    if (!showScroll && window.scrollY > 400) {
-      setShowScroll(true);
-    } else if (showScroll && window.scrollY <= 400) {
-      setShowScroll(false);
-    }
-  };
-  window.addEventListener("scroll", checkScrollTop);
   const scrollTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, [businessProfile]);
-
-  useSmoothScroll();
-
-  const [loading, setLoading] = useState(true);
-  const [progressValue, setProgressValue] = useState(0);
-  useEffect(() => {
-    const duration = 600; // Set the total loading time in milliseconds
-    const interval = 100; // Update interval for progress in milliseconds
-    const steps = duration / interval;
-
-    const updateProgress = (step) => {
-      const newProgress = (step / steps) * 100;
-      setProgressValue(newProgress);
-
-      if (step < steps) {
-        setTimeout(() => updateProgress(step + 1), interval);
-      } else {
-        setLoading(false);
-      }
-    };
-
-    // Start the loading simulation after a short delay
-    setTimeout(() => updateProgress(1), interval);
-  }, []);
-
-  if (loading) {
-    return (
-      <div
-        style={{
-          position: "absolute",
-          top: "50%",
-          left: "50%",
-          transform: "translate(-50%,-50%)",
-          width: "30vw",
-        }}
-      >
-        <LinearProgress
-          sx={{
-            backgroundColor: "white",
-            "& .MuiLinearProgress-bar": {
-              backgroundColor: "#ff3d55",
-            },
-          }}
-          fourColor
-          variant="determinate"
-          value={progressValue}
-        />
-      </div>
-    );
-  }
-
   return (
     <div className={classes.wholepage}>
-      <Modal />
-      <div className="scroll-to-top">
-        <Navbar
-          className={classes.navbar}
-          setBusinessProfile={setBusinessProfile}
-        />
-        <div className={classes.backgif}></div>
-        <ProgressIndicator />
-        <Particle />
-
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-black">
+        Skip to content
+      </a>
+      <Navbar />
+      <div className={classes.backgif} aria-hidden="true" />
+      <Particle />
+      <main id="main-content">
         <Hero isPhone={isPhone} />
         <Divider sx={dividerStyle} />
-        <About isPhone={isPhone} />
+        <About />
         <Divider sx={dividerStyle} />
         <Diploma isPhone={isPhone} />
         <Divider sx={dividerStyle} />
-        <WorkExperience isPhone={isPhone} />
+        <WorkExperience />
         <Divider sx={dividerStyle} />
-        <Volunteering  isPhone={isPhone} />
+        <Volunteering />
         <Divider sx={dividerStyle} />
         <Projects />
         <Divider sx={dividerStyle} />
-        <Fab size="small" className={classes.ArrowTop} onClick={scrollTop}>
-          <KeyboardArrowUpIcon />
-        </Fab>
-
-        <Divider sx={dividerStyle} />
         <LanguageTools isPhone={isPhone} />
         <ContactFooter />
-        <Snackbar
-          anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
-          open={openAlert}
-          autoHideDuration={5000}
-          onClose={handleCloseAlert}
+      </main>
+      <ProgressIndicator />
+      {showScroll && (
+        <Fab
+          size="small"
+          className={classes.ArrowTop}
+          onClick={scrollTop}
+          aria-label="Scroll to top"
         >
-          <Alert severity="warning" onClose={handleCloseAlert}>
-            Send me your feedback at{" "}
-            <u>
-              <i>
-                <b>johnpapani1@gmail.com</b>
-              </i>
-            </u>
-          </Alert>
-        </Snackbar>
-      </div>
+          <KeyboardArrowUpIcon />
+        </Fab>
+      )}
     </div>
   );
 };
+
 export default Home;

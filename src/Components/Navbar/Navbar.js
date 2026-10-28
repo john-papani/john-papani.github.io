@@ -1,145 +1,138 @@
 import React, { useState } from "react";
 import faviconfornav from "../../img/2.png";
 import {
-  Typography,
   Button,
   Toolbar,
   Box,
   AppBar,
   Container,
-  Chip,
+  IconButton,
+  Menu,
+  MenuItem,
   useScrollTrigger,
 } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
 import { useStyles } from "./navbarstyle";
-import LiveTime from "../Helpers/autoreloadTime";
 
-// const pages = ["About", "Projects", "Contact"];
-// const pages = ["Projects","CV and Information",  "Contact"];
-//  const pages = ["Short Bio","CV and Information",  "Contact"];
-// const pages = ["MONO KOULIS 🤡"];
 const pages = [
-  "about",
-  "diploma",
-  "work experience",
-  "volunteering",
-  "projects",
+  { label: "About", id: "about" },
+  { label: "Diploma", id: "diploma" },
+  { label: "Experience", id: "work-experience" },
+  { label: "Volunteering", id: "volunteering" },
+  { label: "Projects", id: "projects" },
+  { label: "Contact", id: "contact" },
 ];
 
-function ElevationScroll(props) {
-  const { children } = props;
-  const trigger = useScrollTrigger({
-    disableHysteresis: true,
-    threshold: 0,
-  });
+function ElevationScroll({ children }) {
+  const trigger = useScrollTrigger({ disableHysteresis: true, threshold: 0 });
 
   return React.cloneElement(children, {
-    elevation: trigger ? 15 : 0,
-    style: {
-      zIndex: trigger ? 30 : 0, // Adjust the value based on your needs
-      backgroundColor: trigger ? "transparent" : "transparent",
-      transition: "background-color 0.3s ease-out", // Add a transition for a smooth effect
-      backdropFilter: trigger ? "blur(500px)" : "none",
+    elevation: trigger ? 4 : 0,
+    sx: {
+      zIndex: trigger ? 30 : 10,
+      backgroundColor: trigger ? "rgba(6, 7, 11, 0.92)" : "transparent",
+      transition: "background-color 0.25s ease",
+      borderBottom: trigger ? "1px solid rgba(255,255,255,0.08)" : "none",
     },
-    // color: trigger ? "inherit" : "transparent",
-    position: trigger ? "fixed" : "absolute",
+    position: "fixed",
   });
 }
 
-const Navbar = (props) => {
-  const {
-    // openAlert,
-    // setOpenAlert,
-    // setMessageAlert,
-    // setSeverityAlert,
-    setBusinessProfile,
-  } = props;
+const Navbar = () => {
   const classes = useStyles();
   const [anchorElNav, setAnchorElNav] = useState(null);
+
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleCloseNavMenu = (page) => {
-    // const koulis = () => {
-    //   window.open("https://nd.gr", "_blank");
-    // };
-    // for (let i = 0; i < 10; i++) {
-    //   koulis();
-    // }
-    document
-      .getElementById(page.page)
-      .scrollIntoView({ behavior: "smooth", block: "start", inline: "start" });
+
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
   };
-  const handleBusinessSwitch = () => {
-    // setSeverityAlert(openAlert ? "success" : "error");
-    // setMessageAlert(
-    //   openAlert
-    //     ? "Show Projects and Business Components"
-    //     : "Hide Projects and Businnes Components"
-    // );
-    // setOpenAlert(true);
-    setBusinessProfile((profile) => !profile);
+
+  const scrollToSection = (id) => {
+    handleCloseNavMenu();
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <ElevationScroll {...props}>
-      <AppBar className={classes.appbar}>
-        <Container maxWidth="xl" sx={{ alignItems: "center" }}>
-          <Toolbar disableGutters>
-            <img
-              src={faviconfornav}
-              alt="ip"
-              className="w-8 h-8 mr-2 rounded-full"
-            />
-
-            <p
-              className="mr-10 font-[agustina] font-bold tracking-wider cursor-pointer italic text-xl no-underline"
-              onClick={() => handleCloseNavMenu()}
+    <ElevationScroll>
+      <AppBar className={classes.appbar} component="nav" aria-label="Main navigation">
+        <Container maxWidth="lg">
+          <Toolbar disableGutters sx={{ minHeight: { xs: 56, md: 64 } }}>
+            <button
+              type="button"
+              onClick={scrollToTop}
+              className={classes.brandButton}
+              aria-label="Back to top"
             >
-              Ioannis Papanikolaou
-            </p>
+              <img
+                src={faviconfornav}
+                alt=""
+                className="w-8 h-8 mr-2 rounded-full"
+              />
+              <span className={classes.brandName}>Ioannis Papanikolaou</span>
+            </button>
 
-            {/* <FormControlLabel
-              sx={{
-                background: "#d9d9d9",
-                borderRadius: "12px",
-                paddingRight: "5px",
-              }}
-              control={
-                <Switch
-                  defaultChecked
-                  color="warning"
-                  onChange={() => handleBusinessSwitch()}
-                />
-              }
-              label="Bussiness"
-            /> */}
-            <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+            <Box sx={{ flexGrow: 1 }} />
+
+            <Box sx={{ display: { xs: "none", md: "flex" }, gap: 0.5 }}>
               {pages.map((page) => (
                 <Button
-                  key={page}
-                  onClick={() => handleCloseNavMenu({ page })}
+                  key={page.id}
+                  onClick={() => scrollToSection(page.id)}
                   sx={{
-                    my: 2,
-                    color: "white",
-                    display: "block",
-                    fontWeight: "bold",
+                    color: "var(--color-muted)",
+                    fontWeight: 500,
+                    fontSize: "0.875rem",
+                    textTransform: "none",
+                    "&:hover": { color: "var(--color-light)" },
                   }}
-                  className="hover:text-[#ff6374] font-bold"
                 >
-                  {page}
+                  {page.label}
                 </Button>
               ))}
-              <Chip
-                label={<LiveTime />}
-                sx={{
-                  color: "inherit",
-                  fontWeight: "bold",
-                  position: "absolute",
-                  right: "0px",
-                  top: "30%",
-                }}
-              />
             </Box>
+
+            <IconButton
+              size="large"
+              aria-label="Open navigation menu"
+              aria-controls="nav-menu"
+              aria-haspopup="true"
+              onClick={handleOpenNavMenu}
+              sx={{ display: { xs: "flex", md: "none" }, color: "white" }}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Menu
+              id="nav-menu"
+              anchorEl={anchorElNav}
+              anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+              transformOrigin={{ vertical: "top", horizontal: "right" }}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
+              sx={{
+                display: { xs: "block", md: "none" },
+                "& .MuiPaper-root": {
+                  backgroundColor: "#0c0f18",
+                  border: "1px solid rgba(255,255,255,0.1)",
+                },
+              }}
+            >
+              {pages.map((page) => (
+                <MenuItem
+                  key={page.id}
+                  onClick={() => scrollToSection(page.id)}
+                  sx={{ color: "var(--color-light)", fontSize: "0.9375rem" }}
+                >
+                  {page.label}
+                </MenuItem>
+              ))}
+            </Menu>
           </Toolbar>
         </Container>
       </AppBar>
