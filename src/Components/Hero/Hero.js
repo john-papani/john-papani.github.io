@@ -41,10 +41,10 @@ const Hero = ({ isPhone }) => {
             M.Eng. in Electrical &amp; Computer Engineering, NTUA
           </p>
           <p className={classes.summary}>
-            I&apos;m a Full Stack Developer at Mitsis Group, building web
-            applications, APIs, dashboards, and internal tools with React,
-            Next.js, Python, and .NET. My NTUA thesis on Greek parliamentary
-            debates also contributed to a peer-reviewed publication.
+            I&apos;m a full-stack software engineer building web applications,
+            APIs, dashboards, and internal tools with React, Next.js, Python,
+            and .NET. My NTUA thesis on Greek parliamentary debates also
+            contributed to a peer-reviewed publication.
           </p>
           <div className={classes.ctaRow}>
             <button
