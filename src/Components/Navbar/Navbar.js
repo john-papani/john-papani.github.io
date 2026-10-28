@@ -120,7 +120,7 @@ const Navbar = () => {
               aria-controls="nav-menu"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              sx={{ display: { xs: "flex", md: "none" }, color: "white" }}
+              sx={{ display: { xs: "flex", md: "none" }, color: "var(--color-light)" }}
             >
               <MenuIcon />
             </IconButton>
