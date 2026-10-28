@@ -3,7 +3,7 @@ import { work_experience_list } from "../../data/work_exper";
 import WorkItem from "./WorkItem";
 import { parseMonthYear } from "../../utils/parseMonthYear";
 
-const WorkExperience = () => {
+const WorkExperience = ({ embedded = false }) => {
   const containerRef = useRef(null);
 
   const sortedExperienceList = useMemo(() => {
@@ -27,14 +27,18 @@ const WorkExperience = () => {
     <section
       id="work-experience"
       aria-labelledby="experience-heading"
-      className="pt-11 pb-6 w-[min(92%,1100px)] mx-auto"
+      className={
+        embedded
+          ? "pt-11 pb-6 w-full"
+          : "pt-11 pb-6 w-[min(92%,1100px)] mx-auto"
+      }
     >
       <h2 id="experience-heading" className="section-title">
         Work Experience
       </h2>
       <ol
         ref={containerRef}
-        className="relative border-s border-white/15 mx-auto list-none pl-0"
+        className="relative border-s border-[var(--surface-border)] mx-auto list-none pl-0"
       >
         {sortedExperienceList.map((work) => (
           <WorkItem key={`${work.title}-${work.start_time}`} work={work} />

@@ -27,7 +27,7 @@ export const useStyles = makeStyles(() => ({
   },
   avatar: {
     margin: "0 auto",
-    border: "1px solid rgba(255, 255, 255, 0.14)",
+    border: "1px solid var(--surface-border)",
     boxShadow: "0 16px 48px rgba(0, 0, 0, 0.35)",
   },
   eyebrow: {
@@ -59,7 +59,7 @@ export const useStyles = makeStyles(() => ({
     fontFamily: "var(--font-body)",
     fontSize: "1rem",
     lineHeight: 1.7,
-    color: "#c5cad8",
+    color: "var(--color-muted)",
     maxWidth: "36rem",
     margin: "0 0 1.25rem",
     "@media (max-width: 900px)": {

@@ -13,7 +13,7 @@ const Hero = ({ isPhone }) => {
   };
 
   return (
-    <section className={classes.hero} aria-labelledby="hero-heading">
+    <section data-reveal className={`${classes.hero} reveal`} aria-labelledby="hero-heading">
       <Grid
         container
         spacing={4}
@@ -41,10 +41,10 @@ const Hero = ({ isPhone }) => {
             M.Eng. in Electrical &amp; Computer Engineering, NTUA
           </p>
           <p className={classes.summary}>
-            I build full-stack web applications, REST APIs, and internal tools for
-            business operations — with React, Next.js, Python/Django, Node.js, and
-            .NET. Currently focused on dashboards, automation, and maintainable
-            software for hospitality and enterprise workflows.
+            I&apos;m a Full Stack Developer at Mitsis Group, building web
+            applications, APIs, dashboards, and internal tools with React,
+            Next.js, Python, and .NET. My NTUA thesis on Greek parliamentary
+            debates also contributed to a peer-reviewed publication.
           </p>
           <div className={classes.ctaRow}>
             <button

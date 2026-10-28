@@ -1,10 +1,7 @@
 import React from "react";
-import { useStyles } from "./diplomaStyle";
-import { Grid, Card, CardContent, Button } from "@mui/material";
 import DiplomaText from "./DiplomaText";
 
-const Diploma = ({ isPhone }) => {
-  const classes = useStyles();
+const Diploma = ({ compact = false }) => {
   const links = [
     {
       label: "View Publication",
@@ -18,68 +15,45 @@ const Diploma = ({ isPhone }) => {
   ];
 
   return (
-    <div id="diploma">
-      <Grid container spacing={2} className={classes.diplomacontainer}>
-        <h2 className="section-title">
-          Diploma Thesis
-        </h2>
-        <Grid
-          container
-          width={isPhone ? "85%" : "100%"}
-          alignItems="center"
-          margin="auto"
-          marginTop={isPhone ? "2%" : "0"}
-          padding="1%"
-          textAlign="justify"
-        >
-          <Grid item xs={12} md={8}>
-            <Card>
-              <CardContent>
-                <DiplomaText className={classes.maintext} isPhone={isPhone} />
-                <div className="flex flex-wrap gap-2 mt-6">
-                  {links.map(({ label, url }) => (
-                    <Button
-                      key={label}
-                      component="a"
-                      href={url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      variant="contained"
-                      size="small"
-                      sx={{
-                        textTransform: "none",
-                        backgroundColor: "var(--color-accent)",
-                        "&:hover": {
-                          backgroundColor: "var(--color-accent-hover)",
-                        },
-                      }}
-                    >
-                      {label}
-                    </Button>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid
-            item
-            xs={12}
-            md={4}
-            sx={{
-              paddingTop: isPhone ? "24px" : "0",
-              paddingBottom: isPhone ? "24px" : "0",
-              paddingLeft: isPhone ? "0" : "32px",
-            }}
-          >
-            <img
-              src="https://github.com/john-papani/diploma/blob/master/greek_parliament_picture.png?raw=true"
-              alt="Greek Parliament building"
-              className="w-[85%] md:w-full mx-auto h-[100%]"
-            />
-          </Grid>
-        </Grid>
-      </Grid>
-    </div>
+    <section
+      id="research"
+      className={compact ? "px-0" : "py-11 px-4"}
+      aria-labelledby="research-heading"
+    >
+      <h2 id="research-heading" className="section-title">
+        Research &amp; Publication
+      </h2>
+      <div
+        data-reveal
+        className={`grid gap-6 items-center mx-auto p-5 bg-[var(--color-dark-soft)] border border-[var(--surface-border)] rounded-lg ${
+          compact
+            ? "grid-cols-1 w-full"
+            : "md:grid-cols-[1fr_260px] w-[min(92%,1000px)]"
+        } reveal`}
+      >
+        <div>
+          <DiplomaText />
+          <div className="flex flex-wrap gap-2 mt-5">
+            {links.map(({ label, url }) => (
+              <a
+                key={label}
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-3 py-1.5 text-sm font-medium text-[var(--color-on-accent)] bg-[var(--color-accent)] hover:bg-[var(--color-accent-hover)] rounded no-underline"
+              >
+                {label}
+              </a>
+            ))}
+          </div>
+        </div>
+        <img
+          src="https://github.com/john-papani/diploma/blob/master/greek_parliament_picture.png?raw=true"
+          alt="Greek Parliament building"
+          className={`w-full object-cover rounded-md ${compact ? "h-32" : "h-44"}`}
+        />
+      </div>
+    </section>
   );
 };
 

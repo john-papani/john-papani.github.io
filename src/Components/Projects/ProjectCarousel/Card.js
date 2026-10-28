@@ -2,25 +2,25 @@ const Card = ({ card, showOutcome = false }) => {
   const linkLabel = card.linkLabel || "View project";
 
   return (
-    <article className="w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.75rem)] min-h-[310px] p-4 bg-[#0c0f18] border border-white/10 rounded-lg flex flex-col text-left transition-colors duration-200 hover:border-white/20">
+    <article data-reveal className="reveal w-full sm:w-[calc(50%-0.5rem)] lg:w-[calc(33.333%-0.75rem)] min-h-[310px] p-4 bg-[var(--color-dark-soft)] border border-[var(--surface-border)] rounded-lg flex flex-col text-left transition-colors duration-200 hover:border-[var(--color-muted)]">
       {card.img ? (
         <a href={card.githubLink} target="_blank" rel="noopener noreferrer">
           <img
-            className="rounded-md mb-3 h-28 w-full object-contain bg-black/20 p-2"
+            className="rounded-md mb-3 h-28 w-full object-contain bg-[var(--surface-media)] p-2"
             src={card.img}
             alt={`Screenshot of ${card.title}`}
           />
         </a>
       ) : (
         <div
-          className="rounded-md mb-3 h-28 w-full flex items-center justify-center bg-black/25 border border-white/5 text-sm text-slate-400"
+          className="rounded-md mb-3 h-28 w-full flex items-center justify-center bg-[var(--surface-media)] border border-[var(--surface-border)] text-sm text-[var(--color-muted)]"
           aria-hidden="true"
         >
           No preview
         </div>
       )}
 
-      <h3 className="text-base font-semibold text-white leading-snug mb-1">
+      <h3 className="text-base font-semibold text-[var(--color-light)] leading-snug mb-1">
         <a
           href={card.githubLink}
           target="_blank"
@@ -37,13 +37,13 @@ const Card = ({ card, showOutcome = false }) => {
         </p>
       )}
 
-      <p className="text-sm text-slate-300 leading-relaxed mb-2 flex-grow line-clamp-3">
+      <p className="text-sm text-[var(--color-muted)] leading-relaxed mb-2 flex-grow line-clamp-3">
         {card.description}
       </p>
 
       {showOutcome && card.outcome && (
-        <p className="text-xs text-slate-400 leading-relaxed mb-3 border-l-2 border-white/10 pl-2 line-clamp-2">
-          <span className="text-slate-500">Outcome: </span>
+        <p className="text-xs text-[var(--color-muted)] leading-relaxed mb-3 border-l-2 border-[var(--surface-border)] pl-2 line-clamp-2">
+          <span className="opacity-75">Outcome: </span>
           {card.outcome}
         </p>
       )}
@@ -52,7 +52,7 @@ const Card = ({ card, showOutcome = false }) => {
         {card.tags?.slice(0, 4).map((tag) => (
           <span
             key={tag}
-            className="px-2 py-0.5 text-[0.6875rem] font-medium text-slate-300 bg-white/5 border border-white/8 rounded"
+            className="px-2 py-0.5 text-[0.6875rem] font-medium text-[var(--color-muted)] bg-[var(--surface-subtle)] border border-[var(--surface-border)] rounded"
           >
             {tag}
           </span>

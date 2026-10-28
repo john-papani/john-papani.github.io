@@ -3,7 +3,7 @@ import { volunteering_exper_list } from "../../data/volunteering_exper";
 
 const Volunteering = () => {
   return (
-    <section id="volunteering" className="py-11 px-4" aria-labelledby="volunteering-heading">
+    <section id="volunteering" data-reveal className="reveal py-11 px-4" aria-labelledby="volunteering-heading">
       <h2 id="volunteering-heading" className="section-title">
         Volunteering
       </h2>
@@ -17,12 +17,13 @@ const Volunteering = () => {
           .map((volunteering, index) => (
             <article
               key={index}
-              className="flex flex-col w-full sm:w-[calc(50%-0.5rem)] md:w-[280px] p-4 bg-[#0c0f18] border border-white/10 rounded-lg"
+              data-reveal
+              className="reveal flex flex-col w-full sm:w-[calc(50%-0.5rem)] md:w-[280px] p-4 bg-[var(--color-dark-soft)] border border-[var(--surface-border)] rounded-lg"
             >
-              <time className="text-xs text-slate-400 mb-1">
+              <time className="text-xs text-[var(--color-muted)] mb-1">
                 {volunteering.start_time} – {volunteering.end_time}
               </time>
-              <h3 className="text-base font-semibold text-white mb-2">
+              <h3 className="text-base font-semibold text-[var(--color-light)] mb-2">
                 {volunteering.title}
               </h3>
               <div className="flex items-center gap-2">
@@ -38,7 +39,7 @@ const Volunteering = () => {
                     href={volunteering.location_url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sm text-[var(--color-muted)] hover:text-white"
+                    className="text-sm text-[var(--color-muted)] hover:text-[var(--color-light)]"
                   >
                     {volunteering.location}
                   </a>

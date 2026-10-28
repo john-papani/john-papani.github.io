@@ -33,7 +33,7 @@ const ProjectsGrid = () => {
           type="button"
           onClick={() => setShowAll((current) => !current)}
           aria-expanded={showAll}
-          className="px-4 py-2 text-sm font-medium text-white border border-white/20 rounded-md hover:border-[var(--color-accent)] hover:text-[var(--color-accent-hover)] transition-colors"
+          className="px-4 py-2 text-sm font-medium text-[var(--color-light)] border border-[var(--surface-border)] rounded-md hover:border-[var(--color-accent)] hover:text-[var(--color-accent-hover)] transition-colors"
         >
           {showAll ? "Show less" : `Show all projects (${all_projects_list.length})`}
         </button>

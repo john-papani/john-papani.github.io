@@ -11,7 +11,7 @@ export const useStyles = makeStyles(() => ({
     fontFamily: "var(--font-body)",
     fontSize: "0.9375rem",
     lineHeight: 1.75,
-    color: "#c5cad8",
+    color: "var(--color-muted)",
     "& b": {
       color: "#ffffff",
       fontWeight: 600,
