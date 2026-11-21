@@ -28,15 +28,15 @@ skills, research and publication work, volunteering, and contact information.
 ### Requirements
 
 - Node.js 20
-- npm
+- pnpm (`corepack enable` or `npm install -g pnpm`)
 
 ### Setup
 
 ```bash
 git clone https://github.com/john-papani/john-papani.github.io.git
 cd john-papani.github.io
-npm ci
-npm start
+pnpm install --frozen-lockfile
+pnpm start
 ```
 
 The development server runs at [http://localhost:3000](http://localhost:3000).
@@ -45,11 +45,11 @@ The development server runs at [http://localhost:3000](http://localhost:3000).
 
 | Command | Purpose |
 | --- | --- |
-| `npm start` | Start the local development server |
-| `npm test` | Run the test suite in watch mode |
-| `npm test -- --watchAll=false --runInBand` | Run the test suite once |
-| `npm run build` | Create an optimized production build in `build/` |
-| `npm run deploy` | Manually deploy `build/` through `gh-pages` |
+| `pnpm start` | Start the local development server |
+| `pnpm test` | Run the test suite in watch mode |
+| `pnpm test -- --watchAll=false --runInBand` | Run the test suite once |
+| `pnpm run build` | Create an optimized production build in `build/` |
+| `pnpm run deploy` | Manually deploy `build/` through `gh-pages` |
 
 ## Updating portfolio content
 
@@ -68,7 +68,7 @@ Images and other visual assets are stored under `src/img/` and `public/`.
 ## Production deployment
 
 Every push to `master` triggers `.github/workflows/jekyll-gh-pages.yml`. The
-workflow installs dependencies with `npm ci`, creates the production build, and
+workflow installs dependencies with `pnpm install --frozen-lockfile`, creates the production build, and
 deploys the `build/` directory through GitHub Pages.
 
 ```bash
